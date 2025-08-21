@@ -1,0 +1,8381 @@
+-- Check
+
+if game.CoreGui:FindFirstChild("3Hax") then
+
+	game.TweenService:Create(game.CoreGui:FindFirstChild("3Hax").Title,TweenInfo.new(0.5),{Size = UDim2.new(0.077, 0,0, 0)}):Play()
+	wait(0.5)
+	game.CoreGui:FindFirstChild("3Hax"):Destroy()
+
+end
+
+-- Gui
+
+local UI = Instance.new("ScreenGui", game.CoreGui)
+
+UI.IgnoreGuiInset = true
+UI.Name = "3Hax"
+
+local Title = Instance.new("TextLabel", UI)
+
+Title.BackgroundColor3 = Color3.new(0.0666667, 0.0666667, 0.0666667)
+Title.BorderColor3 = Color3.new(0, 0, 0)
+Title.BorderSizePixel = 0
+Title.Font = Enum.Font.TitilliumWeb
+Title.Name = "Title"
+Title.Position = UDim2.new(0.077, 0, 0.302817255, 0)
+Title.Size = UDim2.new(0.077, 0, 0, 0)
+Title.Text = "3Hax"
+Title.TextColor3 = Color3.new(1, 1, 1)
+Title.TextScaled = true
+Title.TextSize = 14
+Title.TextWrapped = true
+
+local Round = Instance.new("UICorner", Title)
+
+Round.CornerRadius = UDim.new(0.449999988, 0)
+Round.Name = "Round"
+
+local Stroke = Instance.new("UIStroke", Title)
+
+Stroke.Color = Color3.new(1,1,1)
+Stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+Stroke.Thickness = 1
+Stroke.Name = "Stroke"
+Stroke.Transparency = 0.6
+
+local Icons = Instance.new("Frame", Title)
+
+Icons.BackgroundColor3 = Color3.new(1, 1, 1)
+Icons.BackgroundTransparency = 0.9990000128746033
+Icons.BorderColor3 = Color3.new(0, 0, 0)
+Icons.BorderSizePixel = 0
+Icons.Name = "Icons"
+Icons.Position = UDim2.new(2.50600004, 0, -0.300000012, 0)
+Icons.Size = UDim2.new(1.91568959, 0, 1.75969565, 0)
+
+local Close = Instance.new("ImageButton", Icons)
+
+Close.BackgroundColor3 = Color3.new(0.0666667, 0.0666667, 0.0666667)
+Close.BorderColor3 = Color3.new(0, 0, 0)
+Close.BorderSizePixel = 0
+Close.Image = "rbxassetid://107188679161133"
+Close.Name = "Z_Close"
+Close.Position = UDim2.new(0.572000027, 0, 0.381000012, 0)
+Close.Size = UDim2.new(0.600000024, 0, 0.600000024, 0)
+
+local Round = Instance.new("UICorner", Close)
+
+Round.CornerRadius = UDim.new(0.449999988, 0)
+Round.Name = "Round"
+
+local Square = Instance.new("UIAspectRatioConstraint", Close)
+
+Square.AspectType = Enum.AspectType.ScaleWithParentSize
+Square.DominantAxis = Enum.DominantAxis.Height
+Square.Name = "Square"
+
+local Stroke = Instance.new("UIStroke", Close)
+
+Stroke.Color = Color3.new(1,1,1)
+Stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+Stroke.Thickness = 1
+Stroke.Name = "Stroke"
+Stroke.Transparency = 0.6
+
+local Minimize = Instance.new("ImageButton", Icons)
+
+Minimize.BackgroundColor3 = Color3.new(0.0666667, 0.0666667, 0.0666667)
+Minimize.BorderColor3 = Color3.new(0, 0, 0)
+Minimize.BorderSizePixel = 0
+Minimize.Image = "http://www.roblox.com/asset/?id=106216015154622"
+Minimize.Name = "Minimize"
+Minimize.Position = UDim2.new(0.548916817, 0, 0.380999982, 0)
+Minimize.Size = UDim2.new(0.600000024, 0, 0.600000024, 0)
+
+local Round = Instance.new("UICorner", Minimize)
+
+Round.CornerRadius = UDim.new(0.449999988, 0)
+Round.Name = "Round"
+
+local Square = Instance.new("UIAspectRatioConstraint", Minimize)
+
+Square.AspectType = Enum.AspectType.ScaleWithParentSize
+Square.DominantAxis = Enum.DominantAxis.Height
+Square.Name = "Square"
+
+local Stroke = Instance.new("UIStroke", Minimize)
+
+Stroke.Color = Color3.new(1,1,1)
+Stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+Stroke.Thickness = 1
+Stroke.Name = "Stroke"
+Stroke.Transparency = 0.6
+
+local Positioner = Instance.new("UIListLayout", Icons)
+
+Positioner.FillDirection = Enum.FillDirection.Horizontal
+Positioner.HorizontalAlignment = Enum.HorizontalAlignment.Right
+Positioner.Name = "Positioner"
+Positioner.Padding = UDim.new(0.00999999978, 0)
+Positioner.SortOrder = Enum.SortOrder.Name
+Positioner.VerticalAlignment = Enum.VerticalAlignment.Center
+
+local Main = Instance.new("Frame", Title)
+
+Main.BackgroundColor3 = Color3.new(0.0666667, 0.0666667, 0.0666667)
+Main.BorderColor3 = Color3.new(0, 0, 0)
+Main.BorderSizePixel = 0
+Main.Name = "Main"
+Main.Position = UDim2.new(-0.00401209854, 0, 1.28722835, 0)
+Main.Size = UDim2.new(4.42688322, 0, 0, 0)
+
+local Round = Instance.new("UICorner", Main)
+
+Round.CornerRadius = UDim.new(0.0500000007, 0)
+Round.Name = "Round"
+
+local Stroke = Instance.new("UIStroke", Main)
+
+Stroke.Color = Color3.new(1,1,1)
+Stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+Stroke.Thickness = 1
+Stroke.Name = "Stroke"
+Stroke.Transparency = 0.6
+
+local Tabs = Instance.new("ScrollingFrame", Main)
+
+Tabs.Active = true
+Tabs.BackgroundColor3 = Color3.new(1, 1, 1)
+Tabs.BackgroundTransparency = 0.9990000128746033
+Tabs.BorderColor3 = Color3.new(0, 0, 0)
+Tabs.BorderSizePixel = 0
+Tabs.BottomImage = "rbxassetid://12530016893"
+Tabs.CanvasSize = UDim2.new(0, 0, 0, 0)
+Tabs.MidImage = "rbxassetid://3648198826"
+Tabs.Name = "Tabs"
+Tabs.Position = UDim2.new(0.0143296216, 0, 0.0301172249, 0)
+Tabs.ScrollBarImageColor3 = Color3.new(1.96078, 1.96078, 1.96078)
+Tabs.ScrollBarThickness = 1
+Tabs.Size = UDim2.new(0.237545192, 0, 0.938999951, 0)
+Tabs.TopImage = "rbxassetid://12530018695"
+
+local Tab = Instance.new("TextButton", nil)
+
+Tab.BackgroundColor3 = Color3.new(0.219608, 0.219608, 0.219608)
+Tab.BackgroundTransparency = 0.5
+Tab.BorderColor3 = Color3.new(0, 0, 0)
+Tab.BorderSizePixel = 0
+Tab.Font = Enum.Font.TitilliumWeb
+Tab.Name = "Tab"
+Tab.Size = UDim2.new(0.93900001, 0, 0.100000001, 0)
+Tab.TextColor3 = Color3.new(1, 1, 1)
+Tab.TextScaled = true
+Tab.TextSize = 20
+Tab.TextWrapped = true
+Tab.TextXAlignment = Enum.TextXAlignment.Left
+
+local Round = Instance.new("UICorner", Tab)
+
+Round.CornerRadius = UDim.new(0.200000003, 0)
+Round.Name = "Round"
+
+local List = Instance.new("UIListLayout", Tabs)
+
+List.Name = "List"
+List.Padding = UDim.new(0, 4)
+List.SortOrder = Enum.SortOrder.LayoutOrder
+
+local Split = Instance.new("Frame", Main)
+
+Split.BackgroundColor3 = Color3.new(0.976471, 0.976471, 0.976471)
+Split.BackgroundTransparency = 0.4000000059604645
+Split.BorderColor3 = Color3.new(0, 0, 0)
+Split.BorderSizePixel = 0
+Split.Name = "Split"
+Split.Position = UDim2.new(0.25, 0, 0, 0)
+Split.Size = UDim2.new(0, 1, 1, 0)
+
+local CommandList = Instance.new("ScrollingFrame", Main)
+
+CommandList.Active = true
+CommandList.BackgroundColor3 = Color3.new(1, 1, 1)
+CommandList.BackgroundTransparency = 0.9990000128746033
+CommandList.BorderColor3 = Color3.new(0, 0, 0)
+CommandList.BorderSizePixel = 0
+CommandList.AutomaticCanvasSize = Enum.AutomaticSize.Y
+CommandList.BottomImage = "rbxassetid://12530016893"
+CommandList.CanvasSize = UDim2.new(0, 0, 0, 0)
+CommandList.MidImage = "rbxassetid://3648198826"
+CommandList.Name = "Commands"
+CommandList.Position = UDim2.new(0.251940966, 0, 0.0301172044, 0)
+CommandList.ScrollBarImageColor3 = Color3.new(1.96078, 1.96078, 1.96078)
+CommandList.ScrollBarThickness = 1
+CommandList.Size = UDim2.new(0.748058856, 0, 0.938999891, 0)
+CommandList.TopImage = "rbxassetid://12530018695"
+
+local List = Instance.new("UIListLayout", CommandList)
+
+List.HorizontalAlignment = Enum.HorizontalAlignment.Center
+List.Name = "List"
+List.Padding = UDim.new(0, 4)
+List.SortOrder = Enum.SortOrder.LayoutOrder
+
+local Text = Instance.new("TextLabel", nil)
+
+Text.BackgroundColor3 = Color3.new(1, 1, 1)
+Text.BackgroundTransparency = 1
+Text.BorderColor3 = Color3.new(0, 0, 0)
+Text.BorderSizePixel = 0
+Text.Font = Enum.Font.TitilliumWeb
+Text.Name = "Text"
+Text.Position = UDim2.new(0.0718515813, 0, -1.75866461e-07, 0)
+Text.Size = UDim2.new(0, 330, 0, 22)
+Text.Text = "Movement"
+Text.TextColor3 = Color3.new(1, 1, 1)
+Text.TextScaled = true
+Text.TextSize = 14
+Text.TextWrapped = true
+
+local CmdSplit = Instance.new("Frame", nil)
+
+CmdSplit.BackgroundColor3 = Color3.new(0.976471, 0.976471, 0.976471)
+CmdSplit.BackgroundTransparency = 0.4000000059604645
+CmdSplit.BorderColor3 = Color3.new(0, 0, 0)
+CmdSplit.BorderSizePixel = 0
+CmdSplit.Name = "Split"
+CmdSplit.Position = UDim2.new(0.25, 0, 0, 0)
+CmdSplit.Size = UDim2.new(1, 0, 0, 1)
+
+local Button = Instance.new("TextButton", nil)
+
+Button.AutoButtonColor = false
+Button.BackgroundColor3 = Color3.new(0, 0, 0)
+Button.BackgroundTransparency = 0.10000000149011612
+Button.BorderColor3 = Color3.new(0, 0, 0)
+Button.BorderSizePixel = 0
+Button.ClipsDescendants = true
+Button.Font = Enum.Font.TitilliumWeb
+Button.Name = "Button"
+Button.Position = UDim2.new(0.0945218951, 0, 0.119097643, 0)
+Button.Size = UDim2.new(0.878421962, 0, 0.0949999988, 0)
+Button.Text = "skibidi run part 2"
+Button.TextColor3 = Color3.new(1, 1, 1)
+Button.TextScaled = true
+Button.TextSize = 14
+Button.TextWrapped = true
+Button.TextXAlignment = Enum.TextXAlignment.Left
+
+local Round = Instance.new("UICorner", Button)
+
+Round.CornerRadius = UDim.new(0.400000006, 0)
+Round.Name = "Round"
+
+local Select = Instance.new("TextButton", nil)
+
+Select.AutoButtonColor = false
+Select.BackgroundColor3 = Color3.new(0, 0, 0)
+Select.BackgroundTransparency = 0.10000000149011612
+Select.BorderColor3 = Color3.new(0, 0, 0)
+Select.BorderSizePixel = 0
+Select.ClipsDescendants = true
+Select.Font = Enum.Font.TitilliumWeb
+Select.Name = "Select"
+Select.Position = UDim2.new(0.186595574, 0, 0.159805968, 0)
+Select.Size = UDim2.new(0.878000021, 0, 0.0949999988, 0)
+Select.Text = " test 2: cool version"
+Select.TextColor3 = Color3.new(1, 1, 1)
+Select.TextScaled = true
+Select.TextSize = 14
+Select.TextWrapped = true
+Select.TextXAlignment = Enum.TextXAlignment.Left
+
+local Option = Instance.new("TextLabel", Select)
+
+Option.BackgroundColor3 = Color3.new(1, 1, 1)
+Option.BackgroundTransparency = 1
+Option.BorderColor3 = Color3.new(0, 0, 0)
+Option.BorderSizePixel = 0
+Option.Font = Enum.Font.TitilliumWeb
+Option.Name = "Option"
+Option.Size = UDim2.new(0.980000019, 0, 1, 0)
+Option.Text = "cat"
+Option.TextColor3 = Color3.new(1, 1, 1)
+Option.TextScaled = true
+Option.TextSize = 14
+Option.TextStrokeTransparency = 0
+Option.TextWrapped = true
+Option.TextXAlignment = Enum.TextXAlignment.Right
+
+local Round = Instance.new("UICorner", Select)
+
+Round.CornerRadius = UDim.new(0.400000006, 0)
+Round.Name = "Round"
+
+local Metre = Instance.new("TextButton", nil)
+
+Metre.AutoButtonColor = false
+Metre.BackgroundColor3 = Color3.new(0, 0, 0)
+Metre.BackgroundTransparency = 0.5
+Metre.BorderColor3 = Color3.new(0, 0, 0)
+Metre.BorderSizePixel = 0
+Metre.ClipsDescendants = true
+Metre.Font = Enum.Font.TitilliumWeb
+Metre.Name = "Metre"
+Metre.Position = UDim2.new(0.186595574, 0, 0.159805968, 0)
+Metre.Size = UDim2.new(0.878000021, 0, 0.0949999988, 0)
+Metre.Text = " ooo look it can do stuff"
+Metre.TextColor3 = Color3.new(1, 1, 1)
+Metre.TextScaled = true
+Metre.TextSize = 14
+Metre.TextWrapped = true
+Metre.TextXAlignment = Enum.TextXAlignment.Left
+
+local Round = Instance.new("UICorner", Metre)
+
+Round.CornerRadius = UDim.new(0.400000006, 0)
+Round.Name = "Round"
+
+local Editor = Instance.new("TextBox", Metre)
+
+Editor.BackgroundColor3 = Color3.new(1, 1, 1)
+Editor.BackgroundTransparency = 1
+Editor.BorderColor3 = Color3.new(0, 0, 0)
+Editor.BorderSizePixel = 0
+Editor.Font = Enum.Font.TitilliumWeb
+Editor.Name = "Editor"
+Editor.Position = UDim2.new(0.637437284, 0, 0, 0)
+Editor.Size = UDim2.new(0.341437548, 0, 1, 0)
+Editor.Text = "0"
+Editor.TextColor3 = Color3.new(1, 1, 1)
+Editor.TextScaled = true
+Editor.TextSize = 14
+Editor.TextStrokeTransparency = 0
+Editor.TextWrapped = true
+Editor.TextXAlignment = Enum.TextXAlignment.Right
+
+local Bar = Instance.new("Frame", Metre)
+
+Bar.BackgroundColor3 = Color3.new(1, 1, 1)
+Bar.BackgroundTransparency = 0.800000011920929
+Bar.BorderColor3 = Color3.new(0, 0, 0)
+Bar.BorderSizePixel = 0
+Bar.Name = "Bar"
+Bar.Size = UDim2.new(0, 0, 1, 0)
+
+local Round = Instance.new("UICorner", Bar)
+
+Round.CornerRadius = UDim.new(0.400000006, 0)
+Round.Name = "Round"
+
+local Toggle = Instance.new("TextButton", nil)
+
+Toggle.AutoButtonColor = false
+Toggle.BackgroundColor3 = Color3.new(0, 0, 0)
+Toggle.BackgroundTransparency = 0.5
+Toggle.BorderColor3 = Color3.new(0, 0, 0)
+Toggle.BorderSizePixel = 0
+Toggle.ClipsDescendants = true
+Toggle.Font = Enum.Font.TitilliumWeb
+Toggle.Name = "Toggle"
+Toggle.Position = UDim2.new(0.186595574, 0, 0.159805968, 0)
+Toggle.Size = UDim2.new(0.878000021, 0, 0.0949999988, 0)
+Toggle.Text = " test"
+Toggle.TextColor3 = Color3.new(1, 1, 1)
+Toggle.TextScaled = true
+Toggle.TextSize = 14
+Toggle.TextWrapped = true
+Toggle.TextXAlignment = Enum.TextXAlignment.Left
+
+local Round = Instance.new("UICorner", Toggle)
+
+Round.CornerRadius = UDim.new(0.400000006, 0)
+Round.Name = "Round"
+
+local Popup = Instance.new("Frame", UI)
+
+Popup.BackgroundColor3 = Color3.new(0.0666667, 0.0666667, 0.0666667)
+Popup.BorderColor3 = Color3.new(0, 0, 0)
+Popup.BorderSizePixel = 0
+Popup.Name = "Popup"
+Popup.Position = UDim2.new(-0.3, 0, 0.855000019, 0)
+Popup.Size = UDim2.new(0.3, 0, 0.130295694, 0)
+
+local PopupTitle = Instance.new("TextLabel", Popup)
+
+PopupTitle.BackgroundColor3 = Color3.new(1, 1, 1)
+PopupTitle.BackgroundTransparency = 1
+PopupTitle.BorderColor3 = Color3.new(0, 0, 0)
+PopupTitle.BorderSizePixel = 0
+PopupTitle.Font = Enum.Font.TitilliumWeb
+PopupTitle.Name = "Title"
+PopupTitle.Position = UDim2.new(0, 0, 1.41735472e-06, 0)
+PopupTitle.Size = UDim2.new(1.00090456, 0, 0.358995974, 0)
+PopupTitle.Text = "3Hax (12453105707)"
+PopupTitle.TextColor3 = Color3.new(1, 1, 1)
+PopupTitle.TextScaled = true
+PopupTitle.TextSize = 14
+PopupTitle.TextStrokeTransparency = 0
+PopupTitle.TextWrapped = true
+
+local Split = Instance.new("Frame", Popup)
+
+Split.BackgroundColor3 = Color3.new(0.976471, 0.976471, 0.976471)
+Split.BackgroundTransparency = 0.4000000059604645
+Split.BorderColor3 = Color3.new(0, 0, 0)
+Split.BorderSizePixel = 0
+Split.Name = "Split"
+Split.Position = UDim2.new(0.773999989, 0, 0.319999725, 0)
+Split.Size = UDim2.new(0, 1, 0.680000186, 0)
+
+local PopupDescription = Instance.new("TextLabel", Popup)
+
+PopupDescription.BackgroundColor3 = Color3.new(1, 1, 1)
+PopupDescription.BackgroundTransparency = 1
+PopupDescription.BorderColor3 = Color3.new(0, 0, 0)
+PopupDescription.BorderSizePixel = 0
+PopupDescription.Font = Enum.Font.TitilliumWeb
+PopupDescription.Name = "Description"
+PopupDescription.Position = UDim2.new(0.0154983485, 0, 0.319999725, 0)
+PopupDescription.Size = UDim2.new(0.741065979, 0, 0.680002868, 0)
+PopupDescription.Text = "This game is not yet hacked. Click to join one of the hacked games, Then run this command again."
+PopupDescription.TextColor3 = Color3.new(1, 1, 1)
+PopupDescription.TextScaled = true
+PopupDescription.TextSize = 14
+PopupDescription.TextStrokeTransparency = 0
+PopupDescription.TextWrapped = true
+
+local OkButton = Instance.new("TextButton", Popup)
+
+OkButton.BackgroundColor3 = Color3.new(0, 0, 0)
+OkButton.BackgroundTransparency = 0.10000000149011612
+OkButton.BorderColor3 = Color3.new(0, 0, 0)
+OkButton.BorderSizePixel = 0
+OkButton.Font = Enum.Font.TitilliumWeb
+OkButton.Name = "Button"
+OkButton.Position = UDim2.new(0.789125383, 0, 0.451885283, 0)
+OkButton.Size = UDim2.new(0.191059247, 0, 0.398969531, 0)
+OkButton.TextColor3 = Color3.new(1, 1, 1)
+OkButton.TextScaled = true
+OkButton.TextSize = 14
+OkButton.TextWrapped = true
+
+local Round = Instance.new("UICorner", OkButton)
+
+Round.CornerRadius = UDim.new(0.300000012, 0)
+Round.Name = "Round"
+
+local Round = Instance.new("UICorner", Popup)
+
+Round.CornerRadius = UDim.new(0.200000003, 0)
+Round.Name = "Round"
+
+local Stroke = Instance.new("UIStroke", Popup)
+
+Stroke.Color = Color3.new(1,1,1)
+Stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+Stroke.Thickness = 1
+Stroke.Transparency = 0.6
+Stroke.Name = "Stroke"
+
+local Split = Instance.new("Frame", Popup)
+
+Split.BackgroundColor3 = Color3.new(0.976471, 0.976471, 0.976471)
+Split.BackgroundTransparency = 0.4000000059604645
+Split.BorderColor3 = Color3.new(0, 0, 0)
+Split.BorderSizePixel = 0
+Split.Name = "Split"
+Split.Position = UDim2.new(0, 0, 0.319999725, 0)
+Split.Size = UDim2.new(1, 0, 0, 1)
+
+local Description = Instance.new("Frame", UI)
+
+Description.BackgroundColor3 = Color3.new(0.0666667, 0.0666667, 0.0666667)
+Description.BackgroundTransparency = 0.30000001192092896
+Description.BorderColor3 = Color3.new(0, 0, 0)
+Description.BorderSizePixel = 0
+Description.Name = "Description"
+Description.Position = UDim2.new(0.313272864, 0, 0.143721685, 0)
+Description.Size = UDim2.new(0.178558603, 0, 0.186775699, 0)
+Description.Visible = false
+
+local Desc = Instance.new("TextLabel", Description)
+
+Desc.BackgroundColor3 = Color3.new(1, 1, 1)
+Desc.BackgroundTransparency = 1
+Desc.BorderColor3 = Color3.new(0, 0, 0)
+Desc.BorderSizePixel = 0
+Desc.Font = Enum.Font.TitilliumWeb
+Desc.Name = "Desc"
+Desc.Size = UDim2.new(1, 0, 0.999998569, 0)
+Desc.Text = "Coin farming is abit buggy, but everything else is really good. Theres even a fake knife to make the sheriff shoot you, get the gun then kill the murderer!"
+Desc.TextColor3 = Color3.new(1, 1, 1)
+Desc.TextScaled = true
+Desc.TextSize = 14
+Desc.TextStrokeTransparency = 0
+Desc.TextWrapped = true
+
+local Round = Instance.new("UICorner", Description)
+
+Round.CornerRadius = UDim.new(0.100000001, 0)
+Round.Name = "Round"
+
+local Stroke = Instance.new("UIStroke", Description)
+
+Stroke.Color = Color3.new(1,1,1)
+Stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+Stroke.Thickness = 1
+Stroke.Transparency = 0.6
+Stroke.Name = "Stroke"
+
+-- Functions
+
+function Sound(Parent,Id,Pitch)
+
+	local Sound = Instance.new("Sound")
+
+	if type(Parent) == "userdata" then
+
+		Sound.Parent = Parent
+
+	end
+
+	if type(Parent) == "vector" then
+
+		local Part = Instance.new("Part",game.Workspace)
+		Part.Transparency = 1
+		Part.Anchored = true
+		Part.Position = Parent
+		Part.Size = Vector3.new(0.01,0.01,0.01)
+		Sound.Parent = Part
+
+		Sound.Ended:Connect(function() wait(0.5) Part:Destroy()  end)
+
+	end
+
+	Sound.SoundId = "rbxassetid://" .. Id
+
+	if Pitch == nil then
+
+		Sound.PlaybackSpeed = 1
+
+	end
+
+	if Pitch == "random" then
+
+		Sound.PlaybackSpeed = math.random(90,110) / 100
+
+	else
+
+		Sound.PlaybackSpeed = Pitch
+
+	end
+
+	Sound:Play()
+
+	Sound.Ended:Connect(function() wait(0.5) Sound:Destroy()  end)
+
+end
+
+function ShowPopup(TitleText: string,DescriptionText: string,ButtonText: string)
+
+	if Popup:HasTag("Open") then
+
+		game.TweenService:Create(Popup,TweenInfo.new(0.2),{Position = UDim2.new(0.01, 0,1.1, 0)}):Play()
+		wait(0.2)
+
+	end
+
+	Popup.Position = UDim2.new(-0.264, 0,0.748, 0)
+
+	Popup:AddTag("Open")
+
+	Sound(game.Workspace,"3398620867",1)
+
+	OkButton.Text = ButtonText
+
+	PopupDescription.Text = DescriptionText
+
+	PopupTitle.Text = TitleText
+
+	game.TweenService:Create(Popup,TweenInfo.new(0.3),{Position = UDim2.new(0.01, 0,0.855, 0)}):Play()
+
+	OkButton.MouseButton1Down:Once(function()
+
+		Popup:RemoveTag("Open")
+		game.TweenService:Create(Popup,TweenInfo.new(0.3),{Position = UDim2.new(-0.3, 0,0.855, 0)}):Play()
+
+	end)
+
+end
+
+function Drag()
+
+	local Input = game.UserInputService
+	local Mouse = game.Players.LocalPlayer:GetMouse()
+	local RunService = game:GetService("RunService")
+	local Dragged = Title
+	local TweenService = game:GetService("TweenService")
+	local GuiService = game:GetService("GuiService")
+	local Camera = workspace.CurrentCamera
+
+	local Hovering = false
+	local Dragging = false
+	local Offset = Vector2.new(0, 0)
+	local Velocity = Vector2.new(0, 0)
+	local LastMousePos = nil
+	local LastTime = tick()
+	local Flinging = false
+	local ActiveTween = nil
+
+	Dragged.MouseEnter:Connect(function()
+		Hovering = true
+	end)
+
+	Dragged.MouseLeave:Connect(function()
+		Hovering = false
+	end)
+
+	Input.InputBegan:Connect(function(InputObject)
+		if InputObject.UserInputType == Enum.UserInputType.MouseButton1 and Hovering then
+			if ActiveTween then
+				ActiveTween:Cancel()
+			end
+
+			Dragging = true
+			Flinging = false
+			Offset = Vector2.new(Mouse.X - Dragged.AbsolutePosition.X, Mouse.Y - Dragged.AbsolutePosition.Y)
+			LastMousePos = Vector2.new(Mouse.X, Mouse.Y)
+			LastTime = tick()
+
+			while Dragging do
+				wait()
+				local MousePos = Vector2.new(Mouse.X, Mouse.Y)
+				local Delta = MousePos - LastMousePos
+				local Now = tick()
+				local Dt = Now - LastTime
+				LastTime = Now
+				LastMousePos = MousePos
+				Velocity = Delta / Dt
+
+				local TargetPos = Vector2.new(Mouse.X - Offset.X, Mouse.Y - Offset.Y + GuiService:GetGuiInset().Y)
+				if ActiveTween then
+					ActiveTween:Cancel()
+				end
+				ActiveTween = TweenService:Create(Dragged, TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+					Position = UDim2.new(0, TargetPos.X, 0, TargetPos.Y)
+				})
+				ActiveTween:Play()
+			end
+
+			if ActiveTween then
+				ActiveTween:Cancel()
+			end
+
+			local CurrentPos = Vector2.new(Dragged.Position.X.Offset, Dragged.Position.Y.Offset)
+			local ScreenSize = Camera.ViewportSize
+			Flinging = true
+
+			local flingLoop
+			flingLoop = RunService.RenderStepped:Connect(function(dt)
+				if not Flinging then
+					flingLoop:Disconnect()
+					return
+				end
+
+				CurrentPos += Velocity * dt
+				Dragged.Position = UDim2.new(0, CurrentPos.X, 0, CurrentPos.Y)
+
+				if CurrentPos.X <= 0 or CurrentPos.X + Dragged.AbsoluteSize.X >= ScreenSize.X then
+					Velocity = Vector2.new(-Velocity.X, Velocity.Y) * 0.7
+					CurrentPos = Vector2.new(math.clamp(CurrentPos.X, 0, ScreenSize.X - Dragged.AbsoluteSize.X), CurrentPos.Y)
+				end
+
+				if CurrentPos.Y <= 0 or CurrentPos.Y + Dragged.AbsoluteSize.Y >= ScreenSize.Y then
+					Velocity = Vector2.new(Velocity.X, -Velocity.Y) * 0.7
+					CurrentPos = Vector2.new(CurrentPos.X, math.clamp(CurrentPos.Y, 0, ScreenSize.Y - Dragged.AbsoluteSize.Y))
+				end
+
+				Velocity *= 0.95
+
+				if Velocity.Magnitude < 5 then
+					Flinging = false
+					flingLoop:Disconnect()
+				end
+			end)
+		end
+	end)
+
+	Input.InputEnded:Connect(function(InputObject)
+		if InputObject.UserInputType == Enum.UserInputType.MouseButton1 then
+			Dragging = false
+		end
+	end)
+
+
+end
+
+-- Variables
+
+local UIS = game:GetService("UserInputService")
+local Plr = game.Players.LocalPlayer
+local Mouse = Plr:GetMouse()
+local ID = game.PlaceId
+local Commands = {}
+local Minimized = false
+local Closed = false
+
+-- Appear
+
+spawn(function()
+
+	wait(0.5)
+	game.TweenService:Create(Title,TweenInfo.new(0.5),{Size = UDim2.new(0.077, 0,0.023, 0)}):Play()
+	wait(0.25)
+	game.TweenService:Create(Main,TweenInfo.new(0.5),{Size = UDim2.new(4.42688322, 0, 12.5999622, 0)}):Play()
+
+end)
+
+Drag()
+
+-- Buttons
+
+Minimize.MouseButton1Down:Connect(function()
+
+	Minimized = not Minimized
+
+	if Minimized then
+
+		game.TweenService:Create(Main,TweenInfo.new(0.5),{Size = UDim2.new(4.42688322, 0, 0, 0)}):Play()
+
+	else
+
+		game.TweenService:Create(Main,TweenInfo.new(0.5),{Size = UDim2.new(4.42688322, 0, 12.5999622, 0)}):Play()
+
+	end
+
+end)
+
+Close.MouseButton1Down:Connect(function()
+
+	Close.Interactable = false
+	Closed = true
+	
+	game.TweenService:Create(Title,TweenInfo.new(0.5),{Size = UDim2.new(0.077, 0,0, 0)}):Play()
+	wait(0.5)
+	UI:Destroy()
+
+end)
+
+UI.Destroying:Connect(function()
+	
+	Closed = true
+	
+end)
+
+-- Commands
+
+function LoadCommands()
+
+	for _, Tab in Tabs:GetChildren() do
+		
+		if Tab:IsA("TextButton") then
+			
+			Tab:Destroy()
+			
+		end
+		
+	end
+	
+	for _, Command in Commands do
+
+		if Command.Name then
+
+			Command.Name = " " .. Command.Name
+
+		end
+
+		if Command.Type == "Button" then
+
+			local Clone = Button:Clone()
+
+			local Round = Instance.new("UICorner",Clone)
+
+			Round.CornerRadius = UDim.new(0.4, 0)
+
+			Clone.Parent = CommandList
+
+			Clone.Text = Command.Name
+
+			Clone.MouseEnter:Connect(function()
+
+				Description.Visible = true
+				Desc.Text = Command.Desc
+				game.TweenService:Create(Clone,TweenInfo.new(0.2),{BackgroundColor3 = Color3.fromRGB(83, 83, 83)}):Play()
+
+			end)
+
+			Clone.MouseLeave:Connect(function()
+
+				Description.Visible = false
+				game.TweenService:Create(Clone,TweenInfo.new(0.2),{BackgroundColor3 = Color3.fromRGB(0,0,0)}):Play()
+
+			end)
+
+			Clone.MouseButton1Up:Connect(function()
+
+				local Circle = Instance.new("ImageLabel",Clone)
+				Circle.Size = UDim2.new(0,0,0,0)
+				Circle.AnchorPoint = Vector2.new(0.5,0.5)
+				Circle.ZIndex = 7
+				Circle.BackgroundTransparency = 1
+				Circle.Image = "http://www.roblox.com/asset/?id=6430908053"
+				Circle.BackgroundColor3 = Color3.new(1,1,1)
+				Circle.Position = UDim2.new(0, Mouse.X - Clone.AbsolutePosition.X, 0, Mouse.Y - Clone.AbsolutePosition.Y)
+
+				local Square = Instance.new("UIAspectRatioConstraint",Circle)
+				Square.DominantAxis = Enum.DominantAxis.Width
+
+				game.TweenService:Create(Circle,TweenInfo.new(1),{Size = UDim2.new(0, Clone.AbsoluteSize.X * 10, 0, Clone.AbsoluteSize.Y * 10),ImageTransparency = 1}):Play()
+
+				wait(1)
+
+				Circle:Destroy()
+
+			end)
+
+			Clone.MouseButton1Click:Connect(function()
+
+				Command.Action()
+
+			end)
+
+		end
+
+		if Command.Type == "Select" then
+
+			local Clone = Select:Clone()
+
+			Clone.Parent = CommandList
+
+			Clone.Text = Command.Name
+
+			local Options = Command.Options
+			local Pos = 1
+
+			Clone.Option.Text = Options[Pos]
+
+			Clone.MouseEnter:Connect(function()
+
+				Description.Visible = true
+				Desc.Text = Command.Desc
+				game.TweenService:Create(Clone,TweenInfo.new(0.2),{BackgroundColor3 = Color3.fromRGB(35, 35, 35)}):Play()
+
+			end)
+
+			Clone.MouseLeave:Connect(function()
+
+				Description.Visible = false
+				game.TweenService:Create(Clone,TweenInfo.new(0.2),{BackgroundColor3 = Color3.fromRGB(0,0,0)}):Play()
+
+			end)
+
+			Clone.MouseButton1Down:Connect(function()
+
+				game.TweenService:Create(Clone,TweenInfo.new(0.1,Enum.EasingStyle.Sine,Enum.EasingDirection.Out),{BackgroundColor3 = Color3.new(0.4, 0.4, 0.4)}):Play()
+
+			end)
+
+			Clone.MouseButton1Up:Connect(function()
+
+				game.TweenService:Create(Clone,TweenInfo.new(0.1),{BackgroundColor3 = Color3.fromRGB(35, 35, 35)}):Play()
+
+			end)
+
+			Clone.MouseButton1Click:Connect(function()
+
+				Pos += 1
+
+				if Pos == #Options + 1 then
+
+					Pos = 1
+
+				end
+
+				local Value1 = tonumber(#tostring(Clone.Option.Text))
+
+				Clone.Option.MaxVisibleGraphemes = #Clone.Option.Text
+
+				game.TweenService:Create(Clone.Option,TweenInfo.new(0.1,Enum.EasingStyle.Sine,Enum.EasingDirection.In),{MaxVisibleGraphemes = 0}):Play()
+
+				wait(0.1)
+
+				Clone.Option.Text = Options[Pos]
+
+				Clone.Option.MaxVisibleGraphemes = 0
+
+				game.TweenService:Create(Clone.Option,TweenInfo.new(0.1,Enum.EasingStyle.Sine,Enum.EasingDirection.Out),{MaxVisibleGraphemes = #Clone.Option.Text}):Play()
+
+				Command.Action(Options[Pos])
+
+			end)
+
+		end
+
+		if Command.Type == "Toggle" then
+
+			local Clone = Toggle:Clone()
+
+			local On = false
+
+			local Round = Instance.new("UICorner",Clone)
+
+			Round.CornerRadius = UDim.new(0.4, 0)
+
+			Clone.Parent = CommandList
+
+			Clone.Text = Command.Name
+
+			local SelectStroke = Instance.new("UIStroke",Clone)
+
+			SelectStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+			SelectStroke.Color = Color3.new(1,1,1)
+			SelectStroke.Thickness = 0
+
+			Clone.MouseEnter:Connect(function()
+
+				Description.Visible = true
+				Desc.Text = Command.Desc
+				game.TweenService:Create(Clone,TweenInfo.new(0.2),{BackgroundColor3 = Color3.fromRGB(150,150,150)}):Play()
+
+			end)
+
+			Clone.MouseLeave:Connect(function()
+
+				Description.Visible = false
+				game.TweenService:Create(Clone,TweenInfo.new(0.2),{BackgroundColor3 = Color3.fromRGB(0,0,0)}):Play()
+
+			end)
+
+			Clone.MouseButton1Down:Connect(function()
+
+				On = not On
+
+				Command.Action(On)
+
+				if not On then
+
+					game.TweenService:Create(SelectStroke,TweenInfo.new(0.3,Enum.EasingStyle.Sine,Enum.EasingDirection.Out),{Thickness = 0}):Play()
+
+				end
+
+				if On then
+
+					game.TweenService:Create(SelectStroke,TweenInfo.new(0.3,Enum.EasingStyle.Sine,Enum.EasingDirection.Out),{Thickness = 2}):Play()
+
+				end
+
+			end)
+
+		end
+
+		if Command.Type == "Split" then
+
+			local Clone = CmdSplit:Clone()
+
+			Clone.Parent = CommandList
+
+		end
+
+		if Command.Type == "Title" then
+
+			local Clone = Text:Clone()
+			Clone.Parent = CommandList
+			Clone.Text = Command.Text
+
+			local Goto = Tab:Clone()
+			Goto.Parent = Tabs
+			Goto.Text = Command.Text
+
+			Goto.MouseButton1Down:Connect(function()
+
+				Clone.Name = "Chosen"
+
+				local Simulation = CommandList:Clone()
+
+				Simulation.Parent = Main
+				Simulation.Visible = false
+
+				Simulation.CanvasPosition = Vector2.new(0,0)
+				Simulation.CanvasPosition = Vector2.new(0, Simulation.Chosen.AbsolutePosition.Y - Simulation.AbsolutePosition.Y)
+
+				Clone.Name = "Text"
+				game.TweenService:Create(CommandList,TweenInfo.new(0.5,Enum.EasingStyle.Sine,Enum.EasingDirection.InOut),{CanvasPosition = Simulation.CanvasPosition}):Play()
+
+				Simulation:Destroy()
+
+			end)
+
+		end
+
+		if Command.Type == "Metre" then
+
+			local Down = false
+
+			local function Convert(Scale)
+				local ViewPortSize = workspace.Camera.ViewportSize
+				return (ViewPortSize.X * Scale)
+			end
+
+			local Value = Command.Default
+
+			local Clone = Metre:Clone()
+			Clone.Parent = CommandList
+			Clone.Text = Command.Name
+
+			local BarValue = (Value - Command.Min) / (Command.Min - Command.Max)
+
+			BarValue = math.clamp(-BarValue,0,1)
+
+			Clone.Bar.Size = UDim2.new(BarValue,0,1,0)
+
+			Clone.Editor.Text = Value
+
+			local Mouse = game.Players.LocalPlayer:GetMouse()
+
+			Clone.MouseEnter:Connect(function()
+
+				Description.Visible = true
+				Desc.Text = Command.Desc
+
+			end)
+
+			Clone.MouseLeave:Connect(function()
+
+				Description.Visible = false
+
+			end)
+
+			Clone.MouseButton1Down:Connect(function()
+
+				Down = true
+				repeat
+
+					wait(0.01)
+
+					Value = ((Mouse.X - Clone.AbsolutePosition.X) / Clone.AbsoluteSize.X) * Command.Max
+
+					Value = math.clamp(Value,Command.Min,Command.Max)
+
+					local BarValue = (Value - Command.Min) / (Command.Min - Command.Max) 
+
+					Clone.Bar.Size = UDim2.new(-BarValue,0,1,0)
+
+				until not Down
+
+			end)
+
+			Clone.Editor.FocusLost:Connect(function()
+
+				if tonumber(Clone.Editor.Text) ~= nil then
+
+					Value = tonumber(Clone.Editor.Text)
+
+					Clone.Editor.Text = string.sub(tostring(Value),0,#tostring(math.round(Value)) + 3)
+
+					Command.Action(string.sub(tostring(Value),0,#tostring(math.round(Value)) + 3))
+
+					local BarValue = (Value - Command.Min) / (Command.Min - Command.Max)
+
+					BarValue = math.clamp(-BarValue,0,1)
+
+					Clone.Bar.Size = UDim2.new(math.random(0,100) / 100,0,1,0)
+
+					Clone.Bar.Size = UDim2.new(BarValue,0,1,0)
+
+				else
+
+					Clone.Editor.Text = Value
+
+				end
+
+			end)
+
+			Clone.Bar.Changed:Connect(function(Property)
+
+				if Property == "Size" then
+
+					Clone.Editor.Text = string.sub(tostring(Value),0,#tostring(math.round(Value)) + 3)
+					Command.Action(string.sub(tostring(Value),0,#tostring(math.round(Value)) + 3))
+
+				end
+
+			end)
+
+			game:GetService("UserInputService").InputEnded:Connect(function(Input)
+
+				if Input.UserInputType == Enum.UserInputType.MouseButton1 then
+
+					Down = false
+
+				end
+
+			end)
+
+		end
+
+	end
+
+	local Frame = Instance.new("Frame",CommandList)
+
+	Frame.Transparency = 1
+	Frame.Size = UDim2.new(0.01,0,0.89,0)
+	Frame.Name = "Filler"
+
+end
+
+local Games = {
+
+	["142823291"] = function ()
+
+		local Gun = false
+		local Coins = false
+		local Stab = false
+		local Loop = nil
+		local MovePos = nil
+		local Roles = false
+		local GunShow = false
+		local CoinReach = false
+		local MurderAll = false
+
+		local Found = nil
+
+		local Best = math.huge
+
+		Commands = {
+
+			{
+
+				Type = "Title",
+				Text = "Visual"
+
+			},
+
+			{
+
+				Type = "Split",
+
+			},	
+
+			{
+
+				Name = "Show Roles",
+				Type = "Toggle",
+				Desc = "Shows you the roles of everybody",
+				Action = function(On)
+
+					if On then
+
+						Roles = true
+
+						spawn(function()
+
+							while Roles do
+
+								for _, Thing in game.Players:GetPlayers() do
+
+									local Highlight = Instance.new("Highlight",Thing.Character)
+
+									Highlight.FillTransparency = 1
+
+									Highlight.OutlineColor = Color3.new(1,1,1)
+
+									if not Thing.Character then
+
+										continue
+
+									end
+
+									if Thing.Backpack:FindFirstChild("Knife") or Thing.Character:FindFirstChild("Knife") then
+
+										Highlight.OutlineColor = Color3.new(1,0,0)
+
+									end
+
+									if Thing.Backpack:FindFirstChild("Gun") or Thing.Character:FindFirstChild("Gun") then
+
+										Highlight.OutlineColor = Color3.new(0,0,1)
+
+									end
+
+									wait(0.01)
+
+									if Thing.Character and Thing.Character:FindFirstChild("PlayerHighlightType") then
+
+										Thing.Character:FindFirstChild("PlayerHighlightType"):Destroy()
+
+									end
+
+									Highlight.Name = "PlayerHighlightType"
+
+								end
+
+								wait(0.5)
+
+							end
+
+						end)
+
+					else
+
+						Roles = false
+
+						spawn(function()
+
+							for _, Thing in game.Players:GetPlayers() do
+
+								if Thing.Character:FindFirstChild("PlayerHighlightType") then
+
+									Thing.Character:FindFirstChild("PlayerHighlightType"):Destroy()
+
+								end
+
+							end
+
+						end)
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Name = "Show Gun",
+				Type = "Toggle",
+				Desc = "Shows you where the gun is (If dropped)",
+				Action = function(On)
+
+					if On then
+
+						GunShow = true
+
+						spawn(function()
+
+							while GunShow do
+
+								for _, Thing in game.Workspace:GetDescendants() do
+
+									if Thing.Name == "GunDrop" and Thing:IsA("BasePart") and not Thing:FindFirstChild("GunHighlight") then
+
+										local Highlight = Instance.new("Highlight",Thing)
+
+										Highlight.FillTransparency = 1
+
+										Highlight.OutlineColor = Color3.new(1,1,0)
+
+										Highlight.Name = "GunHighlight"
+
+									end
+
+								end
+
+								wait(0.5)
+
+							end
+
+						end)
+
+					else
+
+						GunShow = false
+
+						spawn(function()
+
+							for _, Thing in game.Players:GetPlayers() do
+
+								if Thing.Character:FindFirstChild("PlayerHighlightType") then
+
+									Thing.Character:FindFirstChild("PlayerHighlightType"):Destroy()
+
+								end
+
+							end
+
+						end)
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Name = "Fake Knife",
+				Type = "Button",
+				Desc = "Gives you an item to make it look like your holding a knife.",
+				Action = function(On)
+
+					local FakeKnife = Instance.new("Tool", Plr.Backpack)
+
+					FakeKnife.CanBeDropped = false
+					FakeKnife.Name = "Knife?"
+					FakeKnife.TextureId = "rbxassetid://13298102229"
+					FakeKnife.ToolTip = 'Click to "Swing"'
+
+					local Handle = Instance.new("Part", FakeKnife)
+
+					Handle.CanCollide = false
+					Handle.Name = "Handle"
+					Handle.Size = Vector3.new(0.001, 0.001, 0.001)
+					Handle.Transparency = 1
+
+					FakeKnife.Activated:Connect(function()
+
+						local Animation = Instance.new("Animation",Plr.Character)
+						Animation.Name = "FakeSwing"
+
+						if math.random(1,2) == 1 then
+
+							Animation.AnimationId = "rbxassetid://1957890538"
+
+						else
+
+							Animation.AnimationId = "rbxassetid://2467567750"
+
+						end
+
+						local Track = Plr.Character.Humanoid:LoadAnimation(Animation)
+
+						Track:Play()
+
+						FakeKnife.Enabled = false
+
+						wait(1)
+
+						FakeKnife.Enabled = true
+
+					end)
+
+				end,
+
+			},
+
+			{
+
+				Type = "Title",
+				Text = "Teleport"
+
+			},
+
+			{
+
+				Type = "Split",
+
+			},	
+
+			{
+
+				Name = "To Innocent",
+				Type = "Button",
+				Desc = "Teleport to an innocent.",
+				Action = function(On)
+
+					local Inno = nil
+
+					for _, Thing in game.Players:GetPlayers() do
+
+						if Thing and Thing.Backpack:FindFirstChild("Gun") or Thing and Thing.Character:FindFirstChild("Gun") then
+
+							continue
+
+						end
+
+						if Thing and Thing.Backpack:FindFirstChild("Knife") or Thing and Thing.Character:FindFirstChild("Knife") then
+
+							continue
+
+						end
+
+						Inno = Thing
+
+					end
+
+					if Inno == nil then
+
+						ShowPopup("Teleport","The round hasnt started yet or people haven't got their items.","Ok")
+
+					else
+
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Inno.Character.HumanoidRootPart.CFrame
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Name = "To Sheriff",
+				Type = "Button",
+				Desc = "Teleport to the sheriff.",
+				Action = function(On)
+
+					local Sheriff = nil
+
+					for _, Thing in game.Players:GetPlayers() do
+
+						if Thing and  Thing.Backpack:FindFirstChild("Gun") or Thing and Thing.Character:FindFirstChild("Gun") then
+
+							Sheriff = Thing
+
+						end
+
+					end
+
+					if Sheriff == nil then
+
+						ShowPopup("Teleport","There is no sheriff right now.","Ok")
+
+					else
+
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Sheriff.Character.HumanoidRootPart.CFrame
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Name = "To Murderer",
+				Type = "Button",
+				Desc = "Teleport to the murderer.",
+				Action = function(On)
+
+					local Murderer = nil
+
+					for _, Thing in game.Players:GetPlayers() do
+
+						if Thing.Backpack:FindFirstChild("Knife") or Thing.Character:FindFirstChild("Knife") then
+
+							Murderer = Thing
+
+						end
+
+					end
+
+					if Murderer == nil then
+
+						ShowPopup("Teleport","There is no murderer yet.","Ok")
+
+					else
+
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Murderer.Character.HumanoidRootPart.CFrame
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Name = "To Lobby",
+				Type = "Button",
+				Desc = "Goto the lobby. Good for afking.",
+				Action = function(On)
+
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-107.900009, 146.830475, 22.3888321, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+
+				end,
+
+			},
+
+			{
+
+				Name = "Auto Sheriff Gun",
+				Type = "Toggle",
+				Desc = "Automatically teleport to the gun when its dropped.",
+				Action = function(On)
+
+					if On then
+
+						Gun = true
+
+						spawn(function()
+
+							while Gun do
+
+								task.wait(1)
+
+								for _, Thing in game.Workspace:GetDescendants() do
+
+									if Thing.Name == "GunDrop" and Thing:IsA("BasePart") then
+
+										if Plr.Character then
+
+											Plr.Character.HumanoidRootPart.CFrame = Thing.CFrame
+
+										end
+
+									end
+
+								end
+
+							end
+
+						end)
+
+					else
+
+						Gun = false
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Type = "Title",
+				Text = "Farming"
+
+			},
+
+			{
+
+				Type = "Split",
+
+			},
+
+			{
+
+				Name = "Get Coins",
+				Type = "Toggle",
+				Desc = "Automatically tween to every coin.",
+				Action = function(On)
+
+					if On then
+
+						local Checked = false
+
+						Coins = true
+
+						local Move = Instance.new("BodyVelocity",Plr.Character.HumanoidRootPart)
+
+						Move.Velocity = Vector3.new(0,0,0)
+
+						local function NoclipLoop()
+
+							if Plr.Character.Humanoid then
+
+								Plr.Character.Humanoid.Sit = true
+
+							end
+							for _, Limb in Plr.Character:GetDescendants() do
+								if Limb:IsA("BasePart") and Limb.CanCollide == true then
+									Limb.CanCollide = false
+								end
+							end
+
+						end
+
+						local Noclipping = game["Run Service"].Stepped:Connect(NoclipLoop)
+
+						Loop = Noclipping
+						MovePos = Move
+
+						spawn(function()
+
+							Coins = true
+
+							while Coins do
+
+								task.wait(0.2)
+
+								for _, Thing in game.Workspace:GetDescendants() do
+
+									if Coins == false then
+
+										Noclipping:Disconnect()
+										Move:Destroy()
+										Plr.Character.Humanoid.Sit = false
+										return
+
+									end
+
+									if Thing.Name == "CoinVisual" and Thing.Transparency == 0 and Thing:IsA("BasePart") then
+
+										if (Thing.Position - Plr.Character:FindFirstChild("HumanoidRootPart").Position).Magnitude < Best then
+
+											Best = (Thing.Position - Plr.Character:FindFirstChild("HumanoidRootPart").Position).Magnitude
+											Found = Thing
+
+											if Coins == false then
+
+												Noclipping:Disconnect()
+												Move:Destroy()
+												Plr.Character.Humanoid.Sit = false
+												return
+
+											end
+
+										end
+
+									end
+
+								end
+
+								if not Found then
+
+									continue
+
+								end
+
+								if Found.Transparency ~= 0 then
+
+									for _, Thing in game.Workspace:GetDescendants() do
+
+										if Coins == false then
+
+											Noclipping:Disconnect()
+											Move:Destroy()
+											Plr.Character.Humanoid.Sit = false
+											return
+
+										end
+
+										if Thing.Name == "CoinVisual" and Thing.Transparency == 0 and Thing:IsA("BasePart") then
+
+											Found = Thing
+
+											if Coins == false then
+
+												Noclipping:Disconnect()
+												Move:Destroy()
+												Plr.Character.Humanoid.Sit = false
+												return
+
+											end
+
+										end
+
+									end
+
+								end
+
+								Move.Velocity = (Found.Position - Plr.Character.HumanoidRootPart.Position).Unit * 25
+
+								repeat
+
+									wait(0.2)
+
+									Move.Velocity = (Found.Position - Plr.Character.HumanoidRootPart.Position).Unit * 25
+
+									if Coins == false then
+
+										Noclipping:Disconnect()
+										Move:Destroy()
+										Plr.Character.Humanoid.Sit = false
+										return
+
+									end
+
+								until Found.Transparency ~= 0 or Found == nil
+
+							end
+
+							Noclipping:Disconnect()
+							Move:Remove()
+							Plr.Character.Humanoid.Sit = false
+
+						end)
+
+					else
+
+						Coins = false
+						Plr.Character.Humanoid.Sit = false
+						MovePos:Remove()
+						if Loop then
+
+							Loop:Disconnect()
+
+						end
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Name = "Coin Reach (LAG)",
+				Type = "Toggle",
+				Desc = "Makes the coin hitbox small and big to make it keep hitting you. Lag expected so its good afking with get coins.",
+				Action = function(On)
+
+					if On then
+
+						CoinReach = true
+
+						spawn(function()
+
+							while CoinReach do
+
+								for _, Thing in game.Workspace:GetDescendants() do
+
+									if Thing.Name == "Coin_Server" then
+
+										if Thing.Size == Vector3.new(2048,2048,2048) then
+
+											Thing.Size = Vector3.new(2,2,1)
+
+										else
+
+											Thing.Size = Vector3.new(2048,2048,2048)
+
+										end
+
+									end
+
+								end
+
+								wait(0.05)
+
+							end
+
+						end)
+
+					else
+
+						CoinReach = false
+						spawn(function()
+
+							for _, Thing in game.Workspace:GetDescendants() do
+
+								if Thing.Name == "Coin_Server" then
+
+									Thing.Size = Vector3.new(2,2,1)							
+
+								end
+
+							end
+
+						end)
+
+					end
+
+				end,
+
+			},
+
+		}
+
+	end,
+	
+	["662417684"] = function ()
+
+		local Opening = false
+		local Collecting = false
+		local OldPos = Plr.Character.HumanoidRootPart.Position
+
+		Commands = {
+
+			{
+
+				Type = "Title",
+				Text = "Blocks"
+
+			},
+
+			{
+
+				Type = "Split",
+
+			},
+
+			{
+
+				Name = "Get Items",
+				Type = "Toggle",
+				Desc = "Keep on getting items until you get every single one.",
+				Action = function(On)
+
+					if On then
+
+						Opening = true
+
+						spawn(function()
+
+							while Opening do
+
+								for i=1,10 do
+
+									game:GetService("ReplicatedStorage").SpawnLuckyBlock:FireServer()
+									game:GetService("ReplicatedStorage").SpawnSuperBlock:FireServer()
+									game:GetService("ReplicatedStorage").SpawnGalaxyBlock:FireServer()
+									game:GetService("ReplicatedStorage").SpawnDiamondBlock:FireServer()
+									game:GetService("ReplicatedStorage").SpawnRainbowBlock:FireServer()
+
+								end
+
+								wait(0.1)
+
+							end
+
+						end)
+
+					else
+
+						Opening = false
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Type = "Split",
+
+			},
+
+			{
+
+				Name = "Lucky Block",
+				Type = "Button",
+				Desc = "Open a lucky block.",
+				Action = function()
+
+					game:GetService("ReplicatedStorage").SpawnLuckyBlock:FireServer()
+
+				end,
+
+			},
+
+			{
+
+				Name = "Super Block",
+				Type = "Button",
+				Desc = "Open a super block.",
+				Action = function()
+
+					game:GetService("ReplicatedStorage").SpawnSuperBlock:FireServer()
+
+				end,
+
+			},
+
+			{
+
+				Name = "Rainbow Block",
+				Type = "Button",
+				Desc = "Open a rainbow block.",
+				Action = function()
+
+					game:GetService("ReplicatedStorage").SpawnRainbowBlock:FireServer()
+
+				end,
+
+			},
+
+			{
+
+				Name = "Diamond Block",
+				Type = "Button",
+				Desc = "Open a diamond block.",
+				Action = function()
+
+					game:GetService("ReplicatedStorage").SpawnDiamondBlock:FireServer()
+
+				end,
+
+			},
+
+			{
+
+				Name = "Galaxy Block",
+				Type = "Button",
+				Desc = "Open a galaxy block.",
+				Action = function()
+
+					game:GetService("ReplicatedStorage").SpawnGalaxyBlock:FireServer()
+
+				end,
+
+			},
+
+			{
+
+				Type = "Title",
+				Text = "Player"
+
+			},
+
+			{
+
+				Type = "Split",
+
+			},
+
+			{
+
+				Name = "Speed",
+				Type = "Metre",
+				Min = 16,
+				Max = 100,
+				Default = 16,
+				Desc = "Sets your walkspeed.",
+				Action = function(Val)
+
+					Plr.Character.Humanoid.WalkSpeed = Val
+
+				end,
+
+			},
+
+			{
+
+				Name = "Jump",
+				Type = "Metre",
+				Min = 50,
+				Max = 500,
+				Default = 50,
+				Desc = "Sets your jumppower.",
+				Action = function(Val)
+
+					Plr.Character.Humanoid.JumpPower = Val
+
+				end,
+
+			},
+
+			{
+
+				Name = "Invisible",
+				Type = "Button",
+				Desc = "Makes you invisible and have a forcefield, Die to turn this off.",
+				Action = function(On)
+
+					if Plr.Character:HasTag("Invisible") then
+
+						ShowPopup("Invisible","Your already invisible!","Oh")
+						return
+
+					end
+
+					local Base = nil
+
+					for _, Thing in game.Workspace:GetChildren() do
+
+						if Thing:FindFirstChild("Owner") and Thing:FindFirstChild("Owner"):IsA("StringValue") and Thing:FindFirstChild("Owner").Value == Plr.Name then
+
+							Base = Thing
+
+						end
+
+					end
+
+					local Tap = false
+					local Platform = Instance.new('Part')
+					Platform.Anchored = true
+					Platform.CanCollide = true
+					Platform.Size = Vector3.new(10,1,10)
+					Platform.Position = Base.SpawnLocation.Position + Vector3.new(0,20,0)
+					Platform.Transparency = 1
+					Platform.Parent = game.Workspace
+
+					Plr.Character:AddTag("Invisible")
+
+					local Touched = Platform.Touched:connect(function(part)
+						if (part.Parent.Name == game.Players.LocalPlayer.Name) then
+							if Tap == false then
+								Tap = true
+								local function Apply()
+									local Clone = Plr.Character.HumanoidRootPart:Clone()
+									wait(0.25)
+									Plr.Character.HumanoidRootPart:Destroy()
+									Clone.Parent = Plr.Character
+									Plr.Character:MoveTo(OldPos)
+									Tap = false
+								end
+								if Plr.Character then
+									Apply()
+								end
+							end
+						end
+					end)
+
+					repeat wait() until Plr.Character
+
+					local Clean
+
+					Clean = game.Players.LocalPlayer.CharacterAdded:connect(function(char)
+						Touched:Disconnect()
+						Platform:Destroy()
+						Clean:Disconnect()
+					end)
+
+					OldPos = Plr.Character.HumanoidRootPart.Position
+					Plr.Character:MoveTo(Platform.Position + Vector3.new(0,0.5,0))
+
+				end,
+
+			},
+
+			{
+
+				Name = "Get Blocks",
+				Type = "Toggle",
+				Desc = "Get all the blocks that have the cooldown off.",
+				Action = function(On)
+
+					if On then
+
+						Collecting = true
+
+						for _, Thing in game.Workspace:GetDescendants() do
+
+							if Thing.Name == "TouchMe" and Thing:IsA("BasePart") then
+
+								Thing:SetAttribute("Pos",Thing.Position)
+
+							end
+
+						end
+
+
+						spawn(function()
+
+							while Collecting do
+
+								wait(0.1)
+
+								for _, Thing in game.Workspace:GetDescendants() do
+
+									if Thing.Name == "TouchMe" and Thing:IsA("BasePart") then
+
+										Thing.Position = Plr.Character.HumanoidRootPart.Position
+										Thing.CanCollide = false
+										Thing.CanQuery = false
+
+									end
+
+								end
+
+							end
+
+						end)
+
+					else
+
+						Collecting = false
+
+						for _, Thing in game.Workspace:GetDescendants() do
+
+							if Thing.Name == "TouchMe" and Thing:IsA("BasePart") then
+
+								Thing.Position = Thing:GetAttribute("Pos")
+
+							end
+
+						end
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Type = "Split",
+
+			},
+
+			{
+
+				Name = "Fire Steps",
+				Type = "Button",
+				Desc = "Makes anywhere you step have fire that kills on touch.",
+				Action = function()
+
+					if not Plr.Backpack:FindFirstChild("FireSword") then
+
+						ShowPopup("Powers","You need the FireSword tool for this, Try turning on get items, If you already have it on and it dont work, reset a couple times until you do.","Understood")
+						return
+
+					end
+
+					for i=1,15 do
+
+						while not Plr.Backpack:FindFirstChild("FireSword") do
+
+							wait()
+
+						end
+
+						for _, Item in Plr.Backpack:GetChildren() do
+
+							if Item:IsA("Tool") and Item.Name == "FireSword" then
+
+								Item.Parent = Plr.Character
+								task.wait()
+								Item.Parent = game.Workspace
+
+							end
+
+						end
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Name = "Energy",
+				Type = "Button",
+				Desc = "If you have all those OP Swords (Periastrons) then this does some cool stuff. Its hard to describe so see yourself.",
+				Action = function()
+
+					if not Plr.Backpack:FindFirstChild("RainbowPeriastron") then
+
+						ShowPopup("Powers","You need the RainbowPeriastron tool for this, Try turning on get items, If you already have it on and it dont work, reset a couple times until you do.","Understood")
+						return
+
+					end
+
+					for i=1,30 do
+
+						while not Plr.Backpack:FindFirstChild("RainbowPeriastron") do
+
+							wait()
+
+						end
+
+						for _, Item in Plr.Backpack:GetChildren() do
+
+							if Item:IsA("Tool") and Item.Name == "RainbowPeriastron" then
+
+								Item.Parent = Plr.Character
+								task.wait()
+								Item.Parent = game.Workspace
+
+							end
+
+						end
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Name = "Earth Shield",
+				Type = "Button",
+				Desc = "Makes anyone near you get flamed to death.",
+				Action = function()
+
+					if not Plr.Backpack:FindFirstChild("EarthOrb") then
+
+						ShowPopup("Powers","You need the EarthOrb tool for this, Try turning on get items, If you already have it on and it dont work, reset a couple times until you do.","Understood")
+						return
+
+					end
+
+					if not (mouse1press and mouse1release) then
+
+						ShowPopup("Powers","Sadly, your executor dont support autoclicking, you will have to spam click for this to work.","Oh")
+
+					end
+
+					for i=1,15 do
+
+						while not Plr.Backpack:FindFirstChild("EarthOrb") do
+
+							wait()
+
+						end
+
+						for _, Item in Plr.Backpack:GetChildren() do
+
+							if Item:IsA("Tool") and Item.Name == "EarthOrb" then
+
+								Item.Parent = Plr.Character
+								while Item.Handle.Transparency == 0 or not Plr.Backpack:FindFirstChild("EarthOrb") do
+
+									wait()
+									if (mouse1press and mouse1release) then
+
+										mouse1press()
+										wait(0.01)
+										mouse1release()
+
+									end
+
+								end
+								task.wait()
+								Item.Parent = game.Workspace
+
+							end
+
+						end
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Name = "Electric Shield",
+				Type = "Button",
+				Desc = "Makes anyone near you get electricuted to death.",
+				Action = function()
+
+					if not Plr.Backpack:FindFirstChild("Lightning Orb") then
+
+						ShowPopup("Powers","You need the Lightning Orb tool for this, Try turning on get items, If you already have it on and it dont work, reset a couple times until you do.","Understood")
+						return
+
+					end
+
+					if not (mouse1press and mouse1release) then
+
+						ShowPopup("Powers","Sadly, your executor dont support autoclicking, you will have to spam click for this to work.","Oh")
+
+					end
+
+					for i=1,15 do
+
+						while not Plr.Backpack:FindFirstChild("Lightning Orb") do
+
+							wait()
+
+						end
+
+						for _, Item in Plr.Backpack:GetChildren() do
+
+							if Item:IsA("Tool") and Item.Name == "Lightning Orb" then
+
+								Item.Parent = Plr.Character
+								while Item.Handle.Transparency == 0 or Item.Parent ~= Plr.Character do
+
+									wait()
+									if (mouse1press and mouse1release) then
+
+										mouse1press()
+										wait(0.01)
+										mouse1release()
+
+									end
+
+								end
+								task.wait()
+								Item.Parent = game.Workspace
+
+							end
+
+						end
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Name = "Bird Army",
+				Type = "Button",
+				Desc = "Gives you a army of birds that swoop into people to kill.",
+				Action = function()
+
+					if not Plr.Backpack:FindFirstChild("SteampunkAttackBirds") then
+
+						ShowPopup("Powers","You need the SteampunkAttackBirds tool for this, Try turning on get items, If you already have it on and it dont work, reset a couple times until you do.","Understood")
+						return
+
+					end
+
+					if not (mouse1press and mouse1release) then
+
+						ShowPopup("Powers","Sadly, your executor dont support autoclicking, you will have to spam click for this to work.","Oh")
+
+					end
+
+					for i=1,15 do
+
+						while not Plr.Backpack:FindFirstChild("SteampunkAttackBirds") do
+
+							wait()
+
+						end
+
+						for _, Item in Plr.Backpack:GetChildren() do
+
+							if Item:IsA("Tool") and Item.Name == "SteampunkAttackBirds" then
+
+								Item.Parent = Plr.Character
+								while Item.Enabled or Item.Parent ~= Plr.Character do
+
+									wait()
+									if (mouse1press and mouse1release) then
+
+										mouse1press()
+										wait(0.01)
+										mouse1release()
+
+									end
+
+								end
+								task.wait()
+								Item.Parent = game.Workspace
+
+							end
+
+						end
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Name = "Plane Army",
+				Type = "Button",
+				Desc = "Gives you a plane army that shoots missiles at people.",
+				Action = function()
+
+					if not Plr.Backpack:FindFirstChild("PersonalJets-DesertEdition") then
+
+						ShowPopup("Powers","You need the PersonalJets-DesertEdition tool for this, Try turning on get items, If you already have it on and it dont work, reset a couple times until you do.","Understood")
+						return
+
+					end
+
+					if not (mouse1press and mouse1release) then
+
+						ShowPopup("Powers","Sadly, your executor dont support autoclicking, you will have to spam click for this to work.","Oh")
+
+					end
+
+					for i=1,15 do
+
+						while not Plr.Backpack:FindFirstChild("PersonalJets-DesertEdition") do
+
+							wait()
+
+						end
+
+						for _, Item in Plr.Backpack:GetChildren() do
+
+							if Item:IsA("Tool") and Item.Name == "PersonalJets-DesertEdition" then
+
+								Item.Parent = Plr.Character
+								while Item.Enabled or Item.Parent ~= Plr.Character do
+
+									wait()
+									if (mouse1press and mouse1release) then
+
+										mouse1press()
+										wait(0.01)
+										mouse1release()
+
+									end
+
+								end
+								task.wait()
+								Item.Parent = game.Workspace
+
+							end
+
+						end
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Name = "Dragon Army",
+				Type = "Button",
+				Desc = "Gives you a dragon army. They dont actually do anything and they are just silly lil guys",
+				Action = function()
+
+					if not Plr.Backpack:FindFirstChild("DragonPlushie") then
+
+						ShowPopup("Powers","You need the DragonPlushie tool for this, Try turning on get items, If you already have it on and it dont work, reset a couple times until you do.","Understood")
+						return
+
+					end
+
+					if not (mouse1press and mouse1release) then
+
+						ShowPopup("Powers","Sadly, your executor dont support autoclicking, you will have to spam click for this to work.","Oh")
+
+					end
+
+					for i=1,15 do
+
+						while not Plr.Backpack:FindFirstChild("DragonPlushie") do
+
+							wait()
+
+						end
+
+						for _, Item in Plr.Backpack:GetChildren() do
+
+							if Item:IsA("Tool") and Item.Name == "DragonPlushie" then
+
+								Item.Parent = Plr.Character
+								while Item.Enabled or Item.Parent ~= Plr.Character do
+
+									wait()
+									if (mouse1press and mouse1release) then
+
+										mouse1press()
+										wait(0.01)
+										mouse1release()
+
+									end
+
+								end
+								task.wait()
+								Item.Parent = game.Workspace
+
+							end
+
+						end
+
+					end
+
+				end,
+
+			},
+			
+
+			{
+
+				Type = "Title",
+				Text = "Other Players"
+
+			},
+
+			{
+
+				Type = "Split",
+
+			},
+
+			{
+
+				Name = "Kill Tool",
+				Type = "Button",
+				Desc = "Click the person you want to kill, Equip a sword and slash.",
+				Action = function()
+
+					local Kill = Instance.new("Tool",Plr.Backpack)
+
+					Kill.Name = "Kill"
+					Kill.ToolTip = "Click the person you want to kill, Equip a sword and slash."
+					Kill.RequiresHandle = false
+					Kill.CanBeDropped = false
+
+					local Handle = Instance.new("Part", Kill)
+
+					Handle.CanCollide = false
+					Handle.Name = "Handle"
+					Handle.Size = Vector3.new(0.001, 0.001, 0.001)
+					Handle.Transparency = 1
+
+					local Do = 0
+
+					Kill.Activated:Connect(function()
+
+						if Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") or Mouse.Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+
+							local Head = Mouse.Target.Parent.Head or Mouse.Target.Parent.Parent.Head
+							local Character = Head.Parent
+
+							if not Character:FindFirstChild("DeathLine") then
+
+								local Outline = Instance.new("Highlight",Character)
+
+								Outline.OutlineColor = Color3.new(1,0,0)
+								Outline.OutlineTransparency = 0
+								Outline.FillTransparency = 1
+								Outline.Name = "DeathLine"
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 0}):Play()
+
+								local Tool = Plr.Character:FindFirstChildOfClass("Tool")
+
+								local Handle = Tool:FindFirstChild("Handle")
+
+								while Plr.Character and Character do
+
+									local Human = Character:FindFirstChildWhichIsA("Humanoid")
+
+									if not Human or Human.Health <= 0 then
+										break
+									end
+
+									Tool = Plr.Character:FindFirstChildOfClass("Tool")
+
+									if not Tool then
+
+										break
+
+									end
+
+									Handle = Tool:FindFirstChild("Handle")
+
+									if not Handle then
+
+										break
+
+									end
+
+									Character["Left Leg"]:BreakJoints()
+									Character["Left Leg"].Velocity = Vector3.new(0,0,0)
+									Character["Left Leg"].Position = Handle.Position + Vector3.new(math.random(-200,200) / 150,math.random(-200,200) / 150,math.random(-200,200) / 150)
+
+									task.wait()
+
+								end
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 1}):Play()
+
+								wait(0.3)
+
+								Outline:Destroy()
+
+							end
+
+						end
+
+					end)
+
+				end,
+
+			},
+
+			{
+
+				Name = "Gun Kill Tool",
+				Type = "Button",
+				Desc = "Click the person you want to kill, Equip a gun and shoot forwards.",
+				Action = function()
+
+					local Kill = Instance.new("Tool",Plr.Backpack)
+
+					Kill.Name = "GKill"
+					Kill.ToolTip = "Click the person you want to kill, Equip a gun and shoot forwards."
+					Kill.RequiresHandle = false
+					Kill.CanBeDropped = false
+
+					local Handle = Instance.new("Part", Kill)
+
+					Handle.CanCollide = false
+					Handle.Name = "Handle"
+					Handle.Size = Vector3.new(0.001, 0.001, 0.001)
+					Handle.Transparency = 1
+
+					local Do = 0
+
+					Kill.Activated:Connect(function()
+
+						if Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") or Mouse.Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+
+							local Head = Mouse.Target.Parent.Head or Mouse.Target.Parent.Parent.Head
+							local Character = Head.Parent
+
+							if not Character:FindFirstChild("DeathLine") then
+
+								local Outline = Instance.new("Highlight",Character)
+
+								Outline.OutlineColor = Color3.new(1,0,0)
+								Outline.OutlineTransparency = 0
+								Outline.FillTransparency = 1
+								Outline.Name = "DeathLine"
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 0}):Play()
+
+								local Tool = Plr.Character:FindFirstChildOfClass("Tool")
+
+								local Handle = Tool:FindFirstChild("Handle")
+
+								while Plr.Character and Character do
+
+									local Human = Character:FindFirstChildWhichIsA("Humanoid")
+
+									if not Human or Human.Health <= 0 then
+										break
+									end
+
+									Tool = Plr.Character:FindFirstChildOfClass("Tool")
+
+									if not Tool then
+
+										break
+
+									end
+
+									Handle = Tool:FindFirstChild("Handle")
+
+									if not Handle then
+
+										break
+
+									end
+
+									Character["Left Leg"]:BreakJoints()
+									Character["Left Leg"].Velocity = Vector3.new(0,0,0)
+									Character["Left Leg"].Size = Vector3.new(10,10,10)
+									Character["Left Leg"].Position = Handle.Position + Vector3.new(math.random(-200,200) / 100,math.random(-200,200) / 100,math.random(-200,200) / 100)
+
+									task.wait()
+
+								end
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 1}):Play()
+
+								wait(0.3)
+
+								Outline:Destroy()
+
+							end
+
+						end
+
+					end)
+
+				end,
+
+			},
+
+			{
+
+				Name = "Creative Mode (OP)",
+				Type = "Button",
+				Desc = "Makes you basically a god. You can mess around with players and go in freecam mode. While staying in your forcefield to be immortal.",
+				Action = function()
+
+					if game.Workspace:FindFirstChild("Freecam") then
+
+						game.Workspace:FindFirstChild("Freecam"):Destroy()
+
+					end
+
+					local Ok = true
+
+					for _, Person in game.Players:GetPlayers() do
+
+						if Person.Character and Person.Character:FindFirstChildOfClass("Humanoid") then
+
+							pcall(function()
+
+								Person.Character:FindFirstChildOfClass("Humanoid").DisplayDistanceType = Enum.HumanoidDisplayDistanceType.Subject
+								Person.Character:FindFirstChildOfClass("Humanoid").HealthDisplayDistance = math.huge
+								Person.Character:FindFirstChildOfClass("Humanoid").NameDisplayDistance = math.huge
+
+							end)
+
+						end
+
+						Person.CharacterAppearanceLoaded:Connect(function()
+
+							if Ok then
+
+								pcall(function()
+
+									Person.Character:FindFirstChildOfClass("Humanoid").DisplayDistanceType = Enum.HumanoidDisplayDistanceType.Subject
+									Person.Character:FindFirstChildOfClass("Humanoid").HealthDisplayDistance = math.huge
+									Person.Character:FindFirstChildOfClass("Humanoid").NameDisplayDistance = math.huge
+
+								end)
+
+							end
+
+						end)
+
+					end
+
+					if (mouse1press and mouse1release) == nil then
+
+						ShowPopup("Creative Mode","Sadly your executor dont support autoclicking. You must manually click over and over to use these items. (Some commands like kill dont require manual clicking.)","Aww")
+
+					else
+
+						ShowPopup("Creative Mode","Press backspace to stop trying to do a command on somebody.","Got it")
+
+					end
+
+					local FreeMove = false
+
+					local Cooldown = false
+
+					local Mode = "None"
+
+					local Look = Instance.new("Part",game.Workspace)
+
+					local ClickCheck = Mouse.Button1Down:Connect(function()
+
+						if Cooldown then
+
+							return
+
+						end
+
+						if Mode == "None" then
+
+							ShowPopup("Creative Mode","Please select a tool.","Ok")
+							return
+
+						end
+						if Mouse.Target and Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") or Mouse.Target and Mouse.Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+							if Mode == "Kill" and Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") or Mode == "Kill" and Mouse.Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+
+								if not Plr.Backpack:FindFirstChild("TriLaserGun") then
+
+									ShowPopup("Creative Mode","'TriLaserGun' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+									return
+
+								end
+
+								local Character = nil
+
+								if Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") then
+
+									Character = Mouse.Target.Parent
+
+								else
+
+									Character = Mouse.Target.Parent.Parent
+
+								end
+
+								local Outline = Instance.new("Highlight",Character)
+
+								Outline.OutlineColor = Color3.new(1,0,0)
+								Outline.OutlineTransparency = 1
+								Outline.FillTransparency = 1
+								Outline.Name = "DeathLine"
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 0}):Play()
+
+								Cooldown = true
+
+								Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("TriLaserGun"))
+
+								local Cancel = false
+
+								repeat
+
+									task.wait()
+									Character["Left Leg"].Size = Vector3.new(20,math.random(3,6),20)
+									Character["Left Leg"]:BreakJoints()
+									Character["Left Leg"].Position = Plr.Character.Head.Position + Vector3.new(0,math.random(4,20),0)
+									Character["Left Leg"].Velocity = Vector3.new(0,0,0)
+
+									spawn(function()
+										if Plr.Character:FindFirstChild("TriLaserGun") and Plr.Character:FindFirstChild("TriLaserGun").Enabled == true then
+											Plr.Character.TriLaserGun.Click:FireServer(Character["Left Leg"].Position)
+										end
+									end)
+
+								until Character.Humanoid.Health == 0 or UIS:IsKeyDown(Enum.KeyCode.Backspace)
+
+								Cancel = true
+
+								Cooldown = false
+
+								Outline.Name = "Finished"
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 1}):Play()
+
+								Plr.Character.Humanoid:UnequipTools()
+
+								wait(0.3)
+
+								Outline:Destroy()
+
+							end
+
+							if Mode == "Fling" and Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") or Mode == "Fling" and Mouse.Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+
+								if not Plr.Backpack:FindFirstChild("Windforce") then
+
+									ShowPopup("Creative Mode","'Windforce' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+									return
+
+								end
+
+								local Character = nil
+
+								if Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") then
+
+									Character = Mouse.Target.Parent
+
+								else
+
+									Character = Mouse.Target.Parent.Parent
+
+								end
+
+								local Outline = Instance.new("Highlight",Character)
+
+								Outline.OutlineColor = Color3.new(1,0,0)
+								Outline.OutlineTransparency = 1
+								Outline.FillTransparency = 1
+								Outline.Name = "DeathLine"
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 0}):Play()
+
+								Cooldown = true
+
+								Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("Windforce"))
+
+								local Cancel = false
+
+								local OldHealth = Character.Humanoid.Health
+
+								repeat
+
+									task.wait()
+									Character["Left Leg"]:BreakJoints()
+									Character["Left Leg"].Velocity = Vector3.new(0,0,0)
+									Character["Left Leg"].Position = Plr.Character:WaitForChild("Windforce").Handle.Position + Vector3.new(math.random(-200,200) / 150,math.random(-200,200) / 150,math.random(-200,200) / 150)
+
+								until Character.Humanoid.Health < OldHealth or UIS:IsKeyDown(Enum.KeyCode.Backspace)
+
+								Cancel = true
+
+								Cooldown = false
+
+								Outline.Name = "Finished"
+
+								Plr.Character.Humanoid:UnequipTools()
+
+								Character["Left Leg"].Position = Vector3.new(0,500,0)
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 1}):Play()
+
+								wait(0.3)
+
+								Outline:Destroy()
+
+							end
+
+							if Mode == "Stun" and Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") or Mode == "Stun" and Mouse.Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+
+								if not Plr.Backpack:FindFirstChild("Taser") then
+
+									ShowPopup("Creative Mode","'Taser' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+									return
+
+								end
+
+								local Character = nil
+
+								if Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") then
+
+									Character = Mouse.Target.Parent
+
+								else
+
+									Character = Mouse.Target.Parent.Parent
+
+								end
+
+								local Outline = Instance.new("Highlight",Character)
+
+								Outline.OutlineColor = Color3.new(1,0,0)
+								Outline.OutlineTransparency = 1
+								Outline.FillTransparency = 1
+								Outline.Name = "DeathLine"
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 0}):Play()
+
+								Cooldown = true
+
+								Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("Taser"))
+
+								local Cancel = false
+
+								if mouse1press and mouse1release then
+
+									spawn(function()
+
+										repeat
+
+											task.wait(0.05)
+											mouse1press()
+											task.wait(0.05)
+											mouse1release()
+
+										until Cancel
+
+									end)
+
+								end
+
+								repeat
+
+									task.wait()
+									Character["Left Leg"]:BreakJoints()
+									Character["Left Leg"].Velocity = Vector3.new(0,0,0)
+									Character["Left Leg"].Position = Plr.Character:WaitForChild("Taser").Handle.Position + Vector3.new(math.random(-200,200) / 150,math.random(-200,200) / 150,math.random(-200,200) / 150)
+
+								until Character:FindFirstChild("GetTasedBro") or UIS:IsKeyDown(Enum.KeyCode.Backspace)
+
+								Cancel = true
+
+								Cooldown = false
+
+								Outline.Name = "Finished"
+
+								Plr.Character.Humanoid:UnequipTools()
+
+								Character["Left Leg"].Position = Vector3.new(0,500,0)
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 1}):Play()
+
+								wait(0.3)
+
+								Outline:Destroy()
+
+							end
+
+							if Mode == "Wither" and Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") or Mode == "Wither" and Mouse.Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+
+								if not Plr.Backpack:FindFirstChild("SpiderSword") then
+
+									ShowPopup("Creative Mode","'SpiderSword' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+									return
+
+								end
+
+								local Character = nil
+
+								if Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") then
+
+									Character = Mouse.Target.Parent
+
+								else
+
+									Character = Mouse.Target.Parent.Parent
+
+								end
+
+								local Outline = Instance.new("Highlight",Character)
+
+								Outline.OutlineColor = Color3.new(1,0,0)
+								Outline.OutlineTransparency = 1
+								Outline.FillTransparency = 1
+								Outline.Name = "DeathLine"
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 0}):Play()
+
+								Cooldown = true
+
+								Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("SpiderSword"))
+
+								local Cancel = false
+
+								local OldHealth = Character.Humanoid.Health
+
+								repeat
+
+									task.wait()
+									Character["Left Leg"]:BreakJoints()
+									Character["Left Leg"].Velocity = Vector3.new(0,0,0)
+									Character["Left Leg"].Position = Plr.Character:WaitForChild("SpiderSword").Handle.Position + Vector3.new(math.random(-200,200) / 150,math.random(-200,200) / 150,math.random(-200,200) / 150)
+
+								until Character["Left Leg"].Transparency == 0.5 or UIS:IsKeyDown(Enum.KeyCode.Backspace)
+
+								Cancel = true
+
+								Cooldown = false
+
+								Outline.Name = "Finished"
+
+								Plr.Character.Humanoid:UnequipTools()
+
+								Character["Left Leg"].Position = Vector3.new(0,500,0)
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 1}):Play()
+
+								wait(0.3)
+
+								Outline:Destroy()
+
+							end
+
+							if Mode == "Drop" and Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") or Mode == "Drop" and Mouse.Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+
+								if not Plr.Backpack:FindFirstChild("EnergySword") then
+
+									ShowPopup("Creative Mode","'EnergySword' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+									return
+
+								end
+
+								local Character = nil
+
+								if Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") then
+
+									Character = Mouse.Target.Parent
+
+								else
+
+									Character = Mouse.Target.Parent.Parent
+
+								end
+
+								local Outline = Instance.new("Highlight",Character)
+
+								Outline.OutlineColor = Color3.new(1,0,0)
+								Outline.OutlineTransparency = 1
+								Outline.FillTransparency = 1
+								Outline.Name = "DeathLine"
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 0}):Play()
+
+								Cooldown = true
+
+								Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("EnergySword"))
+
+								if mouse1press and mouse1release then
+
+									mouse1press()
+									task.wait(0.05)
+									mouse1release()
+
+								end
+
+								local Cancel = false
+
+								local OldHealth = Character.Humanoid.Health
+
+								repeat
+
+									task.wait()
+									Character["Left Leg"]:BreakJoints()
+									Character["Left Leg"].Velocity = Vector3.new(0,0,0)
+									Character["Left Leg"].Position = Plr.Character:WaitForChild("EnergySword").Handle.Position + Vector3.new(math.random(-200,200) / 150,math.random(-200,200) / 150,math.random(-200,200) / 150)
+
+								until not Character:FindFirstChildOfClass("Tool") or UIS:IsKeyDown(Enum.KeyCode.Backspace)
+
+								Cancel = true
+
+								Cooldown = false
+
+								Outline.Name = "Finished"
+
+								Plr.Character.Humanoid:UnequipTools()
+
+								Character["Left Leg"].Position = Vector3.new(0,500,0)
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 1}):Play()
+
+								wait(0.3)
+
+								Outline:Destroy()
+
+							end
+
+							if Mode == "Freeze" and Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") or Mode == "Freeze" and Mouse.Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+
+								if not Plr.Backpack:FindFirstChild("IceSword") then
+
+									ShowPopup("Creative Mode","'IceSword' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+									return
+
+								end
+
+								local Character = nil
+
+								if Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") then
+
+									Character = Mouse.Target.Parent
+
+								else
+
+									Character = Mouse.Target.Parent.Parent
+
+								end
+
+								local Outline = Instance.new("Highlight",Character)
+
+								Outline.OutlineColor = Color3.new(1,0,0)
+								Outline.OutlineTransparency = 1
+								Outline.FillTransparency = 1
+								Outline.Name = "DeathLine"
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 0}):Play()
+
+								Cooldown = true
+
+								Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("IceSword"))
+
+								local Cancel = false
+
+								if mouse1press and mouse1release then
+
+									spawn(function()
+
+										repeat
+
+											task.wait(0.05)
+											mouse1press()
+											task.wait(0.05)
+											mouse1release()
+
+										until Cancel
+
+									end)
+
+								end
+
+								local OldHealth = Character.Humanoid.Health
+
+								repeat
+
+									task.wait()
+									Character["Left Leg"]:BreakJoints()
+									Character["Left Leg"].Velocity = Vector3.new(0,0,0)
+									Character["Left Leg"].Position = Plr.Character:WaitForChild("IceSword").Handle.Position + Vector3.new(math.random(-200,200) / 150,math.random(-200,200) / 150,math.random(-200,200) / 150)
+
+								until Character:FindFirstChild("IceBlock") or UIS:IsKeyDown(Enum.KeyCode.Backspace)
+
+								Cancel = true
+
+								Cooldown = false
+
+								Outline.Name = "Finished"
+
+								Plr.Character.Humanoid:UnequipTools()
+
+								Character["Left Leg"].Position = Vector3.new(0,500,0)
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 1}):Play()
+
+								wait(0.3)
+
+								Outline:Destroy()
+
+							end
+
+							if Mode == "Kill Freeze" and Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") or Mode == "Kill Freeze" and Mouse.Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+
+								if not Plr.Backpack:FindFirstChild("WintersGreatSword") then
+
+									ShowPopup("Creative Mode","'WintersGreatSword' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+									return
+
+								end
+
+								local Character = nil
+
+								if Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") then
+
+									Character = Mouse.Target.Parent
+
+								else
+
+									Character = Mouse.Target.Parent.Parent
+
+								end
+
+								local Outline = Instance.new("Highlight",Character)
+
+								Outline.OutlineColor = Color3.new(1,0,0)
+								Outline.OutlineTransparency = 1
+								Outline.FillTransparency = 1
+								Outline.Name = "DeathLine"
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 0}):Play()
+
+								Cooldown = true
+
+								Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("WintersGreatSword"))
+
+								local Cancel = false
+
+								if mouse1press and mouse1release then
+
+									spawn(function()
+
+										repeat
+
+											task.wait(0.05)
+											mouse1press()
+											task.wait(0.05)
+											mouse1release()
+
+										until Cancel
+
+									end)
+
+								end
+
+								local OldHealth = Character.Humanoid.Health
+
+								repeat
+
+									task.wait()
+									Character["Left Leg"]:BreakJoints()
+									Character["Left Leg"].Velocity = Vector3.new(0,0,0)
+									Character["Left Leg"].Position = Plr.Character:WaitForChild("WintersGreatSword").Handle.Position + Vector3.new(math.random(-200,200) / 150,math.random(-200,200) / 150,math.random(-200,200) / 150)
+
+								until Character:FindFirstChild("Ice Block") or UIS:IsKeyDown(Enum.KeyCode.Backspace)
+
+								Cancel = true
+
+								Cooldown = false
+
+								Outline.Name = "Finished"
+
+								Plr.Character.Humanoid:UnequipTools()
+
+								Character["Left Leg"].Position = Vector3.new(0,500,0)
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 1}):Play()
+
+								wait(0.3)
+
+								Outline:Destroy()
+
+							end
+
+							if Mode == "Shadow" and Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") or Mode == "Shadow" and Mouse.Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+
+								if not Plr.Backpack:FindFirstChild("Darkheart") then
+
+									ShowPopup("Creative Mode","'Darkheart' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+									return
+
+								end
+
+								local Character = nil
+
+								if Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") then
+
+									Character = Mouse.Target.Parent
+
+								else
+
+									Character = Mouse.Target.Parent.Parent
+
+								end
+
+								local Outline = Instance.new("Highlight",Character)
+
+								Outline.OutlineColor = Color3.new(1,0,0)
+								Outline.OutlineTransparency = 1
+								Outline.FillTransparency = 1
+								Outline.Name = "DeathLine"
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 0}):Play()
+
+								Cooldown = true
+
+								Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("Darkheart"))
+
+								local Cancel = false
+
+								if mouse1press and mouse1release then
+
+									spawn(function()
+
+										repeat
+
+											task.wait(0.05)
+											mouse1press()
+											task.wait(0.05)
+											mouse1release()
+
+										until Cancel
+
+									end)
+
+								end
+
+								local OldHealth = Character.Humanoid.Health
+
+								repeat
+
+									task.wait()
+									Character["Left Leg"]:BreakJoints()
+									Character["Left Leg"].Velocity = Vector3.new(0,0,0)
+									Character["Left Leg"].Position = Plr.Character:WaitForChild("Darkheart").Handle.Position + Vector3.new(math.random(-200,200) / 150,math.random(-200,200) / 150,math.random(-200,200) / 150)
+
+								until Character.Humanoid.Health == 0 or UIS:IsKeyDown(Enum.KeyCode.Backspace)
+
+								Cancel = true
+
+								Cooldown = false
+
+								Outline.Name = "Finished"
+
+								Plr.Character.Humanoid:UnequipTools()
+
+								Character["Left Leg"].Position = Vector3.new(0,500,0)
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 1}):Play()
+
+								wait(0.3)
+
+								Outline:Destroy()
+
+							end
+
+							if Mode == "Erase" and Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") or Mode == "Erase" and Mouse.Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+
+								if not Plr.Backpack:FindFirstChild("DualMonsterAxes") then
+
+									ShowPopup("Creative Mode","'DualMonsterAxes' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+									return
+
+								end
+
+								local Character = nil
+
+								if Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") then
+
+									Character = Mouse.Target.Parent
+
+								else
+
+									Character = Mouse.Target.Parent.Parent
+
+								end
+
+								local Outline = Instance.new("Highlight",Character)
+
+								Outline.OutlineColor = Color3.new(1,0,0)
+								Outline.OutlineTransparency = 1
+								Outline.FillTransparency = 1
+								Outline.Name = "DeathLine"
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 0}):Play()
+
+								Cooldown = true
+
+								Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("DualMonsterAxes"))
+
+								local Cancel = false
+
+								if mouse1press and mouse1release then
+
+									spawn(function()
+
+										repeat
+
+											task.wait(0.05)
+											mouse1press()
+											task.wait(0.05)
+											mouse1release()
+
+										until Cancel
+
+									end)
+
+								end
+
+								local OldHealth = Character.Humanoid.Health
+
+								repeat
+
+									task.wait()
+									pcall(function()
+										
+										Character["Left Leg"]:BreakJoints()
+										Character["Left Leg"].Velocity = Vector3.new(0,0,0)
+										Character["Left Leg"].Position = Plr.Character:WaitForChild("DualMonsterAxes").Handle.Position + Vector3.new(math.random(-200,200) / 150,math.random(-200,200) / 150,math.random(-200,200) / 150)
+										
+									end)
+
+								until Character:FindFirstChild("Torso") == nil or UIS:IsKeyDown(Enum.KeyCode.Backspace)
+
+								Cancel = true
+
+								Cooldown = false
+
+								Outline.Name = "Finished"
+
+								Plr.Character.Humanoid:UnequipTools()
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 1}):Play()
+
+								wait(0.3)
+
+								Outline:Destroy()
+
+							end
+							
+							if Mode == "Pixelate" and Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") or Mode == "Pixelate" and Mouse.Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+
+								local Sword = nil
+
+								for _, Item in Plr.Backpack:GetChildren() do
+
+									if Item.Name == "8BitSword" and not Item.Handle:FindFirstChild("SecondSlash") then
+
+										Sword = Item
+
+									end
+
+								end
+
+								if not Sword then
+
+									ShowPopup("Creative Mode","You have the wrong or dont have '8BitSword' required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+									return
+
+								end
+
+								local Character = nil
+
+								if Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") then
+
+									Character = Mouse.Target.Parent
+
+								else
+
+									Character = Mouse.Target.Parent.Parent
+
+								end
+
+								local Outline = Instance.new("Highlight",Character)
+
+								Outline.OutlineColor = Color3.new(1,0,0)
+								Outline.OutlineTransparency = 1
+								Outline.FillTransparency = 1
+								Outline.Name = "DeathLine"
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 0}):Play()
+
+								Cooldown = true
+
+								Plr.Character.Humanoid:EquipTool(Sword)
+
+								local Cancel = false
+
+								if mouse1press and mouse1release then
+
+									spawn(function()
+
+										repeat
+
+											task.wait(0.05)
+											mouse1press()
+											task.wait(0.05)
+											mouse1release()
+
+										until Cancel
+
+									end)
+
+								end
+
+								local OldHealth = Character.Humanoid.Health
+
+								repeat
+
+									task.wait()
+									if Character:FindFirstChild("Left Leg") then
+										Character["Left Leg"]:BreakJoints()
+										Character["Left Leg"].Velocity = Vector3.new(0,0,0)
+										Character["Left Leg"].Position = Sword.Handle.Position + Vector3.new(math.random(-200,200) / 150,math.random(-200,200) / 150,math.random(-200,200) / 150)
+									else
+										break
+									end
+
+								until not Character or not Character:FindFirstChild("Torso") or UIS:IsKeyDown(Enum.KeyCode.Backspace)
+
+								Cancel = true
+
+								Cooldown = false
+
+								Outline.Name = "Finished"
+
+								Plr.Character.Humanoid:UnequipTools()
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 1}):Play()
+
+								wait(0.3)
+
+								Outline:Destroy()
+
+							end
+
+							if Mode == "Slow" and Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") or Mode == "Slow" and Mouse.Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+
+								if not Plr.Backpack:FindFirstChild("SnowExplorerSword") then
+
+									ShowPopup("Creative Mode","'SnowExplorerSword' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+									return
+
+								end
+
+								local Character = nil
+
+								if Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") then
+
+									Character = Mouse.Target.Parent
+
+								else
+
+									Character = Mouse.Target.Parent.Parent
+
+								end
+
+								local Outline = Instance.new("Highlight",Character)
+
+								Outline.OutlineColor = Color3.new(1,0,0)
+								Outline.OutlineTransparency = 1
+								Outline.FillTransparency = 1
+								Outline.Name = "DeathLine"
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 0}):Play()
+
+								Cooldown = true
+
+								Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("SnowExplorerSword"))
+
+								local Cancel = false
+
+								local OldHealth = Character.Humanoid.Health
+
+								repeat
+
+									task.wait()
+									Character["Left Leg"]:BreakJoints()
+									Character["Left Leg"].Velocity = Vector3.new(0,0,0)
+									Character["Left Leg"].Position = Plr.Character:WaitForChild("SnowExplorerSword").Handle.Position + Vector3.new(math.random(-200,200) / 150,math.random(-200,200) / 150,math.random(-200,200) / 150)
+
+								until Character.Humanoid.Health < OldHealth or UIS:IsKeyDown(Enum.KeyCode.Backspace)
+
+								Cancel = true
+
+								Cooldown = false
+
+								Outline.Name = "Finished"
+
+								Plr.Character.Humanoid:UnequipTools()
+
+								Character["Left Leg"].Position = Vector3.new(0,500,0)
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 1}):Play()
+
+								wait(0.3)
+
+								Outline:Destroy()
+
+							end
+							
+							if Mode == "Curse" and Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") or Mode == "Curse" and Mouse.Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+
+								if not Plr.Backpack:FindFirstChild("CrescendoTheSoulStealer") then
+
+									ShowPopup("Creative Mode","'CrescendoTheSoulStealer' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+									return
+
+								end
+
+								local Character = nil
+
+								if Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") then
+
+									Character = Mouse.Target.Parent
+
+								else
+
+									Character = Mouse.Target.Parent.Parent
+
+								end
+
+								local Outline = Instance.new("Highlight",Character)
+
+								Outline.OutlineColor = Color3.new(1,0,0)
+								Outline.OutlineTransparency = 1
+								Outline.FillTransparency = 1
+								Outline.Name = "DeathLine"
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 0}):Play()
+
+								Cooldown = true
+
+								Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("CrescendoTheSoulStealer"))
+
+								local Cancel = false
+
+								if mouse1press and mouse1release then
+
+									spawn(function()
+
+										repeat
+
+											task.wait(0.05)
+											mouse1press()
+											task.wait(0.05)
+											mouse1release()
+
+										until Cancel
+
+									end)
+
+								end
+
+								local OldHealth = Character.Humanoid.Health
+
+								repeat
+
+									task.wait()
+									Character["Left Leg"]:BreakJoints()
+									Character["Left Leg"].Velocity = Vector3.new(0,0,0)
+									Character["Left Leg"].Position = Plr.Character:WaitForChild("CrescendoTheSoulStealer").Handle.Position + Vector3.new(math.random(-200,200) / 150,math.random(-200,200) / 150,math.random(-200,200) / 150)
+
+								until Character:FindFirstChild("Torso"):FindFirstChildOfClass("BodyVelocity") or UIS:IsKeyDown(Enum.KeyCode.Backspace)
+
+								Cancel = true
+
+								Cooldown = false
+
+								Outline.Name = "Finished"
+
+								Plr.Character.Humanoid:UnequipTools()
+
+								Character["Left Leg"].Position = Vector3.new(0,500,0)
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 1}):Play()
+
+								wait(0.3)
+
+								Outline:Destroy()
+
+							end
+
+							if Mode == "Whack" and Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") or Mode == "Whack" and Mouse.Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+
+								if not Plr.Backpack:FindFirstChild("StopSignAxe") then
+
+									ShowPopup("Creative Mode","'StopSignAxe' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+									return
+
+								end
+
+								local Character = nil
+
+								if Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") then
+
+									Character = Mouse.Target.Parent
+
+								else
+
+									Character = Mouse.Target.Parent.Parent
+
+								end
+
+								local Outline = Instance.new("Highlight",Character)
+
+								Outline.OutlineColor = Color3.new(1,0,0)
+								Outline.OutlineTransparency = 1
+								Outline.FillTransparency = 1
+								Outline.Name = "DeathLine"
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 0}):Play()
+
+								Cooldown = true
+
+								Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("StopSignAxe"))
+
+								local Cancel = false
+
+								if mouse1press and mouse1release then
+
+									spawn(function()
+
+										repeat
+
+											task.wait(0.05)
+											mouse1press()
+											task.wait(0.05)
+											mouse1release()
+
+										until Cancel
+
+									end)
+
+								end
+
+								local OldHealth = Character.Humanoid.Health
+
+								repeat
+
+									task.wait()
+									Character["Left Leg"]:BreakJoints()
+									Character["Left Leg"].Velocity = Vector3.new(0,0,0)
+									Character["Left Leg"].Position = Plr.Character:WaitForChild("StopSignAxe").Handle.Position + Vector3.new(math.random(-200,200) / 150,math.random(-200,200) / 150,math.random(-200,200) / 150)
+
+								until Character.Humanoid.Health < OldHealth or Character.Humanoid.Health == 0 or UIS:IsKeyDown(Enum.KeyCode.Backspace)
+
+								Cancel = true
+
+								Cooldown = false
+
+								Outline.Name = "Finished"
+
+								Plr.Character.Humanoid:UnequipTools()
+
+								Character["Left Leg"].Position = Vector3.new(0,500,0)
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 1}):Play()
+
+								wait(0.3)
+
+								Outline:Destroy()
+
+							end
+
+							if Mode == "Burn" and Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") or Mode == "Burn" and Mouse.Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+
+								if not Plr.Backpack:FindFirstChild("TigerSkin") then
+
+									ShowPopup("Creative Mode","'TigerSkin' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+									return
+
+								end
+
+								if Plr.Backpack:FindFirstChild("TigerSkin").Enabled == false then
+
+									ShowPopup("Creative Mode","This command is on cooldown since the tiger skin cannot duplicate (thats how no cooldown works)","I'll wait")
+									return
+
+								end
+
+								local Character = nil
+
+								if Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") then
+
+									Character = Mouse.Target.Parent
+
+								else
+
+									Character = Mouse.Target.Parent.Parent
+
+								end
+
+								local Outline = Instance.new("Highlight",Character)
+
+								Outline.OutlineColor = Color3.new(1,0,0)
+								Outline.OutlineTransparency = 1
+								Outline.FillTransparency = 1
+								Outline.Name = "DeathLine"
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 0}):Play()
+
+								Cooldown = true
+
+								Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("TigerSkin"))
+
+								local Cancel = false
+
+								if mouse1press and mouse1release then
+
+									task.wait(0.05)
+									mouse1press()
+									task.wait(0.05)
+									mouse1release()
+
+								end
+
+								local OldHealth = Character.Humanoid.Health
+
+								repeat
+
+									task.wait()
+									pcall(function()
+
+										Character["Left Leg"]:BreakJoints()
+										Character["Left Leg"].Velocity = Vector3.new(0,0,0)
+										Character["Left Leg"].Position = Plr.Character:FindFirstChild("TigerSkin").Handle.Position + Vector3.new(math.random(-200,200) / 150,math.random(-200,200) / 150,math.random(-200,200) / 150)
+
+									end)
+
+								until not Character:FindFirstChild("Left Arm") and not Character:FindFirstChild("Right Arm") or Character.Humanoid.Health == 0 or UIS:IsKeyDown(Enum.KeyCode.Backspace)
+
+								Cancel = true
+
+								Cooldown = false
+
+								Outline.Name = "Finished"
+
+								Plr.Character.Humanoid:UnequipTools()
+
+								Character["Left Leg"].Position = Vector3.new(0,500,0)
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 1}):Play()
+
+								wait(0.3)
+
+								Outline:Destroy()
+
+							end
+							
+							if Mode == "Egg" and Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") or Mode == "Egg" and Mouse.Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+
+								if not Plr.Backpack:FindFirstChild("EasterPeriastron") then
+
+									ShowPopup("Creative Mode","'EasterPeriastron' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+									return
+
+								end
+
+								local Character = nil
+
+								if Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") then
+
+									Character = Mouse.Target.Parent
+
+								else
+
+									Character = Mouse.Target.Parent.Parent
+
+								end
+
+								local Outline = Instance.new("Highlight",Character)
+
+								Outline.OutlineColor = Color3.new(1,0,0)
+								Outline.OutlineTransparency = 1
+								Outline.FillTransparency = 1
+								Outline.Name = "DeathLine"
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 0}):Play()
+
+								Cooldown = true
+
+								Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("EasterPeriastron"))
+
+								local Cancel = false
+
+								if mouse1press and mouse1release then
+
+									spawn(function()
+
+										repeat
+
+											task.wait(0.05)
+											mouse1press()
+											task.wait(0.05)
+											mouse1release()
+
+										until Cancel
+
+									end)
+
+								end
+								
+								Plr.Character.EasterPeriastron.ServerControl:InvokeServer("KeyPress",{Key = 'q',Down = true})
+
+								local OldHealth = Character.Humanoid.Health
+								
+								repeat
+									
+									wait()
+									
+								until Plr.Character.EasterPeriastron.Handle:FindFirstChild("SparklesPart")
+								
+								repeat
+
+									task.wait()
+									Character["Left Leg"]:BreakJoints()
+									Character["Left Leg"].Velocity = Vector3.new(0,0,0)
+									Character["Left Leg"].Position = Plr.Character:WaitForChild("EasterPeriastron").Handle.Position + Vector3.new(math.random(-200,200) / 150,math.random(-200,200) / 150,math.random(-200,200) / 150)
+
+								until Character:FindFirstChild("Egg") or Character.Humanoid.Health == 0 or UIS:IsKeyDown(Enum.KeyCode.Backspace)
+
+								Cancel = true
+
+								Cooldown = false
+
+								Outline.Name = "Finished"
+
+								Plr.Character.Humanoid:UnequipTools()
+
+								Character["Left Leg"].Position = Vector3.new(0,500,0)
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 1}):Play()
+
+								wait(0.3)
+
+								Outline:Destroy()
+
+							end
+
+							if Mode == "Clone" and Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") or Mode == "Clone" and Mouse.Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+
+								if not Plr.Backpack:FindFirstChild("SpectralSword") then
+
+									ShowPopup("Creative Mode","'SpectralSword' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+									return
+
+								end
+
+								Cooldown = true
+
+								FreeMove = true
+
+								Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("SpectralSword"))
+
+								Plr.Character.HumanoidRootPart.CFrame = Mouse.Hit + Vector3.new(5,0,0)
+
+								wait(0.3)
+
+								game:GetService("Players").LocalPlayer.Character.SpectralSword.KeyDown:FireServer("r",Plr.Character.HumanoidRootPart.Position)
+
+								wait(0.1)
+
+								Cooldown = false
+
+								FreeMove = false
+
+								Plr.Character:FindFirstChild("SpectralSword"):Destroy()
+
+							end
+							
+							if Mode == "Convert" and Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") or Mode == "Convert" and Mouse.Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+
+								if not Plr.Backpack:FindFirstChild("ReaperScythe") then
+
+									ShowPopup("Creative Mode","'ReaperScythe' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+									return
+
+								end
+
+								local Character = nil
+
+								if Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") then
+
+									Character = Mouse.Target.Parent
+
+								else
+
+									Character = Mouse.Target.Parent.Parent
+
+								end
+
+								local Outline = Instance.new("Highlight",Character)
+
+								Outline.OutlineColor = Color3.new(1,0,0)
+								Outline.OutlineTransparency = 1
+								Outline.FillTransparency = 1
+								Outline.Name = "DeathLine"
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 0}):Play()
+
+								Cooldown = true
+
+								Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("ReaperScythe"))
+
+								local Cancel = false
+
+								if mouse1press and mouse1release then
+
+									spawn(function()
+
+										repeat
+
+											task.wait(0.05)
+											mouse1press()
+											task.wait(0.05)
+											mouse1release()
+
+										until Cancel
+
+									end)
+
+								end
+
+								repeat
+
+									task.wait()
+									if Character:FindFirstChild("Left Leg") then
+
+										Character["Left Leg"]:BreakJoints()
+										Character["Left Leg"].Velocity = Vector3.new(0,0,0)
+										Character["Left Leg"].Position = Plr.Character:WaitForChild("ReaperScythe").Handle.Position + Vector3.new(math.random(-200,200) / 150,math.random(-200,200) / 150,math.random(-200,200) / 150)
+
+									end
+
+								until UIS:IsKeyDown(Enum.KeyCode.Backspace) or Character:FindFirstChildOfClass("Part") == nil
+
+								Cancel = true
+
+								Cooldown = false
+
+								Outline.Name = "Finished"
+
+								Plr.Character.Humanoid:UnequipTools()
+
+								Character["Left Leg"].Position = Vector3.new(0,500,0)
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 1}):Play()
+
+								wait(0.3)
+
+								Outline:Destroy()
+
+							end
+
+							if Mode == "Explode" and Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") or Mode == "Explode" and Mouse.Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+
+								if not Plr.Backpack:FindFirstChild("SpaceSword") then
+
+									ShowPopup("Creative Mode","'SpaceSword' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+									return
+
+								end
+
+								local Character = nil
+
+								if Mouse.Target.Parent:FindFirstChild("HumanoidRootPart") then
+
+									Character = Mouse.Target.Parent
+
+								else
+
+									Character = Mouse.Target.Parent.Parent
+
+								end
+
+								local Outline = Instance.new("Highlight",Character)
+
+								Outline.OutlineColor = Color3.new(1,0,0)
+								Outline.OutlineTransparency = 1
+								Outline.FillTransparency = 1
+								Outline.Name = "DeathLine"
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 0}):Play()
+
+								Cooldown = true
+
+								Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("SpaceSword"))
+
+								local Cancel = false
+
+								repeat
+
+									task.wait()
+									if Character:FindFirstChild("Left Leg") then
+
+										Character["Left Leg"]:BreakJoints()
+										Character["Left Leg"].Velocity = Vector3.new(0,0,0)
+										Character["Left Leg"].Position = Plr.Character:WaitForChild("SpaceSword").Handle.Position + Vector3.new(math.random(-200,200) / 150,math.random(-200,200) / 150,math.random(-200,200) / 150)
+
+									end
+
+								until UIS:IsKeyDown(Enum.KeyCode.Backspace) or Character:FindFirstChildOfClass("Humanoid").Health < 25
+
+								Cancel = true
+
+								Cooldown = false
+
+								Outline.Name = "Finished"
+
+								Plr.Character.Humanoid:UnequipTools()
+
+								Character["Left Leg"].Position = Vector3.new(0,500,0)
+
+								game.TweenService:Create(Outline,TweenInfo.new(0.3),{OutlineTransparency = 1}):Play()
+
+								wait(0.3)
+
+								Outline:Destroy()
+
+							end
+
+						end
+						if Mode == "Nova" then
+
+							if not Plr.Backpack:FindFirstChild("IvoryPeriastron") then
+
+								ShowPopup("Creative Mode","'IvoryPeriastron' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+								return
+
+							end
+
+							Cooldown = true
+
+							FreeMove = true
+
+							Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("IvoryPeriastron"))
+
+							Plr.Character.HumanoidRootPart.CFrame = Mouse.Hit
+
+							wait(0.3)
+
+							game:GetService("Players").LocalPlayer.Character.IvoryPeriastron.Remote:FireServer(Enum.KeyCode.Q)
+
+							wait(0.1)
+
+							Cooldown = false
+
+							FreeMove = false
+
+							Plr.Character:FindFirstChild("IvoryPeriastron"):Destroy()
+
+						end
+
+						if Mode == "Laser" then
+
+							if not Plr.Backpack:FindFirstChild("RainbowPeriastron") then
+
+								ShowPopup("Creative Mode","'RainbowPeriastron' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+								return
+
+							end
+
+							Cooldown = true
+
+							FreeMove = true
+
+							Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("RainbowPeriastron"))
+
+							Plr.Character.HumanoidRootPart.CFrame = Mouse.Hit
+
+							wait(0.3)
+
+							game:GetService("Players").LocalPlayer.Character.RainbowPeriastron.Remote:FireServer(Enum.KeyCode.Q)
+
+							wait(0.1)
+
+							Cooldown = false
+
+							FreeMove = false
+
+							Plr.Character:FindFirstChild("RainbowPeriastron"):Destroy()
+
+						end
+
+						if Mode == "Wave" then
+
+							if not Plr.Backpack:FindFirstChild("SwordOfTheSeas") then
+
+								ShowPopup("Creative Mode","'SwordOfTheSeas' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+								return
+
+							end
+
+							Cooldown = true
+
+							FreeMove = true
+
+							Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("SwordOfTheSeas"))
+
+							Plr.Character.HumanoidRootPart.CFrame = CFrame.new(Mouse.Hit.Position) * Plr.Character.HumanoidRootPart.CFrame.Rotation
+
+							wait(0.2)
+
+							game:GetService("Players").LocalPlayer.Character.SwordOfTheSeas.Remote:FireServer(Enum.KeyCode.Q)
+
+							wait(0.2)
+
+							Plr.Character.HumanoidRootPart.CFrame += Vector3.new(0,10000,0)
+
+							wait(0.2)
+
+							FreeMove = false
+							Cooldown = false
+
+							local Tool = Plr.Character:FindFirstChild("SwordOfTheSeas")
+
+							Tool.Parent = game.Workspace
+
+						end
+
+						if Mode == "Fire Portal Gun" then
+
+							if not Plr.Backpack:FindFirstChild("WormholeTunneler") and not Plr.Backpack:FindFirstChild("UsedTunneler") then
+
+								ShowPopup("Creative Mode","'WormholeTunneler' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+								return
+
+							end
+
+							local Tool = nil
+
+							if Plr.Backpack:FindFirstChild("UsedTunneler") then
+
+								Tool = Plr.Backpack:FindFirstChild("UsedTunneler")
+
+							elseif Plr.Backpack:FindFirstChild("WormholeTunneler") then
+								Plr.Backpack:FindFirstChild("WormholeTunneler").Name = "UsedTunneler"								
+								Tool = Plr.Backpack:FindFirstChild("UsedTunneler")	
+							end
+
+							Cooldown = true
+
+							FreeMove = true
+
+							Plr.Character.Humanoid:EquipTool(Tool)
+
+							Plr.Character.HumanoidRootPart.CFrame = CFrame.new(Mouse.Hit.Position + Vector3.new(0,50,0)) * Plr.Character.HumanoidRootPart.CFrame.Rotation
+
+							wait(0.3)
+
+							if mouse1press() and mouse1release() then
+
+								mouse1press()
+								task.wait(0.05)
+								mouse1release()
+
+							end
+
+							wait(0.1)
+
+							Plr.Character.Humanoid:UnequipTools()
+
+							Cooldown = false
+
+							FreeMove = false
+
+						end
+
+						if Mode == "Reset Portal Gun" then
+
+							if not Plr.Backpack:FindFirstChild("WormholeTunneler") and not Plr.Backpack:FindFirstChild("UsedTunneler") then
+
+								ShowPopup("Creative Mode","'WormholeTunneler' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+								return
+
+							end
+
+							local Tool = nil
+
+							if Plr.Backpack:FindFirstChild("UsedTunneler") then
+
+								Tool = Plr.Backpack:FindFirstChild("UsedTunneler")
+
+							elseif Plr.Backpack:FindFirstChild("WormholeTunneler") then
+								Plr.Backpack:FindFirstChild("WormholeTunneler").Name = "UsedTunneler"								
+								Tool = Plr.Backpack:FindFirstChild("UsedTunneler")	
+							end
+
+							Cooldown = true
+
+							Plr.Character.Humanoid:EquipTool(Tool)
+
+							wait(0.3)
+
+							Tool.Remote:FireServer(Enum.KeyCode.X)
+
+							wait(0.1)
+
+							Plr.Character.Humanoid:UnequipTools()
+
+							Cooldown = false
+
+						end
+
+						if Mode == "Multilasers" then
+
+							if not Plr.Backpack:FindFirstChild("CrimsonPeriastron") then
+
+								ShowPopup("Creative Mode","'CrimsonPeriastron' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+								return
+
+							end
+
+							Cooldown = true
+
+							FreeMove = true
+
+							Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("CrimsonPeriastron"))
+
+							Plr.Character.HumanoidRootPart.CFrame = Mouse.Hit
+
+							wait(0.3)
+
+							game:GetService("Players").LocalPlayer.Character.CrimsonPeriastron.Remote:FireServer(Enum.KeyCode.Q)
+
+							wait(0.3)
+
+							Plr.Character.HumanoidRootPart.CFrame += Vector3.new(0,10000,0)
+
+							wait(0.2)
+
+							FreeMove = false
+							Cooldown = false
+
+							local Tool = Plr.Character:FindFirstChild("CrimsonPeriastron")
+
+							Tool.Parent = game.Workspace
+
+						end
+
+						if Mode == "Trap" then
+
+							if not Plr.Backpack:FindFirstChild("TelamonsterTheChaosEdge") then
+
+								ShowPopup("Creative Mode","'TelamonsterTheChaosEdge' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+								return
+
+							end
+
+							Cooldown = true
+
+							FreeMove = true
+
+							Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("TelamonsterTheChaosEdge"))
+
+							Plr.Character.HumanoidRootPart.CFrame = Mouse.Hit
+
+							wait(0.3)
+
+							spawn(function()
+
+								local Table = {}
+								Table.Key = "q"
+								Table.Down = true
+
+								game:GetService("Players").LocalPlayer.Character.TelamonsterTheChaosEdge.ServerControl:InvokeServer("KeyPress",Table)
+
+							end)
+
+							wait(0.3)
+
+							Plr.Character.HumanoidRootPart.CFrame += Vector3.new(0,10000,0)
+
+							wait(0.2)
+
+							FreeMove = false
+							Cooldown = false
+
+							local Tool = Plr.Character:FindFirstChild("TelamonsterTheChaosEdge")
+
+							Tool.Parent = game.Workspace
+
+						end
+
+						if Mode == "Grass" then
+
+							if not Plr.Backpack:FindFirstChild("WhiteGoldBlueFlowerSword") then
+
+								ShowPopup("Creative Mode","'WhiteGoldBlueFlowerSword' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+								return
+
+							end
+
+							Cooldown = true
+
+							FreeMove = true
+
+							Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("WhiteGoldBlueFlowerSword"))
+
+							Plr.Character.HumanoidRootPart.CFrame = Mouse.Hit
+
+							wait(0.3)
+
+							local Args = {
+								[1] = "KeyPress",
+								[2] = {
+									["Key"] = "q",
+									["Down"] = true
+								}
+							}
+
+							spawn(function()
+
+								game:GetService("Players").LocalPlayer.Character.WhiteGoldBlueFlowerSword.ServerControl:InvokeServer(unpack(Args))
+
+							end)
+
+							wait(0.6)
+
+							Plr.Character.HumanoidRootPart.CFrame += Vector3.new(0,10000,0)
+
+							wait(0.2)
+
+							FreeMove = false
+
+							Cooldown = false
+
+							local Tool = Plr.Character:FindFirstChild("WhiteGoldBlueFlowerSword")
+
+							Tool.Parent = game.Workspace
+
+						end
+
+						if Mode == "Curse Bullet" then
+
+							if not Plr.Backpack:FindFirstChild("CrescendoTheSoulStealer") then
+
+								ShowPopup("Creative Mode","'CrescendoTheSoulStealer' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+								return
+
+							end
+
+							Cooldown = true
+
+							FreeMove = true
+
+							Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("CrescendoTheSoulStealer"))
+
+							Plr.Character.HumanoidRootPart.CFrame = Mouse.Hit
+
+							wait(0.3)
+
+							local Args = {
+								[1] = "KeyPress",
+								[2] = {
+									["Key"] = "e",
+									["Down"] = true
+								}
+							}
+
+							spawn(function()
+
+								game:GetService("Players").LocalPlayer.Character.CrescendoTheSoulStealer.ServerControl:InvokeServer(unpack(Args))
+
+							end)
+
+							wait(0.3)
+
+							Plr.Character.HumanoidRootPart.CFrame += Vector3.new(0,10000,0)
+
+							wait(0.2)
+
+							FreeMove = false
+							Cooldown = false
+
+							local Tool = Plr.Character:FindFirstChild("CrescendoTheSoulStealer")
+
+							Tool.Parent = game.Workspace
+
+						end
+
+						if Mode == "Burst" then
+
+							if not Plr.Backpack:FindFirstChild("SwordOfRedEpicness") then
+
+								ShowPopup("Creative Mode","'SwordOfRedEpicness' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+								return
+
+							end
+
+							Cooldown = true
+
+							FreeMove = true
+
+							Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("SwordOfRedEpicness"))
+
+							Plr.Character.HumanoidRootPart.CFrame = Mouse.Hit
+
+							local Waiting = true
+
+							while Waiting do
+
+								wait()
+								for _, Thing in Plr.Character.Humanoid:GetPlayingAnimationTracks() do
+
+									if Thing.Name == "Equip" then
+
+										Thing.Ended:Once(function()
+
+											Waiting = false
+
+										end)
+
+									end
+
+								end
+
+							end
+
+							local Args = {
+								[1] = "KeyPressed",
+								[2] = {
+									["Key"] = "q",
+									["Down"] = true
+								}
+							}
+
+							spawn(function()
+
+								game:GetService("Players").LocalPlayer.Character.SwordOfRedEpicness.ServerControl:InvokeServer(unpack(Args))
+
+							end)
+
+							wait(0.3)
+
+							Plr.Character.HumanoidRootPart.CFrame += Vector3.new(0,10000,0)
+
+							wait(0.2)
+
+							FreeMove = false
+							Cooldown = false
+
+							local Tool = Plr.Character:FindFirstChild("SwordOfRedEpicness")
+
+							Tool.Parent = game.Workspace
+
+						end
+
+						if Mode == "Blue Burst" then
+
+							if not Plr.Backpack:FindFirstChild("EpicBlueSword") then
+
+								ShowPopup("Creative Mode","'EpicBlueSword' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+								return
+
+							end
+
+							Cooldown = true
+
+							FreeMove = true
+
+							Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("EpicBlueSword"))
+
+							Plr.Character.HumanoidRootPart.CFrame = Mouse.Hit
+
+							local Waiting = true
+
+							while Waiting do
+
+								wait()
+								for _, Thing in Plr.Character.Humanoid:GetPlayingAnimationTracks() do
+
+									if Thing.Name == "Equip" then
+
+										while Thing.Length == 0 do
+
+											wait()
+
+										end
+
+										wait(Thing.Length)
+										Waiting = false
+
+									end
+
+								end
+
+							end
+
+							local Args = {
+								[1] = "KeyPressed",
+								[2] = {
+									["Key"] = "q",
+									["Down"] = true
+								}
+							}
+
+							spawn(function()
+
+								game:GetService("Players").LocalPlayer.Character.EpicBlueSword.ServerControl:InvokeServer(unpack(Args))
+
+							end)
+
+							wait(0.3)
+
+							Plr.Character.HumanoidRootPart.CFrame += Vector3.new(0,10000,0)
+
+							wait(0.2)
+
+							FreeMove = false
+							Cooldown = false
+
+							local Tool = Plr.Character:FindFirstChild("EpicBlueSword")
+
+							Tool.Parent = game.Workspace
+
+						end
+
+						if Mode == "Smoke" then
+
+							if not Plr.Backpack:FindFirstChild("BoStaff7000") then
+
+								ShowPopup("Creative Mode","'BoStaff7000' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+								return
+
+							end
+
+							Cooldown = true
+
+							FreeMove = true
+
+							Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("BoStaff7000"))
+
+							Plr.Character.HumanoidRootPart.CFrame = Mouse.Hit
+
+							wait(0.1)
+
+							game:GetService("Players").LocalPlayer.Character.BoStaff7000.Remote:FireServer(Enum.KeyCode.Q)
+
+							wait(1)
+
+							Plr.Character.HumanoidRootPart.CFrame += Vector3.new(0,10000,0)
+
+							wait(0.2)
+
+							FreeMove = false
+							Cooldown = false
+
+							local Tool = Plr.Character:FindFirstChild("BoStaff7000")
+
+							Tool.Parent = game.Workspace
+
+						end
+
+						if Mode == "Timefreeze" then
+
+							if not Plr.Backpack:FindFirstChild("DaggerOfShatteredDimensions") then
+
+								ShowPopup("Creative Mode","'DaggerOfShatteredDimensions' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+								return
+
+							end
+
+							for _, Thing in game.Workspace:GetChildren() do
+
+								if Thing:FindFirstChild("TimeStop") and Thing.TimeStop:IsA("Sound") then
+
+									ShowPopup("Creative Mode","This is already in effect. For some reason the game dont let you have more then one.","Aww")
+									return
+
+								end
+
+							end
+
+							Cooldown = true
+
+							FreeMove = true
+
+							Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("DaggerOfShatteredDimensions"))
+
+							Plr.Character.HumanoidRootPart.CFrame = Mouse.Hit
+
+							wait(0.2)
+
+							spawn(function()
+
+								game:GetService("Players").LocalPlayer.Character.DaggerOfShatteredDimensions.Remote:FireServer(Enum.KeyCode.Q)
+
+							end)
+
+							wait(2)
+
+							Plr.Character.HumanoidRootPart.CFrame += Vector3.new(0,10000,0)
+
+							wait(0.2)
+
+							FreeMove = false
+							Cooldown = false
+
+							local Tool = Plr.Character:FindFirstChild("DaggerOfShatteredDimensions")
+
+							Tool.Parent = game.Workspace
+
+						end
+
+						if Mode == "Snakes" then
+
+							if not Plr.Backpack:FindFirstChild("AttackSnakes") then
+
+								ShowPopup("Creative Mode","'AttackSnakes' Required. You probably have to reset everytime you wanna use this.","Got it")
+								return
+
+							end
+
+							local Tool = Plr.Backpack:FindFirstChild("AttackSnakes")
+
+							Cooldown = true
+
+							FreeMove = true
+
+							Plr.Character.Humanoid:EquipTool(Tool)
+
+							Plr.Character.HumanoidRootPart.CFrame = CFrame.new(Mouse.Hit.Position + Vector3.new(0,2,0)) * Plr.Character.HumanoidRootPart.CFrame.Rotation
+
+							wait(0.3)
+
+							if mouse1press() and mouse1release() then
+
+								mouse1press()
+								task.wait(0.05)
+								mouse1release()
+
+							end
+
+							wait(0.5)
+
+							Plr.Character.HumanoidRootPart.CFrame += Vector3.new(0,10000,0)
+
+							wait(0.2)
+
+							FreeMove = false
+							Cooldown = false
+
+							Tool.Parent = game.Workspace
+
+						end
+
+						if Mode == "Eye Bomb" then
+
+							if not Plr.Backpack:FindFirstChild("OverseerCrossbow") then
+
+								ShowPopup("Creative Mode","'OverseerCrossbow' Required. You probably have to reset everytime you wanna use this.","Got it")
+								return
+
+							end
+
+							local Tool = Plr.Backpack:FindFirstChild("OverseerCrossbow")
+
+							Cooldown = true
+
+							FreeMove = true
+
+							Plr.Character.Humanoid:EquipTool(Tool)
+
+							Plr.Character.HumanoidRootPart.CFrame = CFrame.new(Mouse.Hit.Position + Vector3.new(0,120,0)) * Plr.Character.HumanoidRootPart.CFrame.Rotation
+
+							wait(0.1)
+
+							Tool.ServerControl:InvokeServer("KeyPress",{Key = 'q',Down = true})
+							
+							repeat
+								
+								wait()
+								
+							until Tool.DisplayArrow:FindFirstChild("Fire")
+							
+							if mouse1press() and mouse1release() then
+
+								mouse1press()
+								task.wait(0.05)
+								mouse1release()
+
+							end
+
+							wait(0.5)
+
+							Plr.Character.HumanoidRootPart.CFrame += Vector3.new(0,10000,0)
+
+							wait(0.2)
+
+							FreeMove = false
+							Cooldown = false
+
+							Tool.Parent = game.Workspace
+
+						end
+						
+						if Mode == "Airstrike" then
+
+							if not Plr.Backpack:FindFirstChild("Tactical Airstrike") then
+
+								ShowPopup("Creative Mode","'Tactical Airstrike' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+								return
+
+							end
+
+							Cooldown = true
+
+							FreeMove = true
+
+							Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("Tactical Airstrike"))
+
+							wait(0.2)
+
+							spawn(function()
+
+								game:GetService("Players").LocalPlayer.Character["Tactical Airstrike"].OnMouseClick:FireServer(Mouse.Hit.Position)
+
+							end)
+
+							wait(0.3)
+
+							Plr.Character.HumanoidRootPart.CFrame += Vector3.new(0,10000,0)
+
+							wait(0.2)
+
+							FreeMove = false
+							Cooldown = false
+
+							local Tool = Plr.Character:FindFirstChild("Tactical Airstrike")
+
+							Tool.Parent = game.Workspace
+
+						end
+
+						if Mode == "Pumpkin" then
+
+							if not Plr.Backpack:FindFirstChild("PumpkinBomb") then
+
+								ShowPopup("Creative Mode","'PumpkinBomb' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+								return
+
+							end
+
+							local Tool = Plr.Backpack:FindFirstChild("PumpkinBomb")
+
+							Cooldown = true
+
+							FreeMove = true
+
+							Plr.Character.Humanoid:EquipTool(Tool)
+
+							Plr.Character.HumanoidRootPart.CFrame = CFrame.new(Mouse.Hit.Position + Vector3.new(0,100,0)) * Plr.Character.HumanoidRootPart.CFrame.Rotation
+
+							wait(0.3)
+
+							if mouse1press() and mouse1release() then
+
+								mouse1press()
+								task.wait(0.05)
+								mouse1release()
+
+							end
+
+							wait(0.5)
+
+							Plr.Character.HumanoidRootPart.CFrame += Vector3.new(0,10000,0)
+
+							wait(0.2)
+
+							Tool.Parent = game.Workspace
+
+							FreeMove = false
+							Cooldown = false
+
+						end
+
+						if Mode == "Stun Grenade" then
+
+							if not Plr.Backpack:FindFirstChild("FlashBang") then
+
+								ShowPopup("Creative Mode","'FlashBang' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+								return
+
+							end
+
+							Cooldown = true
+
+							FreeMove = true
+
+							Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("FlashBang"))
+
+							Plr.Character.HumanoidRootPart.CFrame = CFrame.new(Mouse.Hit.Position + Vector3.new(0,150,0)) * Plr.Character.HumanoidRootPart.CFrame.Rotation
+
+							wait(0.3)
+
+							if mouse1press() and mouse1release() then
+
+								mouse1press()
+								task.wait(0.05)
+								mouse1release()
+
+							end
+
+							wait(2.5)
+
+							Plr.Character.HumanoidRootPart.CFrame += Vector3.new(0,10000,0)
+
+							wait(0.2)
+
+							FreeMove = false
+							Cooldown = false
+
+							local Tool = Plr.Character:FindFirstChild("FlashBang")
+
+							Tool.Parent = game.Workspace
+
+						end
+
+						if Mode == "Explosive Table" then
+
+							if not Plr.Backpack:FindFirstChild("DeluxeExplodingLabTable") then
+
+								ShowPopup("Creative Mode","'DeluxeExplodingLabTable' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+								return
+
+							end
+
+							Cooldown = true
+
+							FreeMove = true
+
+							Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("DeluxeExplodingLabTable"))
+
+							Plr.Character.HumanoidRootPart.CFrame = CFrame.new(Mouse.Hit.Position + Vector3.new(0,3,0)) * Plr.Character.HumanoidRootPart.CFrame.Rotation
+
+							wait(0.2)
+
+							if mouse1press() and mouse1release() then
+
+								mouse1press()
+								task.wait(0.05)
+								mouse1release()
+
+							end
+
+							wait(0.2)
+
+							Plr.Character.HumanoidRootPart.CFrame += Vector3.new(0,10000,0)
+
+							wait(0.2)
+
+							FreeMove = false
+							Cooldown = false
+
+							local Tool = Plr.Character:FindFirstChild("DeluxeExplodingLabTable")
+
+							Tool.Parent = game.Workspace
+
+						end
+
+						if Mode == "Vine Trap" then
+
+							if not Plr.Backpack:FindFirstChild("VineStaff") then
+
+								ShowPopup("Creative Mode","'VineStaff' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+								return
+
+							end
+
+							Cooldown = true
+
+							FreeMove = true
+
+							Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("VineStaff"))
+
+							Plr.Character.HumanoidRootPart.CFrame = Mouse.Hit
+
+							wait(0.3)
+
+							spawn(function()
+
+								local Table = {}
+								Table.Down = true
+
+								game:GetService("Players").LocalPlayer.Character.VineStaff.ServerControl:InvokeServer("MouseClick",Table)
+
+							end)
+
+							wait(0.3)
+
+							Plr.Character.HumanoidRootPart.CFrame += Vector3.new(0,10000,0)
+
+							wait(0.2)
+
+							FreeMove = false
+							Cooldown = false
+
+							local Tool = Plr.Character:FindFirstChild("VineStaff")
+
+							Tool.Parent = game.Workspace
+
+						end
+
+						if Mode == "Sleep Fog" then
+
+							if not Plr.Backpack:FindFirstChild("ElixirOfDreams") then
+
+								ShowPopup("Creative Mode","'ElixirOfDreams' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+								return
+
+							end
+
+							Cooldown = true
+
+							FreeMove = true
+
+							Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("ElixirOfDreams"))
+
+							Plr.Character.HumanoidRootPart.CFrame = Mouse.Hit
+
+							wait(0.2)
+
+							spawn(function()
+
+								game:GetService("Players").LocalPlayer.Character.ElixirOfDreams.Remote:FireServer(Enum.KeyCode.Q)
+
+							end)
+
+							wait(0.7)
+
+							Plr.Character.HumanoidRootPart.CFrame += Vector3.new(0,10000,0)
+
+							wait(0.2)
+
+							FreeMove = false
+							Cooldown = false
+
+							local Tool = Plr.Character:FindFirstChild("ElixirOfDreams")
+
+							Tool.Parent = game.Workspace
+
+						end
+
+						if Mode == "Bone Pile" then
+
+							if not Plr.Backpack:FindFirstChild("BoneKnightAxe") then
+
+								ShowPopup("Creative Mode","'BoneKnightAxe' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+								return
+
+							end
+
+							Cooldown = true
+
+							FreeMove = true
+
+							Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("BoneKnightAxe"))
+
+							Plr.Character.HumanoidRootPart.CFrame = Mouse.Hit
+
+							wait(0.2)
+
+							local Args = {
+								[1] = "KeyPress",
+								[2] = {
+									["Key"] = "x",
+									["Down"] = true
+								}
+							}
+
+							spawn(function()
+
+								game:GetService("Players").LocalPlayer.Character.BoneKnightAxe.ServerControl:InvokeServer(unpack(Args))
+
+							end)
+
+							wait(0.1)
+
+							Plr.Character.HumanoidRootPart.CFrame += Vector3.new(0,1000000,0)
+
+							wait(0.2)
+
+							FreeMove = false
+							Cooldown = false
+
+							local Tool = Plr.Character:FindFirstChild("BoneKnightAxe")
+
+							Tool.Parent = game.Workspace
+
+						end
+
+						if Mode == "Missile (HOLD OR CLICK)" then
+
+							if not Plr.Backpack:FindFirstChild("RocketJumper") then
+
+								ShowPopup("Creative Mode","'RocketJumper' Required. Wait abit for the game to give you the item or keep resetting until this works frequently.","Got it")
+								return
+
+							end
+
+							Cooldown = true
+
+							FreeMove = true
+
+							Plr.Character.Humanoid:EquipTool(Plr.Backpack:FindFirstChild("RocketJumper"))
+
+							task.wait(0.05)
+
+							local Shooting = true
+							
+							UIS.InputEnded:Connect(function(Object)
+								
+								if Object.UserInputType == Enum.UserInputType.MouseButton1 then
+									
+									Shooting = false
+									
+								end
+								
+							end)
+							
+							spawn(function()
+								
+								while Shooting do
+									
+									game:GetService("Players").LocalPlayer.Character.RocketJumper.FireRocket:FireServer(Mouse.Hit.Position + Vector3.new(0,0,-1),Mouse.Hit.Position + Vector3.new(0,0,1))
+									
+									wait(0.05)
+									
+								end
+								
+							end)
+
+							FreeMove = false
+							Cooldown = false
+
+						end
+						
+					end)
+
+					local Base = nil
+
+					for _, Thing in game.Workspace:GetChildren() do
+
+						if Thing:FindFirstChild("Owner") and Thing:FindFirstChild("Owner"):IsA("StringValue") and Thing:FindFirstChild("Owner").Value == Plr.Name then
+
+							Base = Thing
+
+						end
+
+					end
+
+					Look.Size = Vector3.new(0,0,0)
+					Look.CanCollide = false
+					Look.Transparency = 1
+					Look.Anchored = true
+					Look.Name = "Freecam"
+					Look.CFrame = game.Workspace.CurrentCamera.CFrame
+
+					game.Workspace.CurrentCamera.CameraSubject = Look
+
+					Plr.CameraMinZoomDistance = 1
+					Plr.CameraMaxZoomDistance = 1
+
+					local Forward = 0
+					local Right = 0
+					local Up = 0
+
+					local ScrollFunc = UIS.InputChanged:Connect(function(Input)
+
+						if Input.UserInputType == Enum.UserInputType.MouseWheel then
+							if Input.Position.Z > 0 then
+								Forward += 1
+							elseif Input.Position.Z < 0 then
+								Forward -= 1
+							end
+						end
+
+					end)
+
+					local Destroyed = false
+
+					spawn(function()
+
+						while not Destroyed do
+
+							task.wait(0.1)
+
+							for i=1,10 do
+
+								game:GetService("ReplicatedStorage").SpawnLuckyBlock:FireServer()
+								game:GetService("ReplicatedStorage").SpawnSuperBlock:FireServer()
+								game:GetService("ReplicatedStorage").SpawnGalaxyBlock:FireServer()
+								game:GetService("ReplicatedStorage").SpawnDiamondBlock:FireServer()
+								game:GetService("ReplicatedStorage").SpawnRainbowBlock:FireServer()
+
+							end
+
+						end
+
+					end)
+
+					local Run = game["Run Service"].RenderStepped:Connect(function()
+
+						task.wait()
+
+						if UIS:IsKeyDown(Enum.KeyCode.W) then
+
+							Forward += 0.05
+
+						end
+
+						if UIS:IsKeyDown(Enum.KeyCode.S) then
+
+							Forward -= 0.05
+
+						end
+
+						if UIS:IsKeyDown(Enum.KeyCode.D) then
+
+							Right += 0.05
+
+						end
+
+						if UIS:IsKeyDown(Enum.KeyCode.A) then
+
+							Right -= 0.05
+
+						end
+
+						if UIS:IsKeyDown(Enum.KeyCode.Q) then
+
+							Up -= 0.05
+
+						end
+
+						if UIS:IsKeyDown(Enum.KeyCode.E) then
+
+							Up += 0.05
+
+						end
+
+						game.Workspace.CurrentCamera.CameraSubject = Look
+
+						if not FreeMove then
+
+							Plr.Character:MoveTo(Base.SpawnLocation.Position + Vector3.new(0,2,0))
+
+						end
+
+						Look.CFrame = CFrame.new(Look.Position + (Look.CFrame.LookVector * Forward) + (Look.CFrame.RightVector * Right) + (Look.CFrame.UpVector * Up)) * game.Workspace.CurrentCamera.CFrame.Rotation
+
+						Forward *= 0.9
+						Right *= 0.9
+						Up *= 0.9
+
+					end)
+
+					Look.Destroying:Connect(function()
+
+						Run:Disconnect()
+						ScrollFunc:Disconnect()
+						ClickCheck:Disconnect()
+						Ok = false
+						Destroyed = true
+
+					end)
+
+					spawn(function()
+
+						Description.Visible = false
+
+						game.TweenService:Create(CommandList,TweenInfo.new(0.2,Enum.EasingStyle.Sine,Enum.EasingDirection.In),{Size = UDim2.new(0, 0, 0.765, 0)}):Play()
+
+						wait(0.2)
+
+						for _, Item in CommandList:GetChildren() do
+
+							if not Item:IsA("UIListLayout") then
+
+								Item:Destroy()
+
+							end
+
+						end
+
+						game.TweenService:Create(CommandList,TweenInfo.new(0.2,Enum.EasingStyle.Sine,Enum.EasingDirection.In),{Size = UDim2.new(0.748058856, 0, 0.938999891, 0)}):Play()
+
+						local Items = {
+
+							"Disable creative mode",
+							"Kill",
+							"Fling",
+							"Stun",
+							"Wither",
+							"Erase",
+							"Drop",
+							"Freeze",
+							"Kill Freeze",
+							"Shadow",
+							"Pixelate",
+							"Curse",
+							"Slow",
+							"Whack",
+							"Burn",
+							"Clone",
+							"Egg",
+							"Convert",
+							"Explode",
+							"Fire Portal Gun",
+							"Reset Portal Gun",
+							"Nova",
+							"Laser",
+							"Trap",
+							"Wave",
+							"Missile (HOLD OR CLICK)",
+							"Multilasers",
+							"Grass",
+							"Curse Bullet",
+							"Burst",
+							"Blue Burst",
+							"Smoke",
+							"Timefreeze",
+							"Snakes",
+							"Airstrike",
+							"Pumpkin",
+							"Stun Grenade",
+							"Explosive Table",
+							"Vine Trap",
+							"Sleep Fog",
+							"Bone Pile",
+							"Eye Bomb",
+
+						}
+
+						local ItemDesc = {
+
+							"Turns off creative mode.",
+							"Kills a player.",
+							"Flings a player.",
+							"Stuns/Tases a player.",
+							"Make a player wither away and unequip their items and hurt them every tick. Sometimes dont work because of cooldown.",
+							"Erases a player and only leaves behind their hats that just fall into the void.",
+							"Makes the player drop their item and slows them down. Sometimes dont work because of cooldown.",
+							"Puts a player in an ice box.",
+							"Puts a player in a more detailed ice box, then explodes into ice.",
+							"Makes all their body parts go in different directions and makes them black.",
+							"Makes a player pixels.",
+							"Makes a player float, then die.",
+							"Slows a player down for abit and resets their speed to 16.",
+							"Slows, sometimes sits, hurts and blurs a players vision.",
+							"Burns a player to death.",
+							"Puts a clone next to someone, Sometimes kills.",
+							"Turns the player into an egg that shrinks.",
+							"Turns a player into a black skeleton that will fight for you.",
+							"Puts rainbowish fire on somebody then explodes them.",
+							"Spawns a blue portal where your mouse is. If one has already been placed, it instead spawns an orange one.",
+							"Clears the portals.",
+							"Spawns a super nova.",
+							"Spawns a laser, Look where you wanna shoot and press W, aka your character looks that way.",
+							"Make it night for abit and trap people near your mouse in red vines.",
+							"Summons a wave.",
+							"Spawns a missile/explosion that EXTREMELY flings and kills players. Including inside bases. (This can just randomly stop working if unlucky)",
+							"Makes alot of lasers around your mouse.",
+							"Grows deadly grass. Lags players when you summon alot of it.",
+							"Spawns a bullet that goes to the closest player and does the curse command on them.",
+							"Makes red orbs go around your mouse that makes people slow.",
+							"Makes blue orbs go around your mouse that makes people sit down.",
+							"Makes a smoke cylinder thing that kills people in it.",
+							"Freezes anybody in the circle.",
+							"Summons snakes. 1 use per reset/death since it doesnt clone.",
+							"Plans an airstrike.",
+							"Summon explosive pumpkin.",
+							"Throws a stun grenade after abit.",
+							"Summons a table that explodes after abit.",
+							"Summons a circle of vines.",
+							"Makes people around your mouse goto sleep for abit.",
+							"Make a REALLY laggy pile of bones that kill on touch.",
+							"Spawns an eye that explodes into smaller eyes that do 50 damage.",
+							
+						}
+
+						for Pos, Item in Items do
+
+							local Clone = Button:Clone()
+
+							local Round = Instance.new("UICorner",Clone)
+
+							Round.CornerRadius = UDim.new(0.4, 0)
+
+							local SelectStroke = Instance.new("UIStroke",Clone)
+
+							SelectStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+							SelectStroke.Color = Color3.new(1,1,1)
+							SelectStroke.Thickness = 0
+
+							Clone.Parent = CommandList
+
+							Clone.Text = " " .. Item
+
+							Clone.MouseEnter:Connect(function()
+
+								Description.Visible = true
+								Desc.Text = ItemDesc[Pos]
+								game.TweenService:Create(Clone,TweenInfo.new(0.2),{BackgroundColor3 = Color3.fromRGB(150,150,150)}):Play()
+
+							end)
+
+							Clone.MouseLeave:Connect(function()
+
+								Description.Visible = false
+								game.TweenService:Create(Clone,TweenInfo.new(0.2),{BackgroundColor3 = Color3.fromRGB(0,0,0)}):Play()
+
+							end)
+
+							Clone.MouseButton1Click:Connect(function()
+
+								if Item ~= "Disable creative mode" then
+
+									for _, Thing in CommandList:GetChildren() do
+
+										if Thing:IsA("TextButton") then
+
+											Thing.Draggable = not Thing.Draggable
+
+										end
+
+									end
+
+									Mode = Item
+
+									wait(0.01)
+
+									game.TweenService:Create(SelectStroke,TweenInfo.new(0.3,Enum.EasingStyle.Sine,Enum.EasingDirection.Out),{Thickness = 2}):Play()
+
+								else
+
+									Destroyed = true
+									Look:Destroy()
+									game.Workspace.CurrentCamera.CameraSubject = Plr.Character:FindFirstChildWhichIsA('Humanoid')
+									game.Workspace.CurrentCamera.CameraType = "Custom"
+									Plr.CameraMinZoomDistance = 0.5
+									Plr.CameraMaxZoomDistance = 400
+									Plr.CameraMode = "Classic"
+
+									game.TweenService:Create(CommandList,TweenInfo.new(0.2,Enum.EasingStyle.Sine,Enum.EasingDirection.In),{Size = UDim2.new(0, 0, 0.765, 0)}):Play()
+
+									wait(0.2)
+
+									for _, Item in CommandList:GetChildren() do
+
+										if not Item:IsA("UIListLayout") then
+
+											Item:Destroy()
+
+										end
+
+									end
+
+									Description.Visible = false
+
+									LoadCommands()
+
+									game.TweenService:Create(CommandList,TweenInfo.new(0.2,Enum.EasingStyle.Sine,Enum.EasingDirection.In),{Size = UDim2.new(0.748058856, 0, 0.938999891, 0)}):Play()
+
+									if Run then
+
+										Run:Disconnect()
+										ScrollFunc:Disconnect()
+										ClickCheck:Disconnect()
+
+									end
+
+								end
+
+							end)
+
+							Clone.Changed:Connect(function(Prop)
+
+								if Prop == "Draggable" then
+
+									game.TweenService:Create(SelectStroke,TweenInfo.new(0.3,Enum.EasingStyle.Sine,Enum.EasingDirection.Out),{Thickness = 0}):Play()
+
+								end
+
+							end)
+
+						end
+
+					end)
+
+				end,
+
+			},
+
+		}
+
+	end,
+	
+	["15980086096"] = function ()
+
+		local OldPos = CFrame.new()
+
+		local Untouchable = false
+
+		local Murdering = false
+
+		local Disabled = false
+
+		local Stuff = Instance.new("Folder",nil)
+
+		Commands = {
+
+			{
+
+				Type = "Title",
+				Text = "Weapons"
+
+			},
+			
+			{
+
+				Type = "Split",
+
+			},
+			
+			{
+
+				Name = "Insta-Infect",
+				Type = "Toggle",
+				Desc = "Be infected then turn this on to auto infect nearby people.",
+				Action = function(On)
+
+					game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+
+					if On and game.Players.LocalPlayer.Backpack:FindFirstChild("Attack") then
+
+						Murdering = true
+
+						local Punch = game.Players.LocalPlayer.Backpack:FindFirstChild("Attack")
+						local Grab = game.Players.LocalPlayer.Backpack:FindFirstChild("Grab")
+
+						spawn(function()
+
+							repeat
+
+								local player = game.Players.LocalPlayer
+								local root = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+								if not root then return end
+
+								local Closest, CDist = nil, math.huge
+
+								for _, other in pairs(game.Players:GetPlayers()) do
+									if other.Character.Humanoid.DisplayName ~= "ghost" and other ~= player and other.Character then
+										local otherRoot = other.Character:FindFirstChild("HumanoidRootPart")
+										if otherRoot then
+											local Dist = (root.Position - otherRoot.Position).Magnitude
+											if Dist < CDist then
+												Closest, CDist = other.Character, Dist
+											end
+										end
+									end
+								end
+
+								if Closest and Closest.Humanoid.Health > 50 then
+
+									local Head = Closest:WaitForChild("Head")
+									local Humanoid = Closest:WaitForChild("Humanoid")
+									local Pos = Closest:WaitForChild("Torso").Position
+
+									Plr.Character.Humanoid:EquipTool(Punch)
+									Plr.Character:WaitForChild("Attack")
+									wait(0.1)
+									Punch.Remote.Hit:FireServer(Head,Humanoid,Pos)
+
+								end
+
+								if Closest and Closest.Humanoid.Health < 50 then
+
+									local Head = Closest:WaitForChild("Head")
+									local Humanoid = Closest:WaitForChild("Humanoid")
+									local Pos = Closest:WaitForChild("Torso").Position
+
+									Plr.Character.Humanoid:EquipTool(Grab)
+									Plr.Character:WaitForChild("Grab")
+									Grab.Remote.Hit:FireServer(Head,Humanoid,Pos)
+
+								end
+
+								wait(0.01)
+
+							until not Murdering
+
+						end)
+
+					elseif On then
+
+						ShowPopup("Insta-Infect","Please get the infection tools to use this.","Ok")
+
+					end
+
+					if not On then
+
+						Murdering = false
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Name = "Godly Upgrade",
+				Type = "Button",
+				Desc = "Select a infection punch or melee to make it op.",
+				Action = function(On)
+
+					if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then
+
+						local Tool = Instance.new("Tool")
+
+						Tool = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
+
+						game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+
+						if Tool.TextureId == "http://www.roblox.com/asset/?id=2421576431" then
+
+							ShowPopup("Godly Upgrade","This tool is already modded.","Ok")
+							return					
+
+						end
+
+						Tool.TextureId = "http://www.roblox.com/asset/?id=2421576431"
+
+						Tool.ToolTip = "Godly Weapon"
+
+						Tool.Equipped:Connect(function()
+
+							local stopit = false
+
+							Tool.Unequipped:Connect(function()
+
+								stopit = true
+
+							end)
+
+							repeat
+
+
+								local player = game.Players.LocalPlayer
+								local root = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+								if not root then return end
+
+								local Closest, CDist = nil, math.huge
+
+								for _, other in pairs(game.Players:GetPlayers()) do
+									if other.Character.Humanoid.DisplayName ~= "ghost" and other ~= player and other.Character then
+										local otherRoot = other.Character:FindFirstChild("HumanoidRootPart")
+										if otherRoot then
+											local Dist = (root.Position - otherRoot.Position).Magnitude
+											if Dist < CDist then
+												Closest, CDist = other.Character, Dist
+											end
+										end
+									end
+								end
+
+								if Closest then
+									if Tool.Name ~= "Gun" then
+
+										local Head = Closest:WaitForChild("Head")
+										local Humanoid = Closest:WaitForChild("Humanoid")
+										local Pos = Closest:WaitForChild("Torso").Position
+
+										for i=1,5 do
+
+											Tool.Remote.Hit:FireServer(Head,Humanoid,Pos)
+
+										end
+
+									else
+
+										local Pos = Closest:WaitForChild("Torso").Position
+
+										Tool.Shoot:FireServer(Pos)
+
+									end
+								end
+
+								wait(0.01)
+
+							until stopit
+
+						end)
+
+					else
+
+						ShowPopup("Godly Upgrade","Please hold an item that can be modded.","Ok")
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Name = "Swoop (READ DESC)",
+				Type = "Button",
+				Desc = "Equip any melee weapon and click this, Then when you hold it, Click when you swoop into somebody.",
+				Action = function(On)
+
+					if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then
+
+						local Tool = Instance.new("Tool")
+
+						Tool = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
+
+						game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+
+						if Tool.TextureId == "http://www.roblox.com/asset/?id=7485051715" then
+
+							ShowPopup("Lock-Hit","This tool is already modded.","Ok")
+							return					
+
+						end
+
+						Tool.TextureId = "http://www.roblox.com/asset/?id=7485051715"
+
+						Tool.ToolTip = "Equip to SWOOP"
+
+						Tool.Activated:Connect(function()
+
+							wait(0.3)
+							Tool.Enabled = false
+							wait(1)
+							Tool.Enabled = true
+
+						end)
+
+						Tool.Equipped:Connect(function()
+
+							for _, Thing in game.Workspace:GetDescendants() do
+
+								if Thing:IsA("BasePart") then
+
+									Thing:SetAttribute("Collide",Thing.CanCollide)
+
+									Thing.CanCollide = false
+
+								end
+
+							end
+
+							local Move = Instance.new("BodyPosition",game.Players.LocalPlayer.Character.HumanoidRootPart)
+
+							Move.MaxForce *= 7
+							Move.P *= 2.5
+
+							local Stop = false					
+
+							game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true
+
+							Tool.Unequipped:Connect(function()
+
+								for _, Thing in game.Workspace:GetDescendants() do
+
+									if Thing:IsA("BasePart") then
+
+										Thing.CanCollide = Thing:GetAttribute("Collide")
+
+									end
+
+								end
+
+								Move:Destroy()
+								Stop = true
+								game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
+
+							end)
+
+							while not Stop do
+
+								task.wait(0.1)
+
+								local player = game.Players.LocalPlayer
+								local root = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+								if not root then return end
+
+								local Closest, CDist = nil, math.huge
+
+								for _, other in pairs(game.Players:GetPlayers()) do
+									if other ~= player and other.Team ~= player.Team and other.Character then
+										local otherRoot = other.Character:FindFirstChild("HumanoidRootPart")
+										if otherRoot then
+											local Dist = (root.Position - otherRoot.Position).Magnitude
+											if Dist < CDist then
+												Closest, CDist = otherRoot, Dist
+											end
+										end
+									end
+								end
+
+								if Closest then
+
+									if Tool.Enabled then
+
+										Move.Position = Closest.Position + (Closest.Velocity / 4) - Vector3.new(0,3,0)
+
+									else
+
+										Move.Position = Closest.Position + (Closest.Velocity / 4) + Vector3.new(0,50,0)
+
+									end
+
+								end
+
+							end
+
+						end)
+
+					else
+
+						ShowPopup("Lock-Hit","Please hold a melee.","Ok")
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Type = "Title",
+				Text = "Character"
+
+			},
+			
+			{
+
+				Type = "Split",
+
+			},
+
+			{
+
+				Name = "Auto-Escape",
+				Type = "Toggle",
+				Desc = "Instantly escapes from grabs.",
+				Action = function(On)
+
+					if On then
+
+						Untouchable = true
+
+						spawn(function()
+
+							while Untouchable do
+
+								task.wait()
+
+								if game.Players.LocalPlayer.PlayerGui:FindFirstChild("EscapeGui") then
+
+									game.Players.LocalPlayer.PlayerGui:FindFirstChild("EscapeGui").Remote.Hit:InvokeServer()
+
+								end
+
+							end
+
+						end)
+
+					else
+
+						Untouchable = false
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Name = "Antidote",
+				Type = "Toggle",
+				Desc = "Goo doesnt effect you.",
+				Action = function(On)
+
+					if On then
+
+						for _, Thing in game.Workspace:GetDescendants() do
+
+							if Thing.Name == "TransfurPart" and Thing:IsA("BasePart") then
+
+								Thing.CanTouch = false
+								Thing.Transparency = 0.8
+
+							end
+
+						end
+
+					else
+
+						for _, Thing in game.Workspace:GetDescendants() do
+
+							if Thing.Name == "TransfurPart" and Thing:IsA("BasePart") then
+
+								Thing.CanTouch = true
+								Thing.Transparency = 0
+
+							end
+
+						end
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Name = "Spam Jump",
+				Type = "Toggle",
+				Desc = "Remove the jump cooldown.",
+				Action = function(On)
+
+					if On then
+
+						game.Players.LocalPlayer.Character.JumpCooldown.Enabled = false
+
+					else
+
+						game.Players.LocalPlayer.Character.JumpCooldown.Enabled = true
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Name = "Disable Forcefield",
+				Type = "Toggle",
+				Desc = "The lobby forcefield doesnt effect you.",
+				Action = function(On)
+
+					if On then
+
+						Disabled = true
+
+						spawn(function()
+
+							while Disabled do
+
+								wait(0.1)
+
+								for _, Thing in game.Workspace:GetDescendants() do
+
+									if Thing.Name == "Kill" and Thing:IsA("BasePart") then
+
+										Thing.Parent = Stuff
+
+									end
+
+								end
+
+							end							
+
+						end)
+
+					else
+
+						Disabled = false
+
+						wait(0.2)
+
+						for _, Thing in Stuff:GetChildren() do
+
+							if Thing.Name == "Kill" and Thing:IsA("BasePart") then
+
+								Thing.Parent = game.Workspace
+
+							end
+
+						end
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Type = "Title",
+				Text = "Teleports"
+
+			},
+			
+			{
+
+				Type = "Split",
+
+			},
+
+			{
+
+				Name = "Lobby",
+				Type = "Button",
+				Desc = "Go to the lobby.",
+				Action = function(On)
+
+					for _, Thing in game.Players.LocalPlayer.Character:GetDescendants() do
+
+						if Thing:IsA("BasePart") then
+
+							Thing.Velocity = Vector3.new(0,0,0)
+
+						end
+
+					end
+
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(136, 9, -11776)
+
+				end,
+
+			},
+
+			{
+
+				Name = "Puddle",
+				Type = "Button",
+				Desc = "Go to a puddle.",
+				Action = function(On)
+
+					for _, Thing in game.Players.LocalPlayer.Character:GetDescendants() do
+
+						if Thing:IsA("BasePart") then
+
+							Thing.Velocity = Vector3.new(0,0,0)
+
+						end
+
+					end
+
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(223, -10, -11788)
+
+				end,
+
+			},
+
+			{
+
+				Name = "Outside",
+				Type = "Button",
+				Desc = "Go outside.",
+				Action = function(On)
+
+					for _, Thing in game.Players.LocalPlayer.Character:GetDescendants() do
+
+						if Thing:IsA("BasePart") then
+
+							Thing.Velocity = Vector3.new(0,0,0)
+
+						end
+
+					end
+
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(120, 47, -11797)
+
+				end,
+
+			},
+
+		}
+
+	end,
+
+	["10679239752"] = function ()
+
+		local Speed = 16
+		local UsingSpeed = false
+		local SpeedWarn = false
+		local Explode = false
+		local NilFolder = Instance.new("Folder",nil)
+		local Herecomesthemoneyyyyyyherewegomoneytimeherecomesthemoneyyyymoneymoneymoneymoneymoneymoneymoneymoneymoneyyyyyyyyyyyyyyyyy = false
+		local Plr = game.Players.LocalPlayer
+		local Crawling = false
+
+		local Character = Plr.Character or Plr.CharacterAdded:Wait()
+
+		Plr.CharacterAdded:Connect(function(New)
+
+			Character = New
+
+		end)
+
+		Commands = {
+
+			{
+
+				Type = "Title",
+				Text = "Movement",
+
+			},
+
+			{
+
+				Type = "Split",
+
+			},
+			
+			{
+
+				Name = "Loop Speed",
+				Desc = "Keep setting your speed to this. 25-30 is recommended so the anticheat dont activate.",
+				Type = "Metre",
+				Min = 16,
+				Max = 35,
+				Default = 16,
+				Action = function(Value)
+
+					Speed = Value
+
+					if tonumber(Speed) > tonumber(30) and SpeedWarn == false then
+
+						SpeedWarn = true
+						ShowPopup("Warning","Going over 30 could sometimes trigger the anticheat and going over 35 can often trigger the anticheat.","Got it")
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Name = "Toggle Speed",
+				Desc = "Toggle the loop speed. (HINT: If you do it right, sometimes by not moving and grabbing, or not, you can move really fast while grabbing somebody.",
+				Type = "Toggle",
+				Action = function(On)
+
+					if On then
+
+						UsingSpeed = true
+
+						spawn(function()
+
+							repeat
+
+								task.wait()
+
+								Character.Humanoid.WalkSpeed = Speed
+
+							until not UsingSpeed
+
+						end)
+
+					else
+
+						UsingSpeed = false
+
+					end
+
+				end,
+
+			},
+			
+			{
+
+				Type = "Title",
+				Text = "Character",
+
+			},
+			
+			{
+
+				Type = "Split",
+
+			},
+
+			{
+
+				Name = "Enable Respawn",
+				Desc = "Allows you to respawn in menu. Resets on death so click again.",
+				Type = "Button",
+				Action = function(On)
+
+					game.StarterGui:SetCore("ResetButtonCallback", true)
+
+				end,
+
+			},
+			
+			{
+
+				Name = "Takedown",
+				Desc = "When you are under 30 hp and are about to be infected, you kill yourself and the person infecting you. (THIS ONLY WORKS MOST OF THE TIME WHEN YOU INSTANTLY GO OUT AND TRY GET INFECTED FOR SOME REASON)",
+				Type = "Toggle",
+				Action = function(On)
+
+					if On then
+
+						Explode = true
+						
+						spawn(function()
+							
+							while Explode do
+
+								wait(0.01)
+
+								if Plr.Character.Humanoid.Health < 30 then
+
+									Plr.Character:FindFirstChildOfClass("Humanoid"):ChangeState(Enum.HumanoidStateType.Dead)
+
+								end
+
+							end
+							
+						end)
+
+					else
+
+						Explode = false
+
+					end
+
+				end,
+
+			},
+			
+			{
+
+				Name = "Disable Forcefield",
+				Desc = "Be able to go inside forcefields as a infected.",
+				Type = "Toggle",
+				Action = function(On)
+
+					if On then
+
+						local Map = nil
+
+						for _, Thing in game.Workspace:GetChildren() do
+
+							if Thing:FindFirstChildOfClass("SpawnLocation") then
+
+								Map = Thing
+
+							end
+
+						end
+
+						for _, Thing in Map:GetDescendants() do
+
+							if Thing:IsA("BasePart") and Thing.Parent.Name ~= "Model" and Thing:FindFirstChild("Script") and Thing:FindFirstChild("Weld") and Thing:FindFirstChild("TouchInterest") then
+
+								local Object = Instance.new("ObjectValue",Thing)
+
+								Object.Name = "OriginalParent"
+
+								Object.Value = Thing.Parent
+
+								Thing.Parent = NilFolder
+
+							end
+
+						end
+
+					else
+
+						for _, Thing in NilFolder:GetChildren() do
+
+							Thing.Parent = Thing:FindFirstChild("OriginalParent").Value
+
+						end
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Name = "Crawl",
+				Desc = "Go under players so you can hit them but they cant hit you. Try not to go under infected when they die since it flings you for some reason.",
+				Type = "Toggle",
+				Action = function(On)
+
+					if On then
+						
+						Plr.Character.Humanoid.PlatformStand = true
+						Plr.Character.Humanoid.RootPart.CFrame = Plr.Character.Humanoid.RootPart.CFrame * CFrame.Angles(math.pi * 0.5, 0, 0)
+						
+						local BodyGyro = Instance.new("BodyGyro", Plr.Character.Humanoid.RootPart)
+
+						BodyGyro.Name = "Flip"
+						BodyGyro.CFrame = CFrame.new(0, 0, 0, 1, 0, -0, -0, -4.37113883e-08, -1, 0, 1, -4.37113883e-08)
+						BodyGyro.MaxTorque = Vector3.new(40000, 40000, 40000)
+						
+						Crawling = true
+						
+						local HB = game["Run Service"].Heartbeat
+						
+						spawn(function()
+							
+							while Crawling do
+								local Delta = HB:Wait()
+								if Plr.Character.Humanoid.MoveDirection.Magnitude > 0 then
+									Plr.Character:TranslateBy(Plr.Character.Humanoid.MoveDirection * 2 * Delta * 10)
+								end
+								if UIS:IsKeyDown(Enum.KeyCode.Space) then
+									
+									Plr.Character:TranslateBy(Vector3.new(0,2,0) * 2 * Delta * 10)
+									
+								end
+							end
+							
+						end)
+						
+					else
+						
+						Crawling = false
+						Plr.Character.Humanoid.RootPart.Flip:Destroy()
+						Plr.Character.Humanoid.PlatformStand = false
+						
+					end
+					
+				end,
+
+			},
+			
+			{
+
+				Name = "Antidote",
+				Desc = "Be immortal to infection puddles.",
+				Type = "Toggle",
+				Action = function(On)
+
+					if On then
+
+						local Map = nil
+
+						for _, Thing in game.Workspace:GetChildren() do
+
+							if Thing:FindFirstChildOfClass("SpawnLocation") then
+
+								Map = Thing
+
+							end
+
+						end
+
+						for _, Thing in Map:GetDescendants() do
+
+							if Thing:IsA("BasePart") and Thing.Parent.Name == "Model" and Thing:FindFirstChild("Script") and Thing:FindFirstChild("Weld") and Thing:FindFirstChild("TouchInterest") then
+
+								Thing:ClearAllChildren()
+								Thing.CanCollide = false
+								Thing.Transparency = 0.5
+
+							end
+
+						end
+
+					else
+
+						local Map = nil
+
+						for _, Thing in game.Workspace:GetChildren() do
+
+							if Thing:FindFirstChildOfClass("SpawnLocation") then
+
+								Map = Thing
+
+							end
+
+						end
+
+						for _, Thing in Map:GetDescendants() do
+
+							if Thing:IsA("BasePart") and Thing.Parent.Name == "Model" and Thing:FindFirstChild("Script") and Thing:FindFirstChild("Weld") and Thing:FindFirstChild("TouchInterest") then
+
+								Thing.CanTouch = true
+								Thing.Transparency = 0
+
+							end
+
+						end
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Name = "Auto-Money",
+				Desc = "Get all money that appears (Only works as non infected).",
+				Type = "Toggle",
+				Action = function(On)
+
+					if On then
+
+						local Map = nil
+
+						for _, Thing in game.Workspace:GetChildren() do
+
+							if Thing:FindFirstChildOfClass("SpawnLocation") then
+
+								Map = Thing
+
+							end
+
+						end
+
+						Herecomesthemoneyyyyyyherewegomoneytimeherecomesthemoneyyyymoneymoneymoneymoneymoneymoneymoneymoneymoneyyyyyyyyyyyyyyyyy = true
+
+						for _, Thing in Map:GetDescendants() do
+
+							if Thing:IsA("BasePart") and Thing.Name == "MoneyStack" then
+
+								Thing:SetAttribute("OldPos",Thing.Position)
+
+							end
+
+						end
+
+						spawn(function()
+
+							while Herecomesthemoneyyyyyyherewegomoneytimeherecomesthemoneyyyymoneymoneymoneymoneymoneymoneymoneymoneymoneyyyyyyyyyyyyyyyyy do
+
+								wait(0.1)
+
+								for _, Thing in Map:GetDescendants() do
+
+									if Thing:IsA("BasePart") and Thing.Name == "MoneyStack" then
+
+										Thing.Position = Character.HumanoidRootPart.Position
+
+									end
+
+								end
+
+							end
+
+						end)
+
+					else
+
+						Herecomesthemoneyyyyyyherewegomoneytimeherecomesthemoneyyyymoneymoneymoneymoneymoneymoneymoneymoneymoneyyyyyyyyyyyyyyyyy = false -- ): no money
+
+						local Map = nil
+
+						for _, Thing in game.Workspace:GetChildren() do
+
+							if Thing:FindFirstChildOfClass("SpawnLocation") then
+
+								Map = Thing
+
+							end
+
+						end
+
+						pcall(function()
+
+							for _, Thing in Map:GetDescendants() do
+
+								if Thing:IsA("BasePart") and Thing.Name == "MoneyStack" then
+
+									Thing.Position = Thing:GetAttribute("OldPos")
+
+								end
+
+							end
+
+						end)
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Name = "Spam Jump",
+				Desc = "Lets you jump without cooldown.",
+				Type = "Toggle",
+				Action = function(On)
+
+					if On then
+
+						Plr.PlayerGui.JumpCooldown.Enabled = false
+
+					else
+
+						Plr.PlayerGui.JumpCooldown.Enabled = true
+
+					end
+
+				end,
+
+			},
+
+		}
+
+	end,
+
+	["11276071411"] = function ()
+
+		local Showing = {}
+		local ShowingSheriff = {}
+		local Magnet = false
+
+		Commands = {
+
+			{
+
+				Type = "Title",
+				Text = "Sheriff"
+
+			},
+
+			{
+
+				Name = "Show Criminals",
+				Type = "Button",
+				Desc = "Shows you where all the criminals are.",
+				Action = function(On)
+
+					for _, Character in game.Workspace:GetChildren() do
+
+						if Character.Name ~= Plr.Name and Character:IsA("Model") and Character:FindFirstChild("PlayerProximityPrompt") and not Character.Head:FindFirstChild("AboveHeadTag") and not Character:FindFirstChild("Reveal") then
+
+							local Show = Instance.new("Highlight",Character)
+
+							Show.Name = "Reveal"
+
+							table.insert(Showing,Show)
+
+						end
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Name = "Hide Criminals",
+				Type = "Button",
+				Desc = "Hides the criminals's location.",
+				Action = function(On)
+
+					for _, Show in Showing do
+
+						Show.Enabled = false
+						Show.Name = "Hidden"
+						wait()
+						Show:Destroy()
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Type = "Title",
+				Text = "Criminal"
+
+			},
+
+			{
+
+				Type = "Split"
+
+			},
+			
+			{
+
+				Name = "Show Sheriffs",
+				Type = "Toggle",
+				Desc = "Shows you where all the sheriffs are.",
+				Action = function(On)
+
+					if On then
+						for _, Character in game.Workspace:GetChildren() do
+
+							if Character.Name ~= Plr.Name and Character:IsA("Model") and Character.Head:FindFirstChild("AboveHeadTag") and not Character:FindFirstChild("Reveal") then
+
+								for _, Thing in Character:GetDescendants() do
+
+									if Thing:IsA("Highlight") then
+
+										Thing:Destroy()
+
+									end
+
+								end
+
+								local Show = Instance.new("Highlight",Character)
+
+								Show.Name = "Reveal"
+
+								Show.FillColor = Color3.new(0,0,1)
+
+								table.insert(ShowingSheriff,Show)
+
+							end
+
+						end
+					else
+						for _, Show in ShowingSheriff do
+
+							Show.Enabled = false
+							Show.Name = "Hidden"
+							wait()
+							Show:Destroy()
+
+						end
+					end
+					
+				end,
+
+			},
+
+			{
+
+				Name = "Task Reach",
+				Type = "Button",
+				Desc = "Makes it so you can instantly complete your task from a distance.",
+				Action = function(On)
+
+					for _, Item in game.Workspace:GetDescendants() do
+						
+						if Item.Name == "TargetTaskHighlight" and Item.Parent:FindFirstChildOfClass("ProximityPrompt") then
+							
+							Item.Parent:FindFirstChildOfClass("ProximityPrompt").MaxActivationDistance = 10000000000
+							Item.Parent:FindFirstChildOfClass("ProximityPrompt").HoldDuration = 0
+							
+						end
+						
+					end
+
+				end,
+
+			},
+			
+			{
+
+				Type = "Split",
+
+			},
+
+			{
+
+				Name = "Money Magnet",
+				Type = "Toggle",
+				Desc = "Makes money easier to collect.",
+				Action = function(On)
+
+					if On then
+
+						Magnet = true
+
+						spawn(function()
+
+							while Magnet do
+
+								wait()
+
+								for _, Money in workspace.CollectableItems:GetChildren() do
+
+									if Money:IsA("Part") then
+
+										Money.Position = Plr.Character.HumanoidRootPart.Position
+
+									end
+
+								end
+
+							end
+
+						end)
+
+					else
+
+						Magnet = false
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Name = "Money X-Ray",
+				Type = "Toggle",
+				Desc = "Lets you see money though walls.",
+				Action = function(On)
+
+					if On then
+
+						for _, Money in workspace.CollectableItems:GetDescendants() do
+							
+							if Money:IsA("BillboardGui") then
+								
+								Money.AlwaysOnTop = true
+								
+							end
+							
+						end
+
+					else
+
+						for _, Money in workspace.CollectableItems:GetDescendants() do
+
+							if Money:IsA("BillboardGui") then
+
+								Money.AlwaysOnTop = false
+
+							end
+
+						end
+
+					end
+
+				end,
+
+			},
+			
+			{
+
+				Name = "Complete Obby",
+				Type = "Button",
+				Desc = "Makes you beat the obby, You get 50 money and can only complete it each round.",
+				Action = function(On)
+
+					Plr.Character.HumanoidRootPart.CFrame = workspace.Lobby.Obby.ObbyEndPart.CFrame
+
+				end,
+
+			},
+
+		}
+
+	end,
+	
+	["11158043705"] = function ()
+
+		local Target = nil
+		local SpeedType = "Normal"
+		local SpeedOn = false
+		local SpeedAmnt = 16
+		local WallClimb
+		local Truss
+		local ClimbUse = false
+		local Killing = false
+		local ItemGiving = false
+
+		game.UserInputService.InputBegan:Connect(function(Input,Chat)
+
+			if Input.KeyCode == Enum.KeyCode.T and not Chat and not Closed then
+
+				if Mouse.Target.Parent:FindFirstChildOfClass("Humanoid") and game.Players:GetPlayerFromCharacter(Mouse.Target.Parent) then
+
+					ShowPopup(Mouse.Target.Parent:GetFullName(),"You have selected " .. Mouse.Target.Parent.Name .. ".","Nice")
+					Target = Mouse.Target.Parent
+					return
+
+				else
+
+					if Mouse.Target.Parent.Parent:FindFirstChildOfClass("Humanoid") and game.Players:GetPlayerFromCharacter(Mouse.Target.Parent.Parent) then
+
+						ShowPopup(Mouse.Target.Parent.Parent:GetFullName(),"You have selected " .. Mouse.Target.Parent.Parent.Name .. ".","Nice")
+						Target = Mouse.Target.Parent.Parent
+						return
+
+					else
+
+						ShowPopup("Error","Invalid target.","Oh")
+						Target = nil
+						return
+
+					end
+
+				end
+
+			end
+
+		end)
+
+		Commands = {
+
+			{
+
+				Type = "Title",
+				Text = "Player"
+
+			},
+
+			{
+
+				Name = "Speed",
+				Desc = "Keeps setting your speed to a specific value.",
+				Type = "Metre",
+				Min = 16,
+				Max = 100,
+				Default = 16,
+				Action = function(Amount)
+
+					SpeedAmnt = Amount
+
+				end,
+
+			},
+
+			{
+
+				Name = "Speed Type",
+				Desc = "Lets you pick teleport or normal speed, Teleport lets you move while ragdolled.",
+				Type = "Select",
+				Options = {"Normal","Teleport"},
+				Action = function(Pick)
+
+					SpeedType = Pick
+
+				end,
+
+			},
+
+			{
+
+				Name = "Toggle Speed",
+				Desc = "Toggles the speed.",
+				Type = "Toggle",
+				Action = function(On)
+
+					if On then
+
+						SpeedOn = true
+
+						spawn(function()
+
+							while SpeedOn do
+
+								wait()
+
+								if SpeedType == "Normal" then
+
+									Plr.Character.Humanoid.WalkSpeed = SpeedAmnt
+
+								else
+
+									Plr.Character.Humanoid.WalkSpeed = 16
+
+									local Delta = game["Run Service"].Heartbeat:Wait()
+
+									Plr.Character:TranslateBy(Plr.Character.Humanoid.MoveDirection * Delta * SpeedAmnt)
+
+								end
+
+							end
+
+						end)
+
+					else
+
+						SpeedOn = false
+						wait()
+						Plr.Character.Humanoid.WalkSpeed = 16
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Type = "Split",
+
+			},
+
+			{
+
+				Name = "Climb Walls",
+				Desc = "Allows you to climb everything.",
+				Type = "Toggle",
+				Action = function(On)
+
+					if On then
+
+						local Players = game:GetService("Players")
+						local RunService = game:GetService("RunService")
+
+						Truss = Instance.new("TrussPart",game.Workspace)
+						Truss.Anchored = true
+						Truss.Size = Vector3.new(0.4,2048,0.4)
+						Truss.Color = Color3.new(1,0,0)
+						Truss.Material = Enum.Material.Neon
+						Truss.Name = "RayTruss"
+						Truss.CanTouch = false
+						Truss.Transparency = 1
+
+						local Params = RaycastParams.new()
+						Params.FilterType = Enum.RaycastFilterType.Exclude
+						Params.FilterDescendantsInstances = {Truss,Plr.Character}
+
+						WallClimb = RunService.RenderStepped:Connect(function()
+
+							if not Plr.Character.HumanoidRootPart or not Plr.Character.HumanoidRootPart.Parent then return end
+
+							local Result = workspace:Raycast(Plr.Character.HumanoidRootPart.Position - Vector3.new(0,2,0), Plr.Character.HumanoidRootPart.CFrame.LookVector * 2.5, Params)
+
+							if Result and ClimbUse then
+								Truss.Position = Result.Position
+							else
+								Truss.Position = Vector3.new(9999999,9999999,9999999)
+								ClimbUse = false
+								wait(0.3)
+								ClimbUse = true
+							end
+
+						end)
+
+					else
+
+						WallClimb:Disconnect()
+						Truss:Destroy()
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Type = "Title",
+				Text = "Target"
+
+			},
+
+			{
+
+				Name = "Quick Kill Target",
+				Desc = "Kills the target but don't count as a kill. (Your not the person who killed them)",
+				Type = "Button",
+				Action = function()
+
+					if not Target or not Target:FindFirstChildOfClass("Humanoid") then
+						
+						print(Target)
+						ShowPopup("Error","Please press T on a player to select as target.","Got it")
+						return
+
+					end
+						
+					if Killing then
+
+						ShowPopup("Error","Your already killing someone.","Right")
+						return
+
+					end
+
+					if Target:FindFirstChild("PVPOFFGUI") and Target:FindFirstChild("PVPOFFGUI").TextLabel == "" then
+
+						ShowPopup("Error","This player doesn't have PVP on.","Ok")
+						return
+
+					end
+
+					if Plr.jaladaDePeloCharge.Value ~= 100 then
+
+						ShowPopup("Error","Your blue bar (Hair grabbing bar) needs to be full for this.","Got it")
+						return
+
+					end
+
+					Killing = true
+
+					if not game.Workspace:FindFirstChild("FloatKill") then
+
+						local Float = Instance.new("Part",game.Workspace)
+
+						Float.Position = Vector3.new(0,-1000,0)
+						Float.Name = "FloatKill"
+						Float.Size = Vector3.new(2048,1,2048)
+						Float.Transparency = 1
+						Float.Anchored = true
+
+					end
+
+					local OldPos = Plr.Character.HumanoidRootPart.CFrame
+
+					Plr.Character.HumanoidRootPart.CFrame = CFrame.new(0,-996.5,0)
+
+					game.Workspace.FallenPartsDestroyHeight = -10000
+
+					repeat
+
+						wait()
+
+						game:GetService("ReplicatedStorage").JALADADEPELOEVENT:FireServer()
+
+						Plr.Character.HumanoidRootPart.CFrame = CFrame.new(0,-996.5,0)
+
+						Target.LeftFoot:BreakJoints()
+						Target.LeftFoot.CanCollide = false
+						Target.LeftFoot.Position = Plr.Character.Humanoid.RootPart.Position + (Plr.Character.Humanoid.RootPart.CFrame.LookVector * 2)
+						Target.LeftFoot.Velocity = Vector3.new(0,0,0)
+
+					until Target:FindFirstChild("BeingCarried")
+
+					repeat
+
+						wait()
+
+					until not Target:FindFirstChild("BeingCarried")
+
+					wait(0.1)
+
+					Plr.Character.HumanoidRootPart.CFrame = OldPos
+
+					Killing = false
+
+				end,
+
+			},
+
+			{
+
+				Name = "Kill Target",
+				Desc = "Kills the target normally.",
+				Type = "Button",
+				Action = function()
+
+					if not Target then
+
+						ShowPopup("Error","Please press T on a player to select as target.","Got it")
+						return
+
+					end
+
+					if Killing then
+
+						ShowPopup("Error","Your already killing someone.","Right")
+						return
+
+					end
+
+					if Target:FindFirstChild("PVPOFFGUI") and Target:FindFirstChild("PVPOFFGUI").TextLabel == "" then
+
+						ShowPopup("Error","This player doesn't have PVP on.","Ok")
+						return
+
+					end
+
+					Killing = true
+
+					if not game.Workspace:FindFirstChild("FloatKill") then
+
+						local Float = Instance.new("Part",game.Workspace)
+
+						Float.Position = Vector3.new(0,-1000,0)
+						Float.Name = "FloatKill"
+						Float.Size = Vector3.new(2048,1,2048)
+						Float.Transparency = 1
+						Float.Anchored = true
+
+					end
+
+					local OldPos = Plr.Character.HumanoidRootPart.CFrame
+
+					Plr.Character.HumanoidRootPart.CFrame = CFrame.new(0,-996.5,0)
+
+					game.Workspace.FallenPartsDestroyHeight = -10000
+
+					game.Workspace.CurrentCamera.CameraSubject = Target.Humanoid
+
+					repeat
+
+						wait()
+
+						if Plr.Backpack:FindFirstChild("1 punches") then
+
+							Plr.Character.Humanoid:EquipTool(Plr.Backpack["1 punches"])
+
+						end
+
+						game:GetService("ReplicatedStorage"):WaitForChild("PUNCHEVENT"):FireServer(1)
+
+						Plr.Character.HumanoidRootPart.CFrame = CFrame.new(0,-996.5,0)
+
+						Target.LeftFoot:BreakJoints()
+						Target.LeftFoot.CanCollide = false
+						Target.LeftFoot.Position = Plr.Character.Humanoid.RootPart.Position + (Plr.Character.Humanoid.RootPart.CFrame.LookVector * 2)
+						Target.LeftFoot.Velocity = Vector3.new(0,0,0)
+
+					until Target:FindFirstChild("canBeStomped") or not Target or Plr.Character.Humanoid.Health == 0
+
+					if not Target or Plr.Character.Humanoid.Health == 0 then
+
+						Plr.Character.HumanoidRootPart.CFrame = OldPos
+
+						Killing = false
+
+						game.Workspace.CurrentCamera.CameraSubject = Plr.Character.Humanoid
+
+						return
+
+					end
+
+					repeat
+
+						wait()
+
+						if Plr.Backpack:FindFirstChild("1 punches") then
+
+							Plr.Character.Humanoid:EquipTool(Plr.Backpack["1 punches"])
+
+						end
+
+						game:GetService("ReplicatedStorage"):WaitForChild("STOMPEVENT"):FireServer()
+
+						Plr.Character.HumanoidRootPart.CFrame = Target.HumanoidRootPart.CFrame + Vector3.new(0,5,0)
+
+					until Target.Humanoid.Health == 0 or not Target or Plr.Character.Humanoid.Health == 0
+
+					if not Target or Plr.Character.Humanoid.Health == 0 then
+
+						Plr.Character.HumanoidRootPart.CFrame = OldPos
+
+						game.Workspace.CurrentCamera.CameraSubject = Plr.Character.Humanoid
+
+						Killing = false
+
+						return
+
+					end
+
+					wait(0.1)
+
+					Plr.Character.HumanoidRootPart.CFrame = OldPos
+
+					Killing = false
+
+					game.Workspace.CurrentCamera.CameraSubject = Plr.Character.Humanoid
+
+				end,
+
+			},
+			
+			{
+
+				Name = "Bring Target",
+				Desc = "Brings the person to you. You need a full blue bar for this.",
+				Type = "Button",
+				Action = function()
+
+					if not Target or not Target:FindFirstChildOfClass("Humanoid") then
+
+						ShowPopup("Error","Please press T on a player to select as target.","Got it")
+						return
+
+					end
+
+					if Target:FindFirstChild("PVPOFFGUI") and Target:FindFirstChild("PVPOFFGUI").TextLabel == "" then
+
+						ShowPopup("Error","This player doesn't have PVP on.","Ok")
+						return
+
+					end
+
+					if Plr.jaladaDePeloCharge.Value ~= 100 then
+
+						ShowPopup("Error","Your blue bar (Hair grabbing bar) needs to be full for this.","Got it")
+						return
+
+					end
+
+					repeat
+
+						wait()
+
+						game:GetService("ReplicatedStorage").JALADADEPELOEVENT:FireServer()
+
+						Target.LeftFoot:BreakJoints()
+						Target.LeftFoot.CanCollide = false
+						Target.LeftFoot.Position = Plr.Character.Humanoid.RootPart.Position + (Plr.Character.Humanoid.RootPart.CFrame.LookVector * 2)
+						Target.LeftFoot.Velocity = Vector3.new(0,0,0)
+
+					until Target:FindFirstChild("BeingCarried")
+
+				end,
+
+			},
+			
+			{
+
+				Type = "Title",
+				Text = "Other"
+
+			},
+			
+			{
+
+				Name = "Throwable Giver",
+				Desc = "Always gives you something to throw.",
+				Type = "Toggle",
+				Action = function(On)
+
+					if On then
+						
+						ItemGiving = true
+						
+						spawn(function()
+							
+							while ItemGiving do
+
+								wait(0.02)
+
+								if not Plr.Character:FindFirstChild("Trash Can") and not Plr.Character:FindFirstChild("Bench") and not Plr.Character:FindFirstChild("Chair") then
+
+									if not Plr.Backpack:FindFirstChild("Trash Can") and not Plr.Backpack:FindFirstChild("Bench") and not Plr.Backpack:FindFirstChild("Chair") then
+
+										for _, Item in game.Workspace:GetDescendants() do
+
+											if Item.Name == "Trash Can" or Item.Name == "Park Bench" or Item.Name == "Chair" then
+												
+												if Item:IsA("BasePart") and Item:FindFirstChildOfClass("ProximityPrompt") and Item:FindFirstChildOfClass("ProximityPrompt").MaxActivationDistance ~= 0 then
+
+													local GotIt = false
+
+													local OldPos = Plr.Character.Head.CFrame
+													local OldPos2 = Item.CFrame
+
+													Item:FindFirstChildOfClass("ProximityPrompt").MaxActivationDistance = 1000000
+													
+													game.Workspace.CurrentCamera.CameraType = Enum.CameraType.Scriptable
+													
+													spawn(function()
+														
+														while not GotIt do
+
+															Plr.Character.HumanoidRootPart.CFrame = OldPos2
+															Item:FindFirstChildOfClass("ProximityPrompt"):InputHoldBegin()
+															wait(0.01)
+															Item:FindFirstChildOfClass("ProximityPrompt"):InputHoldEnd()
+															wait()
+
+														end
+														
+													end)
+													
+													wait(0.2)
+
+													Item.CFrame = game.Workspace.CurrentCamera.CFrame + game.Workspace.CurrentCamera.CFrame.LookVector * 20
+
+													repeat
+														
+														wait()
+														
+													until Item:FindFirstChildOfClass("ProximityPrompt").MaxActivationDistance == 0
+
+													GotIt = true
+
+													wait(0.01)
+													
+													spawn(function()
+														
+														for i=1,5 do
+															
+															wait(0.01)
+															Plr.Character.HumanoidRootPart.CFrame = OldPos
+															game.Workspace.CurrentCamera.CameraType = Enum.CameraType.Track
+															
+														end
+														
+													end)
+													Item.CFrame = OldPos2
+													
+													break
+
+												end
+
+											end
+
+										end
+
+									end
+
+								end
+
+							end
+							
+						end)
+						
+					else
+						
+						ItemGiving = false
+						
+					end
+
+				end,
+
+			},
+			
+		}
+
+	end,
+	
+	["87868857007174"] = function ()
+
+		local Target = nil
+		local SpeedType = "Normal"
+		local SpeedOn = false
+		local SpeedAmnt = 16
+		local WallClimb
+		local Truss
+		local ClimbUse = false
+		local Killing = false
+		local ItemGiving = false
+
+		game.UserInputService.InputBegan:Connect(function(Input,Chat)
+
+			if Input.KeyCode == Enum.KeyCode.T and not Chat and not Closed then
+
+				if Mouse.Target.Parent:FindFirstChildOfClass("Humanoid") and game.Players:GetPlayerFromCharacter(Mouse.Target.Parent) then
+
+					ShowPopup(Mouse.Target.Parent:GetFullName(),"You have selected " .. Mouse.Target.Parent.Name .. ".","Nice")
+					Target = Mouse.Target.Parent
+					return
+
+				else
+
+					if Mouse.Target.Parent.Parent:FindFirstChildOfClass("Humanoid") and game.Players:GetPlayerFromCharacter(Mouse.Target.Parent.Parent) then
+
+						ShowPopup(Mouse.Target.Parent.Parent:GetFullName(),"You have selected " .. Mouse.Target.Parent.Parent.Name .. ".","Nice")
+						Target = Mouse.Target.Parent.Parent
+						return
+
+					else
+
+						ShowPopup("Error","Invalid target.","Oh")
+						Target = nil
+						return
+
+					end
+
+				end
+
+			end
+
+		end)
+
+		Commands = {
+
+			{
+
+				Type = "Title",
+				Text = "Player"
+
+			},
+
+			{
+
+				Name = "Speed",
+				Desc = "Keeps setting your speed to a specific value.",
+				Type = "Metre",
+				Min = 16,
+				Max = 100,
+				Default = 16,
+				Action = function(Amount)
+
+					SpeedAmnt = Amount
+
+				end,
+
+			},
+
+			{
+
+				Name = "Speed Type",
+				Desc = "Lets you pick teleport or normal speed, Teleport lets you move while ragdolled.",
+				Type = "Select",
+				Options = {"Normal","Teleport"},
+				Action = function(Pick)
+
+					SpeedType = Pick
+
+				end,
+
+			},
+
+			{
+
+				Name = "Toggle Speed",
+				Desc = "Toggles the speed.",
+				Type = "Toggle",
+				Action = function(On)
+
+					if On then
+
+						SpeedOn = true
+
+						spawn(function()
+
+							while SpeedOn do
+
+								wait()
+
+								if SpeedType == "Normal" then
+
+									Plr.Character.Humanoid.WalkSpeed = SpeedAmnt
+
+								else
+
+									Plr.Character.Humanoid.WalkSpeed = 16
+
+									local Delta = game["Run Service"].Heartbeat:Wait()
+
+									Plr.Character:TranslateBy(Plr.Character.Humanoid.MoveDirection * Delta * SpeedAmnt)
+
+								end
+
+							end
+
+						end)
+
+					else
+
+						SpeedOn = false
+						wait()
+						Plr.Character.Humanoid.WalkSpeed = 16
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Type = "Split",
+
+			},
+
+			{
+
+				Name = "Climb Walls",
+				Desc = "Allows you to climb everything.",
+				Type = "Toggle",
+				Action = function(On)
+
+					if On then
+
+						local Players = game:GetService("Players")
+						local RunService = game:GetService("RunService")
+
+						Truss = Instance.new("TrussPart",game.Workspace)
+						Truss.Anchored = true
+						Truss.Size = Vector3.new(0.4,2048,0.4)
+						Truss.Color = Color3.new(1,0,0)
+						Truss.Material = Enum.Material.Neon
+						Truss.Name = "RayTruss"
+						Truss.CanTouch = false
+						Truss.Transparency = 1
+
+						local Params = RaycastParams.new()
+						Params.FilterType = Enum.RaycastFilterType.Exclude
+						Params.FilterDescendantsInstances = {Truss,Plr.Character}
+
+						WallClimb = RunService.RenderStepped:Connect(function()
+
+							if not Plr.Character.HumanoidRootPart or not Plr.Character.HumanoidRootPart.Parent then return end
+
+							local Result = workspace:Raycast(Plr.Character.HumanoidRootPart.Position - Vector3.new(0,2,0), Plr.Character.HumanoidRootPart.CFrame.LookVector * 2.5, Params)
+
+							if Result and ClimbUse then
+								Truss.Position = Result.Position
+							else
+								Truss.Position = Vector3.new(9999999,9999999,9999999)
+								ClimbUse = false
+								wait(0.3)
+								ClimbUse = true
+							end
+
+						end)
+
+					else
+
+						WallClimb:Disconnect()
+						Truss:Destroy()
+
+					end
+
+				end,
+
+			},
+
+			{
+
+				Type = "Title",
+				Text = "Target"
+
+			},
+
+			{
+
+				Name = "Quick Kill Target",
+				Desc = "Kills the target but don't count as a kill. (Your not the person who killed them)",
+				Type = "Button",
+				Action = function()
+
+					if not Target or not Target:FindFirstChildOfClass("Humanoid") then
+
+						print(Target)
+						ShowPopup("Error","Please press T on a player to select as target.","Got it")
+						return
+
+					end
+
+					if Killing then
+
+						ShowPopup("Error","Your already killing someone.","Right")
+						return
+
+					end
+
+					if Target:FindFirstChild("PVPOFFGUI") and Target:FindFirstChild("PVPOFFGUI").TextLabel == "" then
+
+						ShowPopup("Error","This player doesn't have PVP on.","Ok")
+						return
+
+					end
+
+					if Plr.jaladaDePeloCharge.Value ~= 100 then
+
+						ShowPopup("Error","Your blue bar (Hair grabbing bar) needs to be full for this.","Got it")
+						return
+
+					end
+
+					Killing = true
+
+					if not game.Workspace:FindFirstChild("FloatKill") then
+
+						local Float = Instance.new("Part",game.Workspace)
+
+						Float.Position = Vector3.new(0,-1000,0)
+						Float.Name = "FloatKill"
+						Float.Size = Vector3.new(2048,1,2048)
+						Float.Transparency = 1
+						Float.Anchored = true
+
+					end
+
+					local OldPos = Plr.Character.HumanoidRootPart.CFrame
+
+					Plr.Character.HumanoidRootPart.CFrame = CFrame.new(0,-996.5,0)
+
+					game.Workspace.FallenPartsDestroyHeight = -10000
+
+					repeat
+
+						wait()
+
+						game:GetService("ReplicatedStorage").JALADADEPELOEVENT:FireServer()
+
+						Plr.Character.HumanoidRootPart.CFrame = CFrame.new(0,-996.5,0)
+
+						Target.LeftFoot:BreakJoints()
+						Target.LeftFoot.CanCollide = false
+						Target.LeftFoot.Position = Plr.Character.Humanoid.RootPart.Position + (Plr.Character.Humanoid.RootPart.CFrame.LookVector * 2)
+						Target.LeftFoot.Velocity = Vector3.new(0,0,0)
+
+					until Target:FindFirstChild("BeingCarried")
+
+					repeat
+
+						wait()
+
+					until not Target:FindFirstChild("BeingCarried")
+
+					wait(0.1)
+
+					Plr.Character.HumanoidRootPart.CFrame = OldPos
+
+					Killing = false
+
+				end,
+
+			},
+
+			{
+
+				Name = "Kill Target",
+				Desc = "Kills the target normally.",
+				Type = "Button",
+				Action = function()
+
+					if not Target then
+
+						ShowPopup("Error","Please press T on a player to select as target.","Got it")
+						return
+
+					end
+
+					if Killing then
+
+						ShowPopup("Error","Your already killing someone.","Right")
+						return
+
+					end
+
+					if Target:FindFirstChild("PVPOFFGUI") and Target:FindFirstChild("PVPOFFGUI").TextLabel == "" then
+
+						ShowPopup("Error","This player doesn't have PVP on.","Ok")
+						return
+
+					end
+
+					Killing = true
+
+					if not game.Workspace:FindFirstChild("FloatKill") then
+
+						local Float = Instance.new("Part",game.Workspace)
+
+						Float.Position = Vector3.new(0,-1000,0)
+						Float.Name = "FloatKill"
+						Float.Size = Vector3.new(2048,1,2048)
+						Float.Transparency = 1
+						Float.Anchored = true
+
+					end
+
+					local OldPos = Plr.Character.HumanoidRootPart.CFrame
+
+					Plr.Character.HumanoidRootPart.CFrame = CFrame.new(0,-996.5,0)
+
+					game.Workspace.FallenPartsDestroyHeight = -10000
+
+					game.Workspace.CurrentCamera.CameraSubject = Target.Humanoid
+
+					repeat
+
+						wait()
+
+						if Plr.Backpack:FindFirstChild("1 punches") then
+
+							Plr.Character.Humanoid:EquipTool(Plr.Backpack["1 punches"])
+
+						end
+
+						game:GetService("ReplicatedStorage"):WaitForChild("PUNCHEVENT"):FireServer(1)
+
+						Plr.Character.HumanoidRootPart.CFrame = CFrame.new(0,-996.5,0)
+
+						Target.LeftFoot:BreakJoints()
+						Target.LeftFoot.CanCollide = false
+						Target.LeftFoot.Position = Plr.Character.Humanoid.RootPart.Position + (Plr.Character.Humanoid.RootPart.CFrame.LookVector * 2)
+						Target.LeftFoot.Velocity = Vector3.new(0,0,0)
+
+					until Target:FindFirstChild("canBeStomped") or not Target or Plr.Character.Humanoid.Health == 0
+
+					if not Target or Plr.Character.Humanoid.Health == 0 then
+
+						Plr.Character.HumanoidRootPart.CFrame = OldPos
+
+						Killing = false
+
+						game.Workspace.CurrentCamera.CameraSubject = Plr.Character.Humanoid
+
+						return
+
+					end
+
+					repeat
+
+						wait()
+
+						if Plr.Backpack:FindFirstChild("1 punches") then
+
+							Plr.Character.Humanoid:EquipTool(Plr.Backpack["1 punches"])
+
+						end
+
+						game:GetService("ReplicatedStorage"):WaitForChild("STOMPEVENT"):FireServer()
+
+						Plr.Character.HumanoidRootPart.CFrame = Target.HumanoidRootPart.CFrame + Vector3.new(0,5,0)
+
+					until Target.Humanoid.Health == 0 or not Target or Plr.Character.Humanoid.Health == 0
+
+					if not Target or Plr.Character.Humanoid.Health == 0 then
+
+						Plr.Character.HumanoidRootPart.CFrame = OldPos
+
+						game.Workspace.CurrentCamera.CameraSubject = Plr.Character.Humanoid
+
+						Killing = false
+
+						return
+
+					end
+
+					wait(0.1)
+
+					Plr.Character.HumanoidRootPart.CFrame = OldPos
+
+					Killing = false
+
+					game.Workspace.CurrentCamera.CameraSubject = Plr.Character.Humanoid
+
+				end,
+
+			},
+
+			{
+
+				Name = "Bring Target",
+				Desc = "Brings the person to you. You need a full blue bar for this.",
+				Type = "Button",
+				Action = function()
+
+					if not Target or not Target:FindFirstChildOfClass("Humanoid") then
+
+						ShowPopup("Error","Please press T on a player to select as target.","Got it")
+						return
+
+					end
+
+					if Target:FindFirstChild("PVPOFFGUI") and Target:FindFirstChild("PVPOFFGUI").TextLabel == "" then
+
+						ShowPopup("Error","This player doesn't have PVP on.","Ok")
+						return
+
+					end
+
+					if Plr.jaladaDePeloCharge.Value ~= 100 then
+
+						ShowPopup("Error","Your blue bar (Hair grabbing bar) needs to be full for this.","Got it")
+						return
+
+					end
+
+					repeat
+
+						wait()
+
+						game:GetService("ReplicatedStorage").JALADADEPELOEVENT:FireServer()
+
+						Target.LeftFoot:BreakJoints()
+						Target.LeftFoot.CanCollide = false
+						Target.LeftFoot.Position = Plr.Character.Humanoid.RootPart.Position + (Plr.Character.Humanoid.RootPart.CFrame.LookVector * 2)
+						Target.LeftFoot.Velocity = Vector3.new(0,0,0)
+
+					until Target:FindFirstChild("BeingCarried")
+
+				end,
+
+			},
+
+			{
+
+				Type = "Title",
+				Text = "Other"
+
+			},
+
+			{
+
+				Name = "Throwable Giver",
+				Desc = "Always gives you something to throw.",
+				Type = "Toggle",
+				Action = function(On)
+
+					if On then
+
+						ItemGiving = true
+
+						spawn(function()
+
+							while ItemGiving do
+
+								wait(0.02)
+
+								if not Plr.Character:FindFirstChild("Trash Can") and not Plr.Character:FindFirstChild("Bench") and not Plr.Character:FindFirstChild("Chair") then
+
+									if not Plr.Backpack:FindFirstChild("Trash Can") and not Plr.Backpack:FindFirstChild("Bench") and not Plr.Backpack:FindFirstChild("Chair") then
+
+										for _, Item in game.Workspace:GetDescendants() do
+
+											if Item.Name == "Trash Can" or Item.Name == "Park Bench" or Item.Name == "Chair" then
+
+												if Item:IsA("BasePart") and Item:FindFirstChildOfClass("ProximityPrompt") and Item:FindFirstChildOfClass("ProximityPrompt").MaxActivationDistance ~= 0 then
+
+													local GotIt = false
+
+													local OldPos = Plr.Character.Head.CFrame
+													local OldPos2 = Item.CFrame
+
+													Item:FindFirstChildOfClass("ProximityPrompt").MaxActivationDistance = 1000000
+
+													game.Workspace.CurrentCamera.CameraType = Enum.CameraType.Scriptable
+
+													spawn(function()
+
+														while not GotIt do
+
+															Plr.Character.HumanoidRootPart.CFrame = OldPos2
+															Item:FindFirstChildOfClass("ProximityPrompt"):InputHoldBegin()
+															wait(0.01)
+															Item:FindFirstChildOfClass("ProximityPrompt"):InputHoldEnd()
+															wait()
+
+														end
+
+													end)
+
+													wait(0.2)
+
+													Item.CFrame = game.Workspace.CurrentCamera.CFrame + game.Workspace.CurrentCamera.CFrame.LookVector * 20
+
+													repeat
+
+														wait()
+
+													until Item:FindFirstChildOfClass("ProximityPrompt").MaxActivationDistance == 0
+
+													GotIt = true
+
+													wait(0.01)
+
+													spawn(function()
+
+														for i=1,5 do
+
+															wait(0.01)
+															Plr.Character.HumanoidRootPart.CFrame = OldPos
+															game.Workspace.CurrentCamera.CameraType = Enum.CameraType.Track
+
+														end
+
+													end)
+													Item.CFrame = OldPos2
+
+													break
+
+												end
+
+											end
+
+										end
+
+									end
+
+								end
+
+							end
+
+						end)
+
+					else
+
+						ItemGiving = false
+
+					end
+
+				end,
+
+			},
+
+		}
+
+	end,
+	
+	["104368835975147"] = function ()
+
+		local Diamonds = false
+		local Heals = false
+		
+		Commands = {
+
+			{
+
+				Type = "Title",
+				Text = "Player"
+
+			},
+
+			{
+
+				Name = "Get Diamonds",
+				Desc = "Auto Collects Diamonds.",
+				Type = "Toggle",
+				Action = function(On)
+					
+					if On then
+						
+						Diamonds = true
+						
+						spawn(function()
+							
+							while Diamonds do
+
+								wait()
+
+								for _, Gem in game.Workspace.Gems:GetChildren() do
+
+									Gem.Position = Plr.Character.HumanoidRootPart.Position
+
+								end
+
+							end
+							
+						end)
+						
+					else
+						
+						Diamonds = false
+						
+					end
+					
+				end,
+
+			},
+
+			{
+
+				Name = "Get Heals",
+				Desc = "Auto Collects Heals.",
+				Type = "Toggle",
+				Action = function(On)
+
+					if On then
+
+						Heals = true
+
+						spawn(function()
+
+							while Heals do
+
+								wait()
+
+								for _, Effect in game.Workspace.Effects:GetChildren() do
+
+									if game.Workspace.Effects.SpawnReward.BillboardGui.Frame.BackgroundColor3 ~= Color3.fromRGB(255, 0, 0) then
+										
+										Effect.Position = Plr.Character.HumanoidRootPart.Position
+										
+									end
+									
+								end
+
+							end
+
+						end)
+
+					else
+
+						Heals = false
+
+					end
+
+				end,
+
+			},
+			
+		}
+
+	end,
+	
+	["10449761463"] = function ()
+
+		local Noclipping
+		
+		local function Noclip()
+			
+			Noclipping = game["Run Service"].Stepped:Connect(function()
+				if Plr.Character ~= nil then
+					for _, Child in pairs(Plr.Character:GetDescendants()) do
+						if Child:IsA("BasePart") and Child.CanCollide == true then
+							Child.CanCollide = false
+						end
+					end
+				end
+			end)
+			
+		end
+		
+		local function Clip()
+
+			Noclipping:Disconnect()
+			
+			for _, Child in pairs(Plr.Character:GetDescendants()) do
+				if Child:IsA("BasePart") and Child.CanCollide == false then
+					Child.CanCollide = true
+				end
+			end
+
+		end
+
+		local function BringBlock()
+
+			local Block = Instance.new("Part",game.Workspace)
+			
+			Block.CFrame = Plr.Character.HumanoidRootPart.CFrame
+			Block.Size = Vector3.new(1,1,1)
+			Block.Transparency = 1
+			Block.Anchored = true
+			Block.CanCollide = false
+			Block.CanTouch = false
+			Block.CanQuery = false
+			
+			spawn(function()
+				
+				while Block.Parent ~= nil do
+
+					wait()
+					Plr.Character.HumanoidRootPart.CFrame = Block.CFrame
+
+				end
+				
+			end)
+			
+			return Block
+
+		end
+		
+		Commands = {
+
+			{
+
+				Type = "Title",
+				Text = "Characters"
+
+			},
+
+			{
+
+				Name = "Vortex Edge",
+				Desc = 'Is all about air and speed. You need "The Strongest Hero" for this to work.',
+				Type = "Button",
+				Action = function()
+
+					if not Plr.Character:GetAttribute("Character") or Plr.Character:GetAttribute("Character") ~= "Bald" then
+						
+						ShowPopup("Invalid Character",'You need "The Strongest Hero" (or Bold in code name) to use this character.',"Oops")
+						return
+						
+					end
+					
+					Plr.PlayerGui.Hotbar.Backpack.LocalScript.Enabled = false
+					
+					-- Nullify
+					
+					game:GetService("Players").LocalPlayer.PlayerGui.Hotbar.Backpack.Hotbar["1"].Base.ToolName.Text = "Nullify"
+
+					local function Nullify()
+						
+						local ClosestPlayer = nil
+						local ClosestDistance = math.huge
+						
+						for _, Player in game.Workspace.Live:GetChildren() do
+							if Player ~= Plr.Character and Player:FindFirstChild("HumanoidRootPart") then
+								local Distance = (Player.HumanoidRootPart.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+								if Distance < ClosestDistance then
+									
+									ClosestDistance = Distance
+									ClosestPlayer = Player
+									
+								end
+							end
+						end
+						
+						if ClosestDistance > 40 or ClosestPlayer == nil then
+							
+							local Block = BringBlock()
+							
+							Noclip()
+							game.TweenService:Create(Block,TweenInfo.new(0.5),{CFrame = Block.CFrame - Vector3.new(0,10,0)}):Play()
+							wait(0.5)
+							game.TweenService:Create(Block,TweenInfo.new(0.5),{CFrame = Block.CFrame + Vector3.new(0,10,0)}):Play()
+							wait(0.5)
+							Clip()
+							Block.Parent = nil
+							return
+								
+						end
+						
+						local Block = BringBlock()
+
+						Noclip()
+						game.TweenService:Create(Block,TweenInfo.new(0.5),{CFrame = Block.CFrame - Vector3.new(0,8,0)}):Play()
+						wait(0.5)
+						for i=1,100 do
+							
+							wait()
+							
+							Block.CFrame = CFrame.new(ClosestPlayer.HumanoidRootPart.Position - Vector3.new(0,8,0)) * CFrame.Angles(math.rad(90),0,0)
+							
+						end
+						Clip()
+						Block.CFrame = ClosestPlayer.HumanoidRootPart.CFrame
+						wait(0.01)
+						Block.Parent = nil
+						
+					end
+
+					-- Activate
+					
+					local Pressed1 = Plr.PlayerGui.Hotbar.Backpack.Hotbar["1"].Base.MouseButton1Down:Connect(Nullify)
+
+					local Button1 = game.UserInputService.InputBegan:Connect(function(Key,Chat)
+
+						if Chat then
+
+							return
+
+						end
+
+						if Key.KeyCode == Enum.KeyCode.One then
+
+							Nullify()
+
+						end
+
+					end)
+
+					Plr.Character.Humanoid.Died:Connect(function()
+
+						Button1:Disconnect()
+						Pressed1:Disconnect()
+
+					end)
+					
+				end,
+
+			},
+
+		}
+
+	end,
+	
+	["70671905624144"] = function ()
+		local basepos = Plr.Character.HumanoidRootPart.CFrame
+		Commands = {
+			
+			{
+
+				Type = "Title",
+				Text = "CLAAAAAAAAAAAAAAAA"
+
+			},
+			{
+
+				Name = "Set Base",
+				Desc = 'Click this inside of your base.',
+				Type = "Button",
+				Action = function()
+
+					basepos = Plr.Character.HumanoidRootPart.CFrame
+
+				end,
+
+			},
+			{
+
+				Name = "Quick Steal Button",
+				Desc = 'Everytime you try to steal a baddie, you instantly get it and teleport to your base then back.',
+				Type = "Button",
+				Action = function()
+
+					for _, Item in game:GetDescendants() do
+						
+						if Item.Name == "StealProximity" and Item:IsA("ProximityPrompt") then
+							
+							Item.HoldDuration = 0
+							Item.RequiresLineOfSight = false
+							
+							Item.Triggered:Connect(function(trig)
+								
+								if trig == Plr then
+									
+									local oldpos = Plr.Character.HumanoidRootPart.CFrame
+									
+									Plr.Character.HumanoidRootPart.CFrame = basepos
+									
+									wait(0.3)
+									
+									Plr.Character.HumanoidRootPart.CFrame = oldpos
+									
+								end
+								
+							end)
+							
+						end
+						
+					end
+					
+				end,
+
+			},
+
+		}
+
+	end,
+	
+}
+
+if Games[tostring(ID)] then
+
+	Games[tostring(ID)]()
+
+else
+
+	ShowPopup("3Hax (" .. game.PlaceId .. ")","This game is not yet hacked. Click to join one of the hacked games, Then run this command again.","Got it")
+
+	Commands = {
+
+		{
+
+			Type = "Title",
+			Text = "Recommended",
+
+		},
+
+		{
+
+			Type = "Split",
+
+		},
+
+		{
+
+			Name = "Lucky Blocks Battlegrounds",
+			Type = "Button",
+			Desc = "This is the most fun game to hack. Gives you insane powers, and you can even control the entire game with a command that took ages to make.",
+			Action = function()
+
+				local TeleportService = game:GetService("TeleportService")
+				local Id = 662417684
+
+				TeleportService:Teleport(Id, Plr)
+
+			end,
+
+		},
+
+		{
+
+			Name = "The 63 Infection",
+			Type = "Button",
+			Desc = "Is abit weird and isn't a good game, but it lets you instakill players and more.",
+			Action = function()
+
+				local TeleportService = game:GetService("TeleportService")
+				local Id = 15980086096
+
+				TeleportService:Teleport(Id, Plr)
+
+			end,
+
+		},
+
+		{
+
+			Name = "Murder Mystery 2",
+			Type = "Button",
+			Desc = "Coin farming is abit buggy, but everything else is really good. Theres even a fake knife to make the sheriff shoot you, get the gun then kill the murderer!",
+			Action = function()
+
+				local TeleportService = game:GetService("TeleportService")
+				local Id = 142823291
+
+				TeleportService:Teleport(Id, Plr)
+
+			end,
+
+		},
+
+		{
+
+			Type = "Title",
+			Text = "Other",
+
+		},
+
+		{
+
+			Type = "Split",
+
+		},
+
+		{
+
+			Name = "Impossible Squid Game! Glass Bridge!",
+			Type = "Button",
+			Desc = "Id: 13987158269 (Good for trolling noobs)",
+			Action = function()
+
+				local TeleportService = game:GetService("TeleportService")
+				local Id = 13987158269
+
+				TeleportService:Teleport(Id, Plr)
+
+			end,
+
+		},
+
+		{
+
+			Name = "Obby Creator",
+			Type = "Button",
+			Desc = "Id: 2913303231 (Has anticheat but these hacks dont mess with them)",
+			Action = function()
+
+				local TeleportService = game:GetService("TeleportService")
+				local Id = 2913303231
+
+				TeleportService:Teleport(Id, Plr)
+
+			end,
+
+		},
+
+		{
+
+			Name = "Furry Infection game [Furinfection]",
+			Type = "Button",
+			Desc = "Id: 10679239752 (Has level 2 anticheat)",
+			Action = function()
+
+				local TeleportService = game:GetService("TeleportService")
+				local Id = 10679239752
+
+				TeleportService:Teleport(Id, Plr)
+
+			end,
+
+		},
+
+		{
+
+			Name = "Tower of hell",
+			Type = "Button",
+			Desc = "Id: 1962086868 (Has level 3 anticheat and you can be banned but only 7 days)",
+			Action = function()
+
+				local TeleportService = game:GetService("TeleportService")
+				local Id = 1962086868
+
+				TeleportService:Teleport(Id, Plr)
+
+			end,
+
+		},
+
+	}
+
+end
+
+-- Setup
+
+LoadCommands()
+
+print("Loaded " .. #Commands .. " hacks in " .. game.PlaceId .. ".")
+
+-- Other
+
+game:GetService("RunService").RenderStepped:Connect(function()
+
+	Description.Position = UDim2.new(-0.0915,Mouse.X,-0.12,Mouse.Y)
+
+end)
