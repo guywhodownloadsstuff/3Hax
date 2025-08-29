@@ -1,1 +1,352 @@
-print("WIP")
+-- UI
+
+local Menu = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
+
+Menu.Name = "3Hax"
+Menu.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Menu.DisplayOrder = 1999999999
+
+local Background = Instance.new("Frame", Menu)
+
+Background.BackgroundColor3 = Color3.new(0.156863, 0.156863, 0.156863)
+Background.BorderColor3 = Color3.new(0, 0, 0)
+Background.BorderSizePixel = 0
+Background.Name = "Background"
+Background.Position = UDim2.new(0.00999999978, 0, 1, 0)
+Background.Size = UDim2.new(0.176433131, 0, 0.357071549, 0)
+
+local Square = Instance.new("UIAspectRatioConstraint", Background)
+
+Square.Name = "Square"
+Square.AspectType = Enum.AspectType.ScaleWithParentSize
+Square.DominantAxis = Enum.DominantAxis.Height
+
+local Round = Instance.new("UICorner", Background)
+
+Round.CornerRadius = UDim.new(0.0299999993, 0)
+Round.Name = "Round"
+
+local CommandBox = Instance.new("TextBox", Background)
+
+CommandBox.BackgroundColor3 = Color3.new(1, 1, 1)
+CommandBox.BackgroundTransparency = 0.8999999761581421
+CommandBox.BorderColor3 = Color3.new(0, 0, 0)
+CommandBox.BorderSizePixel = 0
+CommandBox.ClearTextOnFocus = false
+CommandBox.Font = Enum.Font.Ubuntu
+CommandBox.Name = "CommandBox"
+CommandBox.PlaceholderText = "Search for hax.."
+CommandBox.Position = UDim2.new(0.0279590134, 0, 0, 0)
+CommandBox.Size = UDim2.new(0.972041011, 0, 0.123299152, 0)
+CommandBox.Text = ""
+CommandBox.TextColor3 = Color3.new(1, 1, 1)
+CommandBox.TextSize = 14
+CommandBox.TextWrapped = true
+CommandBox.TextXAlignment = Enum.TextXAlignment.Left
+
+local Outline = Instance.new("UIStroke", Background)
+
+Outline.Color = Color3.new(1, 1, 1)
+Outline.Name = "Outline"
+
+local Cover = Instance.new("Frame", Background)
+
+Cover.BackgroundColor3 = Color3.new(1, 1, 1)
+Cover.BackgroundTransparency = 0.8999999761581421
+Cover.BorderColor3 = Color3.new(0, 0, 0)
+Cover.BorderSizePixel = 0
+Cover.Name = "Cover"
+Cover.Size = UDim2.new(0.0279589966, 0, 0.123299152, 0)
+
+local Scroll = Instance.new("ScrollingFrame", Background)
+
+Scroll.Active = true
+Scroll.BackgroundColor3 = Color3.new(1, 1, 1)
+Scroll.BackgroundTransparency = 0.9900000095367432
+Scroll.BorderColor3 = Color3.new(0, 0, 0)
+Scroll.AutomaticCanvasSize = Enum.AutomaticSize.Y
+Scroll.BorderSizePixel = 0
+Scroll.BottomImage = "rbxassetid://12530016893"
+Scroll.MidImage = "rbxassetid://3648198826"
+Scroll.Name = "Scroll"
+Scroll.Position = UDim2.new(0, 0, 0.123298973, 0)
+Scroll.ScrollBarThickness = 2
+Scroll.Size = UDim2.new(1, 0, 0.876700878, 0)
+Scroll.TopImage = "rbxassetid://12530018695"
+
+local Command = Instance.new("TextButton", nil)
+
+Command.BackgroundColor3 = Color3.new(1, 1, 1)
+Command.BackgroundTransparency = 1
+Command.BorderColor3 = Color3.new(0, 0, 0)
+Command.BorderSizePixel = 0
+Command.Font = Enum.Font.Ubuntu
+Command.Name = "Command"
+Command.Size = UDim2.new(1, 0, 0.0799999982, 0)
+Command.Text = "Command"
+Command.TextColor3 = Color3.new(1, 1, 1)
+Command.TextScaled = true
+Command.TextSize = 14
+Command.TextWrapped = true
+Command.TextXAlignment = Enum.TextXAlignment.Left
+
+local List = Instance.new("UIListLayout", Scroll)
+
+List.SortOrder = Enum.SortOrder.LayoutOrder
+List.Padding = UDim.new(0, 5)
+List.Name = "List"
+
+-- Variables
+
+local Plr = game.Players.LocalPlayer
+local UserInputService = game:GetService("UserInputService")
+
+-- Functions
+
+local KeysDown = {}
+
+UserInputService.InputBegan:Connect(function(Key, Chat)
+	if Chat then return end
+	if Key.UserInputType == Enum.UserInputType.Keyboard then
+		KeysDown[Key.KeyCode] = true
+	end
+end)
+
+UserInputService.InputEnded:Connect(function(Key, Chat)
+	if Key.UserInputType == Enum.UserInputType.Keyboard then
+		KeysDown[Key.KeyCode] = false
+	end
+end)
+
+function KeyDown(Key)
+	return KeysDown[Key] == true
+end
+
+local function ParseArgs(argTypes, userInput)
+	local args = {}
+	local split = string.split(userInput, " ")
+
+	-- first word is the command, rest are args
+	table.remove(split, 1)
+
+	for i, argType in ipairs(argTypes) do
+		local raw = split[i]
+		if not raw then break end
+
+		if argType == "string" then
+			table.insert(args, raw)
+
+		elseif argType == "number" then
+			local num = tonumber(raw)
+			table.insert(args, num or 0)
+
+		elseif argType == "plr" then
+			local plr = nil
+			for _, p in ipairs(game.Players:GetPlayers()) do
+				if string.lower(p.DisplayName) == string.lower(raw) 
+					or string.lower(p.Name) == string.lower(raw) then
+					plr = p
+					break
+				end
+			end
+			table.insert(args, plr)
+		end
+	end
+	return args
+end
+
+-- Commands
+
+local Flying = nil
+
+local Commands = {
+	
+	{
+
+		Name = {"fly"},
+		Desc = "An undetectable and smooth fly with noclip.",
+		Args = {},
+		Func = function()
+
+			local Run = game["Run Service"]
+			local Root = Plr.Character:FindFirstChildOfClass("Humanoid").RootPart
+			local FlyPos = Root.CFrame
+			
+			game.Workspace.Gravity = 0
+			
+			Plr.Character:FindFirstChildOfClass("Humanoid").PlatformStand = true
+			
+			local ForwardSpeed = 0
+			local RightSpeed = 0
+			local UpSpeed = 0
+			
+			Flying = Run.RenderStepped:Connect(function()
+
+				Root.Velocity = Vector3.new(0,0,0)
+				Root.RotVelocity = Vector3.new(0,0,0)
+				Root.CFrame = CFrame.new(FlyPos.Position, FlyPos.Position + game.Workspace.CurrentCamera.CFrame.LookVector)
+				
+				if KeyDown(Enum.KeyCode.W) then
+					
+					ForwardSpeed += 0.1
+					
+				end
+				
+				if KeyDown(Enum.KeyCode.D) then
+
+					RightSpeed += 0.1
+
+				end
+				
+				if KeyDown(Enum.KeyCode.S) then
+
+					ForwardSpeed -= 0.1
+
+				end
+
+				if KeyDown(Enum.KeyCode.A) then
+
+					RightSpeed -= 0.1
+
+				end
+				
+				if KeyDown(Enum.KeyCode.E) then
+
+					UpSpeed += 0.1
+
+				end
+
+				if KeyDown(Enum.KeyCode.Q) then
+
+					UpSpeed -= 0.1
+
+				end
+				
+				FlyPos += game.Workspace.CurrentCamera.CFrame.LookVector * ForwardSpeed
+				FlyPos += game.Workspace.CurrentCamera.CFrame.RightVector * RightSpeed
+				FlyPos += game.Workspace.CurrentCamera.CFrame.UpVector * UpSpeed
+
+				ForwardSpeed *= 0.9
+				RightSpeed *= 0.9
+				UpSpeed *= 0.9
+
+			end)
+
+		end,
+
+	},
+
+	{
+
+		Name = {"unfly"},
+		Desc = "Stops your epic flight powers.",
+		Args = {},
+		Func = function()
+
+			game.Workspace.Gravity = 196.2
+
+			Plr.Character:FindFirstChildOfClass("Humanoid").PlatformStand = false
+
+			Flying:Disconnect()
+
+		end,
+
+	},
+	
+	{
+		
+		Name = {"end"},
+		Desc = "Deletes 3Hax from the game.",
+		Args = {},
+		Func = function()
+			
+			Menu:Destroy()
+			
+		end,
+
+	},
+	
+}
+
+-- Setup
+
+game.TweenService:Create(Background,TweenInfo.new(0.5),{Position = UDim2.new(0.00999999978, 0, 0.649999976, 0)}):Play()
+
+for _, Cmd in Commands do
+	
+	local Clone = Command:Clone()
+
+	Clone.Text = table.concat(Cmd.Name, " / ")  .. " [" .. table.concat(Cmd.Args, "] [") .. "]"
+	Clone.Parent = Scroll
+	
+	if Cmd.Args[1] == nil then
+		
+		Clone.Text = table.concat(Cmd.Name, " / ")
+		
+	end
+	
+	Clone.MouseButton1Down:Connect(function()
+		
+		CommandBox.Text = Cmd.Name[1]
+		
+	end)
+	
+	Clone.MouseEnter:Connect(function()
+		
+		Clone.Text = Cmd.Desc
+		
+	end)
+	
+	Clone.MouseLeave:Connect(function()
+		
+		Clone.Text = table.concat(Cmd.Name, " / ")  .. " [" .. table.concat(Cmd.Args, "] [") .. "]"
+
+		if Cmd.Args[1] == nil then
+
+			Clone.Text = table.concat(Cmd.Name, " / ")
+
+		end
+		
+	end)
+	
+end
+
+-- Execute
+
+UserInputService.InputBegan:Connect(function(Input, Chat)
+	
+	if not Chat and Input.KeyCode == Enum.KeyCode.Semicolon then
+		
+		CommandBox:CaptureFocus()
+		
+		if CommandBox.Text == ";" then
+			
+			CommandBox.Text = ""
+			
+		end
+		
+	end
+	
+end)
+
+CommandBox.FocusLost:Connect(function(Enter)
+
+	if Enter then
+		
+		local Split = string.split(CommandBox.Text, " ")
+		local Picked = Split[1]
+
+		for _, Cmd in ipairs(Commands) do
+			for _, Alias in ipairs(Cmd.Name) do
+				if string.lower(Alias) == string.lower(Picked) then
+					local parsed = ParseArgs(Cmd.Args, CommandBox.Text)
+					Cmd.Func(unpack(parsed))
+				end
+			end
+		end
+		
+		CommandBox.Text = ""
+		
+	end
+
+end)
