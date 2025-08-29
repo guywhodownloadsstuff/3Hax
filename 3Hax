@@ -155,16 +155,178 @@ local function ParseArgs(argTypes, userInput)
 	return args
 end
 
+function Rename()
+	
+	local Length = math.random(10,20)
+	local Array = {}
+	for i = 1, Length do
+		Array[i] = string.char(math.random(32, 126))
+	end
+	return table.concat(Array)
+	
+end
+
 -- Commands
 
 local Flying = nil
+local SafeFlying = nil
+local Platform = nil
+local PlatformPart = nil
 
 local Commands = {
 	
 	{
 
+		Name = {"platform","float"},
+		Desc = "Have an invisible platform under you, press Q and E to change height.",
+		Args = {},
+		Func = function()
+
+			local Run = game["Run Service"]
+			local Root = Plr.Character:FindFirstChildOfClass("Humanoid").RootPart
+			
+			local Raise = 0
+			
+			local Float = Instance.new("Part",game.Workspace)
+			
+			Float.Name = Rename()
+			Float.Transparency = 1
+			Float.Anchored = true
+			Float.Size = Vector3.new(10,1,10)
+
+			PlatformPart = Float
+			
+			local Image = Instance.new("Decal",Float)
+			
+			Image.Face = Enum.NormalId.Top
+			Image.Texture = "http://www.roblox.com/asset/?id=7928096707"
+			Image.Color3 = Color3.fromRGB(500,500,500)
+			Image.Transparency = 0.9
+			
+			local Sin = 0
+			
+			Platform = Run.RenderStepped:Connect(function()
+				
+				if KeyDown(Enum.KeyCode.E) then
+					
+					Raise += 0.6
+					
+				end
+				
+				if KeyDown(Enum.KeyCode.Q) then
+
+					Raise -= 0.3
+
+				end
+				
+				Raise *= 0.7
+				
+				Float.CFrame = CFrame.new(Root.Position.X,Root.Position.Y + (Raise - 3.5),Root.Position.Z)
+				
+				Sin += 0.03
+								
+				Image.Transparency = 0.9 + (math.sin(Sin) / 20)
+				
+			end)
+
+		end,
+
+	},
+	
+	{
+
+		Name = {"unplatform","unfloat"},
+		Desc = "Stop doing the thing.",
+		Args = {},
+		Func = function()
+
+			if Platform then
+				
+				Platform:Disconnect()
+				
+			end
+
+			if PlatformPart then
+
+				PlatformPart.CanCollide = false
+				
+				game.TweenService:Create(PlatformPart:FindFirstChildOfClass("Decal"),TweenInfo.new(0.4),{Transparency = 1}):Play()
+				
+				wait(0.4)
+				
+				PlatformPart:Destroy()
+
+			end
+
+		end,
+
+	},
+	
+	{
+
+		Name = {"safefly","sfly"},
+		Desc = "More careful version of ;fly.",
+		Args = {},
+		Func = function()
+
+			local Run = game["Run Service"]
+			local Root = Plr.Character:FindFirstChildOfClass("Humanoid").RootPart
+			local FlyPos = Root.CFrame
+
+			game.Workspace.Gravity = 0
+			
+			local ForwardSpeed = 0
+			local RightSpeed = 0
+			local UpSpeed = 0
+			
+			Flying = Run.RenderStepped:Connect(function()
+				
+				Plr.Character:FindFirstChildOfClass("Humanoid").Sit = true
+
+				for _, Animation in Plr.Character:FindFirstChildOfClass("Humanoid"):GetPlayingAnimationTracks() do
+
+					Animation:Stop()
+					Animation:Destroy()
+
+				end
+				
+				Root.Velocity = Vector3.new(0,0,0)
+				Root.RotVelocity = Vector3.new(0,0,0)
+				Root.CFrame = CFrame.new(FlyPos.Position, FlyPos.Position + game.Workspace.CurrentCamera.CFrame.LookVector)
+
+				if KeyDown(Enum.KeyCode.W) or KeyDown(Enum.KeyCode.Up) then
+					ForwardSpeed += Plr.Character.Humanoid.WalkSpeed / 500
+				elseif KeyDown(Enum.KeyCode.S) or KeyDown(Enum.KeyCode.Down) then
+					ForwardSpeed -= Plr.Character.Humanoid.WalkSpeed / 500
+				elseif KeyDown(Enum.KeyCode.D) then
+					RightSpeed += Plr.Character.Humanoid.WalkSpeed / 500
+				elseif KeyDown(Enum.KeyCode.A) or KeyDown(Enum.KeyCode.Left) then
+					RightSpeed -= Plr.Character.Humanoid.WalkSpeed / 500
+				elseif KeyDown(Enum.KeyCode.E) or KeyDown(Enum.KeyCode.Space) then
+					UpSpeed += Plr.Character.Humanoid.WalkSpeed / 500
+				elseif KeyDown(Enum.KeyCode.Q) or KeyDown(Enum.KeyCode.LeftControl) then
+					UpSpeed -= Plr.Character.Humanoid.WalkSpeed / 500
+				end
+
+				FlyPos += game.Workspace.CurrentCamera.CFrame.LookVector * ForwardSpeed
+				FlyPos += game.Workspace.CurrentCamera.CFrame.RightVector * RightSpeed
+				FlyPos += game.Workspace.CurrentCamera.CFrame.UpVector * UpSpeed
+
+				ForwardSpeed *= 0.8
+				RightSpeed *= 0.8
+				UpSpeed *= 0.8
+				
+			end)
+
+
+		end,
+
+	},
+	
+	{
+
 		Name = {"fly"},
-		Desc = "An undetectable and smooth fly with noclip.",
+		Desc = "Start flying, Mostly undetectable but use ;safefly for that.",
 		Args = {},
 		Func = function()
 
@@ -188,37 +350,37 @@ local Commands = {
 				
 				if KeyDown(Enum.KeyCode.W) or KeyDown(Enum.KeyCode.Up) then
 					
-					ForwardSpeed += 0.1
+					ForwardSpeed += Plr.Character.Humanoid.WalkSpeed / 500
 					
 				end
 				
 				if KeyDown(Enum.KeyCode.D) or KeyDown(Enum.KeyCode.Right) then
 
-					RightSpeed += 0.1
+					RightSpeed += Plr.Character.Humanoid.WalkSpeed / 500
 
 				end
 				
 				if KeyDown(Enum.KeyCode.S) or KeyDown(Enum.KeyCode.Down) then
 
-					ForwardSpeed -= 0.1
+					ForwardSpeed -= Plr.Character.Humanoid.WalkSpeed / 500
 
 				end
 
 				if KeyDown(Enum.KeyCode.A) or KeyDown(Enum.KeyCode.Left) then
 
-					RightSpeed -= 0.1
+					RightSpeed -= Plr.Character.Humanoid.WalkSpeed / 500
 
 				end
 				
 				if KeyDown(Enum.KeyCode.E) or KeyDown(Enum.KeyCode.Space) then
 
-					UpSpeed += 0.1
+					UpSpeed += Plr.Character.Humanoid.WalkSpeed / 500
 
 				end
 
 				if KeyDown(Enum.KeyCode.Q) or KeyDown(Enum.KeyCode.LeftControl)  or KeyDown(Enum.KeyCode.RightControl) then
 
-					UpSpeed -= 0.1
+					UpSpeed -= Plr.Character.Humanoid.WalkSpeed / 500
 
 				end
 				
@@ -238,7 +400,7 @@ local Commands = {
 
 	{
 
-		Name = {"unfly"},
+		Name = {"unfly","unsafefly","unsfly"},
 		Desc = "Stops your epic flight powers.",
 		Args = {},
 		Func = function()
@@ -246,8 +408,32 @@ local Commands = {
 			game.Workspace.Gravity = 196.2
 
 			Plr.Character:FindFirstChildOfClass("Humanoid").PlatformStand = false
+			Plr.Character:FindFirstChildOfClass("Humanoid").Sit = false
 
-			Flying:Disconnect()
+			if Flying then
+				
+				Flying:Disconnect()
+				
+			end
+			
+			if SafeFlying then
+				
+				SafeFlying:Disconnect()
+			
+			end
+			
+		end,
+
+	},
+	
+	{
+
+		Name = {"speed","flyspeed"},
+		Desc = "Sets your speed, this also changes how fast you fly.",
+		Args = {"number"},
+		Func = function(Speed)
+
+			Plr.Character:FindFirstChildOfClass("Humanoid").WalkSpeed = Speed
 
 		end,
 
@@ -317,13 +503,9 @@ UserInputService.InputBegan:Connect(function(Input, Chat)
 	
 	if not Chat and Input.KeyCode == Enum.KeyCode.Semicolon then
 		
-		CommandBox:CaptureFocus()
+		wait()
 		
-		if CommandBox.Text == ";" then
-			
-			CommandBox.Text = ""
-			
-		end
+		CommandBox:CaptureFocus()
 		
 	end
 	
