@@ -1,6 +1,6 @@
 -- UI
 
-local Menu = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
+local Menu = Instance.new("ScreenGui", game.CoreGui)
 
 Menu.Name = "3Hax"
 Menu.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -141,33 +141,540 @@ local function ParseArgs(argTypes, userInput)
 			table.insert(args, num or 0)
 
 		elseif argType == "plr" then
-			local plr = nil
-			for _, p in ipairs(game.Players:GetPlayers()) do
-				if string.lower(p.DisplayName) == string.lower(raw) 
-					or string.lower(p.Name) == string.lower(raw) then
-					plr = p
-					break
+			local Plrs = game.Players:GetChildren()
+			local Plr = nil
+			local PlrScriptName = raw
+			
+			for i=1, #Plrs do
+
+				if string.find(string.lower(Plrs[i].Character.Humanoid.DisplayName),string.lower(PlrScriptName)) then
+
+					Plr = game.Players:FindFirstChild(Plrs[i].Name)
+
 				end
+
 			end
-			table.insert(args, plr)
+			table.insert(args, Plr)
+			
 		end
 	end
 	return args
 end
 
+function Rename()
+	
+	local Length = math.random(10,20)
+	local Array = {}
+	for i = 1, Length do
+		Array[i] = string.char(math.random(32, 126))
+	end
+	return table.concat(Array)
+	
+end
+
 -- Commands
 
 local Flying = nil
+local SafeFlying = nil
+local Platform = nil
+local PlatformPart = nil
+local Lagging = false
+local Banging = nil
 
 local Commands = {
 	
 	{
 
-		Name = {"fly"},
-		Desc = "An undetectable and smooth fly with noclip.",
+		Name = {"bang"},
+		Desc = ":3",
+		Args = {"plr"},
+		Func = function(Victim)
+
+			local Sin = 0
+			local Root = Plr.Character:FindFirstChildOfClass("Humanoid").RootPart
+			
+			Banging = game["Run Service"].RenderStepped:Connect(function()
+				
+				Sin += 0.4
+				
+				local VRoot = Victim.Character.HumanoidRootPart
+				
+				local VPos = VRoot.Position - VRoot.CFrame.LookVector * math.abs(math.sin(Sin))
+				Root.CFrame = CFrame.new(VPos, VRoot.Position)
+				
+			end)
+
+		end,
+
+	},
+	
+	{
+
+		Name = {"unbang"},
+		Desc = "3:",
+		Args = {},
+		Func = function(Victim)
+
+			if Banging then
+				
+				Banging:Disconnect()
+				
+			end
+
+		end,
+
+	},
+	
+	{
+
+		Name = {"salute"},
+		Desc = "dont ask.",
 		Args = {},
 		Func = function()
 
+			local Salute = Instance.new("Tool",Plr.Backpack)
+
+			Salute.Name = "Salute"
+			Salute.ToolTip = "SALUTE!!!!"
+			Salute.TextureId = "http://www.roblox.com/asset/?id=96453452615980"
+			Salute.RequiresHandle = false
+
+			local Track = nil
+			
+			Salute.Equipped:Connect(function()
+
+				local Anim = Instance.new("Animation")
+				Anim.Parent = game.Workspace
+				Anim.AnimationId = Plr.Character:FindFirstChildOfClass("Humanoid").RigType ~= "R15" and "rbxassetid://72042024" or "rbxassetid://698251653"
+				Track = Plr.Character:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+				Track.Looped = true
+				Track:Play()
+				Track.TimePosition = 0.05
+				Track:AdjustSpeed(0)
+
+			end)
+
+			Salute.Unequipped:Connect(function()
+
+				Track:Stop()
+				Track:Destroy()
+
+			end)
+
+		end,
+
+	},
+	
+	{
+
+		Name = {"jerk","jork"},
+		Desc = "jerk it.",
+		Args = {},
+		Func = function()
+
+			local Jerk = Instance.new("Tool",Plr.Backpack)
+			
+			Jerk.Name = "Jerk"
+			Jerk.ToolTip = "Hold down to increase jerkiness."
+			Jerk.TextureId = "http://www.roblox.com/asset/?id=15052258274"
+			Jerk.RequiresHandle = false
+			
+			local Track = nil
+			local Speed = Instance.new("NumberValue")
+			
+			Jerk.Equipped:Connect(function()
+				
+				local Anim = Instance.new("Animation")
+				Anim.Parent = game.Workspace
+				Anim.AnimationId = Plr.Character:FindFirstChildOfClass("Humanoid").RigType ~= "R15" and "rbxassetid://72042024" or "rbxassetid://698251653"
+				Track = Plr.Character:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+				Track.Looped = true
+				Track:Play()
+				
+				game.TweenService:Create(Speed,TweenInfo.new(0.7),{Value = 0.7}):Play()
+				
+				while Plr.Character:FindFirstChild("Jerk") do
+					
+					wait()
+					
+					Track:AdjustSpeed(Speed.Value)
+					
+					if Track.TimePosition > 0.5 then
+						Track.TimePosition = 0.4
+					end
+					
+				end
+				
+			end)
+			
+			Jerk.Activated:Connect(function()
+
+				game.TweenService:Create(Speed,TweenInfo.new(3),{Value = 3}):Play()
+
+			end)
+
+			Jerk.Deactivated:Connect(function()
+
+				game.TweenService:Create(Speed,TweenInfo.new(1),{Value = 0.7}):Play()
+
+			end)
+			
+			Jerk.Unequipped:Connect(function()
+
+				Track:Stop()
+				Track:Destroy()
+
+			end)
+
+		end,
+
+	},
+	
+	{
+
+		Name = {"lag"},
+		Desc = "Have fake lag that looks funny.",
+		Args = {},
+		Func = function()
+
+			local Humanoid = Plr.Character.Humanoid
+			local Pain = true
+
+			game.Workspace.Gravity = 30
+
+			Humanoid.JumpPower = 20
+			Humanoid.WalkSpeed /= 2
+
+			for _, Item in Humanoid.Parent:GetDescendants() do
+
+				if Item:IsA("BasePart") then
+
+					Item.Massless = true
+
+				end
+
+			end
+
+			Lagging = true
+			
+			spawn(function()
+
+				while Lagging do
+
+					wait(math.random(1,6))
+
+					local Glitch = math.random(1,5)
+
+					if Glitch == 1 then
+
+						Pain = false
+						Humanoid.RootPart.Anchored = true
+
+						wait(math.random(50,250) / 100)
+
+						Pain = true
+
+					end
+
+					if Glitch == 2 then
+
+						Humanoid.PlatformStand = true
+						Humanoid.Sit = true
+
+						local Animation = Instance.new("Animation")
+						Animation.AnimationId = "http://www.roblox.com/asset/?id=180436148"
+						local Track = game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):LoadAnimation(Animation)
+						Track.Looped = true
+						Track.Priority = Enum.AnimationPriority.Action
+						Track:Play()
+
+						wait(math.random(8,13))
+
+						Track:Stop()
+						Humanoid.PlatformStand = false
+
+					end
+
+					if Glitch == 3 then
+
+						game.Workspace.Gravity = 0
+						Humanoid.RootPart.RotVelocity = Vector3.new(math.random(-15,15),math.random(-15,15),math.random(-15,15))
+						Humanoid.PlatformStand = true
+						Humanoid.Sit = true
+
+						local Animation = Instance.new("Animation")
+						Animation.AnimationId = "http://www.roblox.com/asset/?id=180436148"
+						local Track = game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):LoadAnimation(Animation)
+						Track.Looped = true
+						Track.Priority = Enum.AnimationPriority.Action
+						Track:Play()
+
+						wait(math.random(3,6))
+
+						Track:Stop()
+						Humanoid.PlatformStand = false
+						game.Workspace.Gravity = 30
+
+					end
+
+					if Glitch == 4 then
+
+						local Old = Humanoid.RootPart.CFrame
+
+						Humanoid.RootPart.CFrame = CFrame.new(0,1000,0)
+
+						wait(math.random(1,2))
+
+						Humanoid.RootPart.CFrame = Old
+
+					end
+
+					if Glitch == 5 then
+
+						local Old = Humanoid.RootPart.CFrame
+
+						wait(math.random(2,3))
+
+						Humanoid.RootPart.CFrame = Old
+
+					end
+
+					if Glitch == 6 then
+
+						game.Workspace.Gravity = 0
+						Humanoid.RootPart.RotVelocity = Vector3.new(math.random(-500,500),math.random(-500,500),math.random(-500,500))
+						Humanoid.PlatformStand = true
+
+						wait(math.random(50,150) / 100)
+
+						Humanoid.PlatformStand = false
+						game.Workspace.Gravity = 30
+
+					end
+
+				end
+
+			end)
+
+			while Lagging do
+
+				wait()
+
+				if Pain then
+
+					Humanoid.RootPart.Anchored = not Humanoid.RootPart.Anchored
+
+				end
+
+				for _, Anim in Humanoid:GetPlayingAnimationTracks() do
+
+					if Anim.Name == "WalkAnim" then
+						Anim:AdjustSpeed(tonumber(10))
+					end
+
+				end
+
+			end
+
+		end,
+
+	},
+	
+	{
+
+		Name = {"unlag"},
+		Desc = "Be able to play games again.",
+		Args = {},
+		Func = function()
+
+			Lagging = false
+
+			game.Workspace.Gravity = 196.2
+
+			Plr.Character.Humanoid.JumpPower = 50
+			Plr.Character.Humanoid.WalkSpeed = 16
+
+		end,
+
+	},
+	
+	{
+
+		Name = {"platform","float"},
+		Desc = "Have an invisible platform under you, press Q and E to change height.",
+		Args = {},
+		Func = function()
+
+			local Run = game["Run Service"]
+			local Root = Plr.Character:FindFirstChildOfClass("Humanoid").RootPart
+			
+			local Raise = 0
+			
+			local Float = Instance.new("Part",game.Workspace)
+			
+			Float.Name = Rename()
+			Float.Transparency = 1
+			Float.Anchored = true
+			Float.Size = Vector3.new(10,1,10)
+
+			PlatformPart = Float
+			
+			local Image = Instance.new("Decal",Float)
+			
+			Image.Face = Enum.NormalId.Top
+			Image.Texture = "http://www.roblox.com/asset/?id=7928096707"
+			Image.Color3 = Color3.fromRGB(500,500,500)
+			Image.Transparency = 0.9
+			
+			local Sin = 0
+			
+			Platform = Run.RenderStepped:Connect(function()
+				
+				if KeyDown(Enum.KeyCode.E) then
+					
+					Raise += 0.6
+					
+				end
+				
+				if KeyDown(Enum.KeyCode.Q) then
+
+					Raise -= 0.3
+
+				end
+				
+				Raise *= 0.7
+				
+				Float.CFrame = CFrame.new(Root.Position.X,Root.Position.Y + (Raise - 3.5),Root.Position.Z)
+				
+				Sin += 0.03
+								
+				Image.Transparency = 0.9 + (math.sin(Sin) / 20)
+				
+			end)
+
+		end,
+
+	},
+	
+	{
+
+		Name = {"unplatform","unfloat"},
+		Desc = "Stop doing the thing.",
+		Args = {},
+		Func = function()
+
+			if Platform then
+				
+				Platform:Disconnect()
+				
+			end
+
+			if PlatformPart then
+
+				PlatformPart.CanCollide = false
+				
+				game.TweenService:Create(PlatformPart:FindFirstChildOfClass("Decal"),TweenInfo.new(0.4),{Transparency = 1}):Play()
+				
+				wait(0.4)
+				
+				PlatformPart:Destroy()
+
+			end
+
+		end,
+
+	},
+	
+	{
+
+		Name = {"safefly","sfly"},
+		Desc = "More careful version of ;fly.",
+		Args = {},
+		Func = function()
+
+			game.Workspace.Gravity = 196.2
+
+			Plr.Character:FindFirstChildOfClass("Humanoid").PlatformStand = false
+			Plr.Character:FindFirstChildOfClass("Humanoid").Sit = false
+			
+			if Flying then
+
+				Flying:Disconnect()
+
+			end
+			
+			local Run = game["Run Service"]
+			local Root = Plr.Character:FindFirstChildOfClass("Humanoid").RootPart
+			local FlyPos = Root.CFrame
+
+			game.Workspace.Gravity = 0
+			
+			local ForwardSpeed = 0
+			local RightSpeed = 0
+			local UpSpeed = 0
+			
+			SafeFlying = Run.RenderStepped:Connect(function()
+				
+				Plr.Character:FindFirstChildOfClass("Humanoid").Sit = true
+
+				for _, Animation in Plr.Character:FindFirstChildOfClass("Humanoid"):GetPlayingAnimationTracks() do
+
+					Animation:Stop()
+					Animation:Destroy()
+
+				end
+				
+				Root.Velocity = Vector3.new(0,0,0)
+				Root.RotVelocity = Vector3.new(0,0,0)
+				Root.CFrame = CFrame.new(FlyPos.Position, FlyPos.Position + game.Workspace.CurrentCamera.CFrame.LookVector)
+
+				if KeyDown(Enum.KeyCode.W) or KeyDown(Enum.KeyCode.Up) then
+					ForwardSpeed += Plr.Character.Humanoid.WalkSpeed / 500
+				elseif KeyDown(Enum.KeyCode.S) or KeyDown(Enum.KeyCode.Down) then
+					ForwardSpeed -= Plr.Character.Humanoid.WalkSpeed / 500
+				elseif KeyDown(Enum.KeyCode.D) then
+					RightSpeed += Plr.Character.Humanoid.WalkSpeed / 500
+				elseif KeyDown(Enum.KeyCode.A) or KeyDown(Enum.KeyCode.Left) then
+					RightSpeed -= Plr.Character.Humanoid.WalkSpeed / 500
+				elseif KeyDown(Enum.KeyCode.E) or KeyDown(Enum.KeyCode.Space) then
+					UpSpeed += Plr.Character.Humanoid.WalkSpeed / 500
+				elseif KeyDown(Enum.KeyCode.Q) or KeyDown(Enum.KeyCode.LeftControl) then
+					UpSpeed -= Plr.Character.Humanoid.WalkSpeed / 500
+				end
+
+				FlyPos += game.Workspace.CurrentCamera.CFrame.LookVector * ForwardSpeed
+				FlyPos += game.Workspace.CurrentCamera.CFrame.RightVector * RightSpeed
+				FlyPos += game.Workspace.CurrentCamera.CFrame.UpVector * UpSpeed
+
+				ForwardSpeed *= 0.8
+				RightSpeed *= 0.8
+				UpSpeed *= 0.8
+				
+			end)
+
+
+		end,
+
+	},
+	
+	{
+
+		Name = {"fly"},
+		Desc = "Start flying, Mostly undetectable but use ;safefly for that.",
+		Args = {},
+		Func = function()
+
+			game.Workspace.Gravity = 196.2
+
+			Plr.Character:FindFirstChildOfClass("Humanoid").PlatformStand = false
+			Plr.Character:FindFirstChildOfClass("Humanoid").Sit = false
+
+			if SafeFlying then
+
+				SafeFlying:Disconnect()
+
+			end
+			
 			local Run = game["Run Service"]
 			local Root = Plr.Character:FindFirstChildOfClass("Humanoid").RootPart
 			local FlyPos = Root.CFrame
@@ -186,39 +693,39 @@ local Commands = {
 				Root.RotVelocity = Vector3.new(0,0,0)
 				Root.CFrame = CFrame.new(FlyPos.Position, FlyPos.Position + game.Workspace.CurrentCamera.CFrame.LookVector)
 				
-				if KeyDown(Enum.KeyCode.W) then
+				if KeyDown(Enum.KeyCode.W) or KeyDown(Enum.KeyCode.Up) then
 					
-					ForwardSpeed += 0.1
+					ForwardSpeed += Plr.Character.Humanoid.WalkSpeed / 500
 					
 				end
 				
-				if KeyDown(Enum.KeyCode.D) then
+				if KeyDown(Enum.KeyCode.D) or KeyDown(Enum.KeyCode.Right) then
 
-					RightSpeed += 0.1
-
-				end
-				
-				if KeyDown(Enum.KeyCode.S) then
-
-					ForwardSpeed -= 0.1
-
-				end
-
-				if KeyDown(Enum.KeyCode.A) then
-
-					RightSpeed -= 0.1
+					RightSpeed += Plr.Character.Humanoid.WalkSpeed / 500
 
 				end
 				
-				if KeyDown(Enum.KeyCode.E) then
+				if KeyDown(Enum.KeyCode.S) or KeyDown(Enum.KeyCode.Down) then
 
-					UpSpeed += 0.1
+					ForwardSpeed -= Plr.Character.Humanoid.WalkSpeed / 500
 
 				end
 
-				if KeyDown(Enum.KeyCode.Q) then
+				if KeyDown(Enum.KeyCode.A) or KeyDown(Enum.KeyCode.Left) then
 
-					UpSpeed -= 0.1
+					RightSpeed -= Plr.Character.Humanoid.WalkSpeed / 500
+
+				end
+				
+				if KeyDown(Enum.KeyCode.E) or KeyDown(Enum.KeyCode.Space) then
+
+					UpSpeed += Plr.Character.Humanoid.WalkSpeed / 500
+
+				end
+
+				if KeyDown(Enum.KeyCode.Q) or KeyDown(Enum.KeyCode.LeftControl)  or KeyDown(Enum.KeyCode.RightControl) then
+
+					UpSpeed -= Plr.Character.Humanoid.WalkSpeed / 500
 
 				end
 				
@@ -238,7 +745,7 @@ local Commands = {
 
 	{
 
-		Name = {"unfly"},
+		Name = {"unfly","unsafefly","unsfly"},
 		Desc = "Stops your epic flight powers.",
 		Args = {},
 		Func = function()
@@ -246,8 +753,32 @@ local Commands = {
 			game.Workspace.Gravity = 196.2
 
 			Plr.Character:FindFirstChildOfClass("Humanoid").PlatformStand = false
+			Plr.Character:FindFirstChildOfClass("Humanoid").Sit = false
 
-			Flying:Disconnect()
+			if Flying then
+				
+				Flying:Disconnect()
+				
+			end
+			
+			if SafeFlying then
+				
+				SafeFlying:Disconnect()
+			
+			end
+			
+		end,
+
+	},
+	
+	{
+
+		Name = {"speed","flyspeed"},
+		Desc = "Sets your speed, this also changes how fast you fly.",
+		Args = {"number"},
+		Func = function(Speed)
+
+			Plr.Character:FindFirstChildOfClass("Humanoid").WalkSpeed = Speed
 
 		end,
 
@@ -317,13 +848,9 @@ UserInputService.InputBegan:Connect(function(Input, Chat)
 	
 	if not Chat and Input.KeyCode == Enum.KeyCode.Semicolon then
 		
-		CommandBox:CaptureFocus()
+		wait()
 		
-		if CommandBox.Text == ";" then
-			
-			CommandBox.Text = ""
-			
-		end
+		CommandBox:CaptureFocus()
 		
 	end
 	
@@ -340,7 +867,11 @@ CommandBox.FocusLost:Connect(function(Enter)
 			for _, Alias in ipairs(Cmd.Name) do
 				if string.lower(Alias) == string.lower(Picked) then
 					local parsed = ParseArgs(Cmd.Args, CommandBox.Text)
-					Cmd.Func(unpack(parsed))
+					spawn(function()
+
+						Cmd.Func(unpack(parsed))
+
+					end)
 				end
 			end
 		end
