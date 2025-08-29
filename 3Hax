@@ -1,6 +1,6 @@
 -- UI
 
-local Menu = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
+local Menu = Instance.new("ScreenGui", game.CoreGui)
 
 Menu.Name = "3Hax"
 Menu.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -172,8 +172,240 @@ local Flying = nil
 local SafeFlying = nil
 local Platform = nil
 local PlatformPart = nil
+local Lagging = false
 
 local Commands = {
+	
+	{
+
+		Name = {"jerk","jork"},
+		Desc = "jerk it.",
+		Args = {},
+		Func = function()
+
+			local Jerk = Instance.new("Tool",Plr.Backpack)
+			
+			Jerk.Name = "Jerk"
+			Jerk.ToolTip = "Hold down to increase jerkiness."
+			Jerk.TextureId = "http://www.roblox.com/asset/?id=15052258274"
+			Jerk.RequiresHandle = false
+			
+			local Track = nil
+			local Speed = Instance.new("NumberValue")
+			
+			Jerk.Equipped:Connect(function()
+				
+				local Anim = Instance.new("Animation")
+				Anim.Parent = game.Workspace
+				Anim.AnimationId = Plr.Character:FindFirstChildOfClass("Humanoid").RigType ~= "R15" and "rbxassetid://72042024" or "rbxassetid://698251653"
+				Track = Plr.Character:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+				Track:Play()
+				
+				game.TweenService:Create(Speed,TweenInfo.new(0.7),{Value = 0.5}):Play()
+				
+				while Plr.Character:FindFirstChild("Jerk") do
+					
+					wait()
+					Track:AdjustSpeed(Speed.Value)
+					
+					if Track.TimePosition < 0.65 then
+						Track.TimePosition = 0.6
+					end
+					
+				end
+				
+			end)
+			
+			Jerk.Activated:Connect(function()
+
+				game.TweenService:Create(Speed,TweenInfo.new(0.7),{Value = 1.3}):Play()
+
+			end)
+
+			Jerk.Deactivated:Connect(function()
+
+				game.TweenService:Create(Speed,TweenInfo.new(0.7),{Value = 0.5}):Play()
+
+			end)
+			
+			Jerk.Unequipped:Connect(function()
+
+				Track:Stop()
+				Track:Destroy()
+
+			end)
+
+		end,
+
+	},
+	
+	{
+
+		Name = {"lag"},
+		Desc = "Have fake lag that looks funny.",
+		Args = {},
+		Func = function()
+
+			local Humanoid = Plr.Character.Humanoid
+			local Pain = true
+
+			game.Workspace.Gravity = 30
+
+			Humanoid.JumpPower = 20
+			Humanoid.WalkSpeed /= 2
+
+			for _, Item in Humanoid.Parent:GetDescendants() do
+
+				if Item:IsA("BasePart") then
+
+					Item.Massless = true
+
+				end
+
+			end
+
+			Lagging = true
+			
+			spawn(function()
+
+				while Lagging do
+
+					wait(math.random(1,6))
+
+					local Glitch = math.random(1,5)
+
+					if Glitch == 1 then
+
+						Pain = false
+						Humanoid.RootPart.Anchored = true
+
+						wait(math.random(50,250) / 100)
+
+						Pain = true
+
+					end
+
+					if Glitch == 2 then
+
+						Humanoid.PlatformStand = true
+						Humanoid.Sit = true
+
+						local Animation = Instance.new("Animation")
+						Animation.AnimationId = "http://www.roblox.com/asset/?id=180436148"
+						local Track = game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):LoadAnimation(Animation)
+						Track.Looped = true
+						Track.Priority = Enum.AnimationPriority.Action
+						Track:Play()
+
+						wait(math.random(8,13))
+
+						Track:Stop()
+						Humanoid.PlatformStand = false
+
+					end
+
+					if Glitch == 3 then
+
+						game.Workspace.Gravity = 0
+						Humanoid.RootPart.RotVelocity = Vector3.new(math.random(-15,15),math.random(-15,15),math.random(-15,15))
+						Humanoid.PlatformStand = true
+						Humanoid.Sit = true
+
+						local Animation = Instance.new("Animation")
+						Animation.AnimationId = "http://www.roblox.com/asset/?id=180436148"
+						local Track = game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):LoadAnimation(Animation)
+						Track.Looped = true
+						Track.Priority = Enum.AnimationPriority.Action
+						Track:Play()
+
+						wait(math.random(3,6))
+
+						Track:Stop()
+						Humanoid.PlatformStand = false
+						game.Workspace.Gravity = 30
+
+					end
+
+					if Glitch == 4 then
+
+						local Old = Humanoid.RootPart.CFrame
+
+						Humanoid.RootPart.CFrame = CFrame.new(0,1000,0)
+
+						wait(math.random(1,2))
+
+						Humanoid.RootPart.CFrame = Old
+
+					end
+
+					if Glitch == 5 then
+
+						local Old = Humanoid.RootPart.CFrame
+
+						wait(math.random(2,3))
+
+						Humanoid.RootPart.CFrame = Old
+
+					end
+
+					if Glitch == 6 then
+
+						game.Workspace.Gravity = 0
+						Humanoid.RootPart.RotVelocity = Vector3.new(math.random(-500,500),math.random(-500,500),math.random(-500,500))
+						Humanoid.PlatformStand = true
+
+						wait(math.random(50,150) / 100)
+
+						Humanoid.PlatformStand = false
+						game.Workspace.Gravity = 30
+
+					end
+
+				end
+
+			end)
+
+			while Lagging do
+
+				wait()
+
+				if Pain then
+
+					Humanoid.RootPart.Anchored = not Humanoid.RootPart.Anchored
+
+				end
+
+				for _, Anim in Humanoid:GetPlayingAnimationTracks() do
+
+					if Anim.Name == "WalkAnim" then
+						Anim:AdjustSpeed(tonumber(10))
+					end
+
+				end
+
+			end
+
+		end,
+
+	},
+	
+	{
+
+		Name = {"unlag"},
+		Desc = "Be able to play games again.",
+		Args = {},
+		Func = function()
+
+			Lagging = false
+
+			game.Workspace.Gravity = 196.2
+
+			Plr.Character.Humanoid.JumpPower = 50
+			Plr.Character.Humanoid.WalkSpeed = 16
+
+		end,
+
+	},
 	
 	{
 
@@ -269,6 +501,17 @@ local Commands = {
 		Args = {},
 		Func = function()
 
+			game.Workspace.Gravity = 196.2
+
+			Plr.Character:FindFirstChildOfClass("Humanoid").PlatformStand = false
+			Plr.Character:FindFirstChildOfClass("Humanoid").Sit = false
+			
+			if Flying then
+
+				Flying:Disconnect()
+
+			end
+			
 			local Run = game["Run Service"]
 			local Root = Plr.Character:FindFirstChildOfClass("Humanoid").RootPart
 			local FlyPos = Root.CFrame
@@ -279,7 +522,7 @@ local Commands = {
 			local RightSpeed = 0
 			local UpSpeed = 0
 			
-			Flying = Run.RenderStepped:Connect(function()
+			SafeFlying = Run.RenderStepped:Connect(function()
 				
 				Plr.Character:FindFirstChildOfClass("Humanoid").Sit = true
 
@@ -330,6 +573,17 @@ local Commands = {
 		Args = {},
 		Func = function()
 
+			game.Workspace.Gravity = 196.2
+
+			Plr.Character:FindFirstChildOfClass("Humanoid").PlatformStand = false
+			Plr.Character:FindFirstChildOfClass("Humanoid").Sit = false
+
+			if SafeFlying then
+
+				SafeFlying:Disconnect()
+
+			end
+			
 			local Run = game["Run Service"]
 			local Root = Plr.Character:FindFirstChildOfClass("Humanoid").RootPart
 			local FlyPos = Root.CFrame
@@ -522,7 +776,11 @@ CommandBox.FocusLost:Connect(function(Enter)
 			for _, Alias in ipairs(Cmd.Name) do
 				if string.lower(Alias) == string.lower(Picked) then
 					local parsed = ParseArgs(Cmd.Args, CommandBox.Text)
-					Cmd.Func(unpack(parsed))
+					spawn(function()
+
+						Cmd.Func(unpack(parsed))
+
+					end)
 				end
 			end
 		end
