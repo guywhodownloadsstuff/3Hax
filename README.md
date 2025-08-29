@@ -21,13 +21,13 @@ You might need stuff like mouse1click() and basic stuff like that but thats basi
 # Script Hub
 
 ```
-loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/coolguyandstuffyeah/3Hax/refs/heads/main/3Hax"))()
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/guywhodownloadsstuff/3Hax/refs/heads/main/3Hax"))()
 ```
 
-# Universal
+# Universal (WIP)
 
 ```
-loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/coolguyandstuffyeah/3Hax/refs/heads/main/Universal"))()
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/guywhodownloadsstuff/3Hax/refs/heads/main/Universal"))()
 ```
 
 # Credits
