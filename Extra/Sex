@@ -1,0 +1,302 @@
+local Breed = Instance.new("ScreenGui", game.CoreGui)
+
+Breed.Name = "Breed"
+Breed.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+local Hint = Instance.new("TextButton", Breed)
+
+Hint.BackgroundColor3 = Color3.new(1, 1, 1)
+Hint.BackgroundTransparency = 1
+Hint.BorderColor3 = Color3.new(0, 0, 0)
+Hint.BorderSizePixel = 0
+Hint.Font = Enum.Font.Ubuntu
+Hint.Name = "Hint"
+Hint.Position = UDim2.new(0.683917165, 0, 0.821666658, 0)
+Hint.Size = UDim2.new(0.130732536, 0, 0.163333327, 0)
+Hint.Text = "This script requires 2 hackers. One starts requesting, and the other presses search."
+Hint.TextColor3 = Color3.new(1, 1, 1)
+Hint.TextScaled = true
+Hint.TextSize = 14
+Hint.TextWrapped = true
+
+local List = Instance.new("Frame", Breed)
+
+List.BackgroundColor3 = Color3.new(1, 1, 1)
+List.BackgroundTransparency = 1
+List.BorderColor3 = Color3.new(0, 0, 0)
+List.BorderSizePixel = 0
+List.Name = "List"
+List.Position = UDim2.new(1, 0, 0.0199999996, 0)
+List.Size = UDim2.new(0.170382306, 0, 0.964999974, 0)
+
+local Check = Instance.new("TextButton", List)
+
+Check.BackgroundColor3 = Color3.new(1, 1, 1)
+Check.BorderColor3 = Color3.new(0, 0, 0)
+Check.BorderSizePixel = 0
+Check.Font = Enum.Font.Ubuntu
+Check.Name = "Check"
+Check.Position = UDim2.new(0.833598733, 0, 0.908333361, 0)
+Check.Size = UDim2.new(1, 0, 0.0799999982, 0)
+Check.Style = Enum.ButtonStyle.RobloxButton
+Check.Text = "Search"
+Check.TextColor3 = Color3.new(1, 1, 1)
+Check.TextScaled = true
+Check.TextSize = 14
+Check.TextWrapped = true
+
+local Request = Instance.new("TextButton", List)
+
+Request.BackgroundColor3 = Color3.new(1, 1, 1)
+Request.BorderColor3 = Color3.new(0, 0, 0)
+Request.BorderSizePixel = 0
+Request.Font = Enum.Font.Ubuntu
+Request.Name = "Request"
+Request.Position = UDim2.new(0.833598733, 0, 0.821666658, 0)
+Request.Size = UDim2.new(1, 0, 0.0799999982, 0)
+Request.Style = Enum.ButtonStyle.RobloxButton
+Request.Text = "Start Requesting"
+Request.TextColor3 = Color3.new(1, 1, 1)
+Request.TextScaled = true
+Request.TextSize = 14
+Request.TextWrapped = true
+
+local Layout = Instance.new("UIListLayout", List)
+
+Layout.VerticalAlignment = Enum.VerticalAlignment.Bottom
+Layout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+Layout.SortOrder = Enum.SortOrder.LayoutOrder
+Layout.Padding = UDim.new(0.00999999978, 0)
+Layout.Name = "Layout"
+
+-- Variables
+
+local Plr = game.Players.LocalPlayer
+local Running = false
+local OldPos = nil
+local AcceptPos = nil
+
+-- Setup
+
+game.TweenService:Create(List,TweenInfo.new(0.5),{Position = UDim2.new(0.821815133, 0, 0.0199999996, 0)}):Play()
+
+-- Hint
+
+Hint.MouseButton1Down:Connect(function()
+	
+	Hint:Destroy()
+	
+end)
+
+-- Check
+
+Check.MouseButton1Down:Connect(function()
+	
+	Check.Text = "Searching.."
+	Check.Interactable = false
+	
+	local Found = nil
+	
+	for _, Person in game.Players:GetPlayers() do
+		
+		if Person.Character and Person.Character:FindFirstChildOfClass("Humanoid") and Person.Character:FindFirstChildOfClass("Humanoid").RootPart then
+			
+			local Pos = Person.Character:FindFirstChildOfClass("Humanoid").RootPart.Position
+			
+			if Pos.X < 70 and Pos.X > 68 then
+				
+				if Pos.Y < 70 and Pos.Y > 68 then
+				
+					if Pos.Z < 70 and Pos.Z > 68 then
+
+						Found = Person
+
+					end
+				
+				end
+				
+			end
+
+		end
+		
+	end
+	
+	if Found then
+		
+		Check.Text = "Accept " .. Found.DisplayName .. "?"
+		Request.Text = "Decline"
+		Check.Interactable = true
+		
+		Check.MouseButton1Down:Once(function()
+			
+			if Check.Text == "Accept " .. Found.DisplayName .. "?" then
+				
+				Check.Interactable = false
+				Request.Visible = false
+				Check.Visible = false
+				
+				AcceptPos = Plr.Character:FindFirstChildOfClass("Humanoid").RootPart.CFrame
+				
+				repeat
+
+					wait()
+
+					game.Workspace.Gravity = 0
+
+					local Root = Plr.Character:FindFirstChildOfClass("Humanoid").RootPart
+
+					Root.Velocity = Vector3.new(0,0,0)
+					Root.Rotation = Vector3.new(0,0,0)
+					Root.CFrame = CFrame.new(420,420,420)
+
+				until Found.Character and Found.Character.Humanoid.RootPart.Position.Y > 3000
+				
+				wait()
+				
+				game.Workspace.Gravity = 196.2
+				Plr.Character:FindFirstChildOfClass("Humanoid").RootPart.CFrame = AcceptPos
+				
+				wait(1)
+				
+				Breed:Destroy()
+				print(Found.DisplayName)
+				
+			end
+			
+		end)
+		
+	else
+		
+		Check.Text = "Nobody Found."
+		wait(1)
+		Check.Text = "Search"
+		Check.Interactable = true
+		
+	end
+	
+end)
+
+-- Request
+
+Request.MouseButton1Down:Connect(function()
+	
+	if Request.Text == "Decline" then
+		
+		Request.Text = "Start Requesting"
+		Check.Text = "Search"
+		Check.Interactable = true
+		
+	end
+	
+	if Request.Text == "Start Requesting" then
+		
+		Check.Visible = false
+		Request.Text = "Stop Requesting"
+		
+		OldPos = Plr.Character:FindFirstChildOfClass("Humanoid").RootPart.CFrame
+		
+		Running = true
+
+		local Found = nil
+		
+		spawn(function()
+			
+			while Running do
+				
+				wait(1)
+				
+				for _, Person in game.Players:GetPlayers() do
+
+					if Person.Character and Person.Character:FindFirstChildOfClass("Humanoid") and Person.Character:FindFirstChildOfClass("Humanoid").RootPart then
+
+						local Pos = Person.Character:FindFirstChildOfClass("Humanoid").RootPart.Position
+
+						if Pos.X < 421 and Pos.X > 419 then
+
+							if Pos.Y < 421 and Pos.Y > 419 then
+
+								if Pos.Z < 421 and Pos.Z > 419 then
+
+									Found = Person
+									Running = false
+
+								end
+
+							end
+
+						end
+
+					end
+
+				end
+				
+			end
+
+		end)
+		
+		while Running do
+			
+			wait()
+			
+			if Plr.Character then
+				
+				game.Workspace.Gravity = 0
+				
+				local Root = Plr.Character:FindFirstChildOfClass("Humanoid").RootPart
+				
+				Root.Velocity = Vector3.new(0,0,0)
+				Root.Rotation = Vector3.new(0,0,0)
+				Root.CFrame = CFrame.new(69,69,69)
+				
+			end
+			
+		end
+		
+		if Found then
+			
+			Request = "Found!"
+
+			local Root = Plr.Character:FindFirstChildOfClass("Humanoid").RootPart
+
+			Root.CFrame = CFrame.new(0,4000,0)
+			wait()
+			Root.Anchored = true
+			
+			repeat
+				
+				wait()
+				Root.CFrame = CFrame.new(0,4000,0)
+				
+			until Found.Character.Humanoid.RootPart.Position.Y < 410
+
+			wait(0.3)
+			
+			game.Workspace.Gravity = 196.2
+			
+			Root.CFrame = Found.Character.Humanoid.RootPart.CFrame
+			
+			wait(1)
+			
+			Breed:Destroy()
+			print(Found.DisplayName)
+			
+		end
+		
+	end
+	
+	if Request.Text == "Stop Requesting" then
+
+		Check.Visible = true
+		Request.Text = "Start Requesting"
+
+		game.Workspace.Gravity = 196.2
+
+		local Root = Plr.Character:FindFirstChildOfClass("Humanoid").RootPart
+
+		Root.CFrame = OldPos
+		
+		Running = false
+
+	end
+	
+end)
