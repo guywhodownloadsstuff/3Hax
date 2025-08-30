@@ -3,76 +3,75 @@
 local Menu = Instance.new("ScreenGui", game.CoreGui)
 
 Menu.Name = "3Hax"
-Menu.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Menu.IgnoreGuiInset = true
 Menu.DisplayOrder = 1999999999
 
-local Background = Instance.new("Frame", Menu)
+local Bar = Instance.new("Frame", Menu)
 
-Background.BackgroundColor3 = Color3.new(0.156863, 0.156863, 0.156863)
-Background.BorderColor3 = Color3.new(0, 0, 0)
-Background.BorderSizePixel = 0
-Background.Name = "Background"
-Background.Position = UDim2.new(0.00999999978, 0, 1, 0)
-Background.Size = UDim2.new(0.176433131, 0, 0.357071549, 0)
+Bar.BackgroundColor3 = Color3.new(1, 1, 1)
+Bar.BorderColor3 = Color3.new(0, 0, 0)
+Bar.BorderSizePixel = 0
+Bar.Name = "Bar"
+Bar.Position = UDim2.new(-0.234, 0,0.937, 0)
+Bar.Size = UDim2.new(0.233999997, 0, 0.0419999994, 0)
 
-local Square = Instance.new("UIAspectRatioConstraint", Background)
+local Round = Instance.new("UICorner", Bar)
 
-Square.Name = "Square"
-Square.AspectType = Enum.AspectType.ScaleWithParentSize
-Square.DominantAxis = Enum.DominantAxis.Height
-
-local Round = Instance.new("UICorner", Background)
-
-Round.CornerRadius = UDim.new(0.0299999993, 0)
+Round.CornerRadius = UDim.new(1, 0)
 Round.Name = "Round"
 
-local CommandBox = Instance.new("TextBox", Background)
+local Input = Instance.new("TextBox", Bar)
 
-CommandBox.BackgroundColor3 = Color3.new(1, 1, 1)
-CommandBox.BackgroundTransparency = 0.8999999761581421
-CommandBox.BorderColor3 = Color3.new(0, 0, 0)
-CommandBox.BorderSizePixel = 0
-CommandBox.ClearTextOnFocus = false
-CommandBox.Font = Enum.Font.Ubuntu
-CommandBox.Name = "CommandBox"
-CommandBox.PlaceholderText = "Search for hax.."
-CommandBox.Position = UDim2.new(0.0279590134, 0, 0, 0)
-CommandBox.Size = UDim2.new(0.972041011, 0, 0.123299152, 0)
-CommandBox.Text = ""
-CommandBox.TextColor3 = Color3.new(1, 1, 1)
-CommandBox.TextSize = 14
-CommandBox.TextWrapped = true
-CommandBox.TextXAlignment = Enum.TextXAlignment.Left
+Input.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+Input.BackgroundTransparency = 1
+Input.BorderColor3 = Color3.new(0, 0, 0)
+Input.BorderSizePixel = 0
+Input.ClearTextOnFocus = false
+Input.Font = Enum.Font.SciFi
+Input.Name = "Input"
+Input.Position = UDim2.new(0.0420000665, 0, 0.130000353, 0)
+Input.Size = UDim2.new(0.91900003, 0, 0.75, 0)
+Input.Text = ""
+Input.PlaceholderText = "Search for hax.."
+Input.TextColor3 = Color3.new(0.74902, 0.815686, 0.996078)
+Input.TextScaled = true
+Input.TextSize = 14
+Input.TextWrapped = true
+Input.TextXAlignment = Enum.TextXAlignment.Left
 
-local Outline = Instance.new("UIStroke", Background)
+local Stroke = Instance.new("UIStroke", Bar)
 
-Outline.Color = Color3.new(1, 1, 1)
-Outline.Name = "Outline"
+Stroke.Color = Color3.new(0.137255, 0.286275, 0.392157)
+Stroke.Thickness = 2
+Stroke.Name = "Stroke"
 
-local Cover = Instance.new("Frame", Background)
+local Gradient = Instance.new("UIGradient", Bar)
 
-Cover.BackgroundColor3 = Color3.new(1, 1, 1)
-Cover.BackgroundTransparency = 0.8999999761581421
-Cover.BorderColor3 = Color3.new(0, 0, 0)
-Cover.BorderSizePixel = 0
-Cover.Name = "Cover"
-Cover.Size = UDim2.new(0.0279589966, 0, 0.123299152, 0)
+Gradient.Color = ColorSequence.new(Color3.new(0.027451, 0.129412, 0.207843),Color3.new(0.121569, 0.176471, 0.211765))
+Gradient.Rotation = 16
+Gradient.Name = "Gradient"
 
-local Scroll = Instance.new("ScrollingFrame", Background)
+local Scroll = Instance.new("ScrollingFrame", Menu)
 
 Scroll.Active = true
 Scroll.BackgroundColor3 = Color3.new(1, 1, 1)
-Scroll.BackgroundTransparency = 0.9900000095367432
 Scroll.BorderColor3 = Color3.new(0, 0, 0)
-Scroll.AutomaticCanvasSize = Enum.AutomaticSize.Y
 Scroll.BorderSizePixel = 0
-Scroll.BottomImage = "rbxassetid://12530016893"
-Scroll.MidImage = "rbxassetid://3648198826"
+Scroll.BottomImage = ""
+Scroll.CanvasSize = UDim2.new(0, 0, 0, 0)
+Scroll.MidImage = "rbxassetid://1179108570"
 Scroll.Name = "Scroll"
-Scroll.Position = UDim2.new(0, 0, 0.123298973, 0)
-Scroll.ScrollBarThickness = 2
-Scroll.Size = UDim2.new(1, 0, 0.876700878, 0)
-Scroll.TopImage = "rbxassetid://12530018695"
+Scroll.AutomaticCanvasSize = Enum.AutomaticSize.Y
+Scroll.Position = UDim2.new(0.01, 0,1, 3)
+Scroll.ScrollBarImageTransparency = 0.699999988079071
+Scroll.ScrollBarThickness = 5
+Scroll.Size = UDim2.new(0.233757988, 0, 0.174666777, 0)
+Scroll.TopImage = ""
+
+local List = Instance.new("UIListLayout", Scroll)
+
+List.SortOrder = Enum.SortOrder.LayoutOrder
+List.Name = "List"
 
 local Command = Instance.new("TextButton", nil)
 
@@ -80,21 +79,30 @@ Command.BackgroundColor3 = Color3.new(1, 1, 1)
 Command.BackgroundTransparency = 1
 Command.BorderColor3 = Color3.new(0, 0, 0)
 Command.BorderSizePixel = 0
-Command.Font = Enum.Font.Ubuntu
+Command.Font = Enum.Font.SciFi
 Command.Name = "Command"
-Command.Size = UDim2.new(1, 0, 0.0799999982, 0)
+Command.Size = UDim2.new(1, 0, 0.137251884, 0)
 Command.Text = "Command"
-Command.TextColor3 = Color3.new(1, 1, 1)
+Command.TextColor3 = Color3.new(0.803922, 0.898039, 0.984314)
 Command.TextScaled = true
 Command.TextSize = 14
 Command.TextWrapped = true
-Command.TextXAlignment = Enum.TextXAlignment.Left
 
-local List = Instance.new("UIListLayout", Scroll)
+local Stroke = Instance.new("UIStroke", Scroll)
 
-List.SortOrder = Enum.SortOrder.LayoutOrder
-List.Padding = UDim.new(0, 5)
-List.Name = "List"
+Stroke.Color = Color3.new(0.137255, 0.286275, 0.392157)
+Stroke.Thickness = 2
+Stroke.Name = "Stroke"
+
+local Round = Instance.new("UICorner", Scroll)
+
+Round.CornerRadius = UDim.new(0.150000006, 0)
+Round.Name = "Round"
+
+local Gradient = Instance.new("UIGradient", Scroll)
+Gradient.Rotation = 16
+Gradient.Name = "Gradient"
+Gradient.Color = ColorSequence.new(Color3.new(0.027451, 0.129412, 0.207843),Color3.new(0.121569, 0.176471, 0.211765))
 
 -- Variables
 
@@ -193,14 +201,28 @@ local Commands = {
 			local Sin = 0
 			local Root = Plr.Character:FindFirstChildOfClass("Humanoid").RootPart
 			
+			game.Workspace.FallenPartsDestroyHeight = -math.huge
+			game.Workspace.Gravity = 0
+			
 			Banging = game["Run Service"].RenderStepped:Connect(function()
+				
+				if not Victim then
+					
+					Banging:Disconnect()
+					
+				end
 				
 				Sin += 0.4
 				
+				Root.Velocity = Vector3.new(0,0,0)
+				Root.RotVelocity = Vector3.new(0,0,0)
+				
 				local VRoot = Victim.Character.HumanoidRootPart
 				
-				local VPos = VRoot.Position - VRoot.CFrame.LookVector * math.abs(math.sin(Sin))
+				if VRoot then
+				local VPos = VRoot.Position - VRoot.CFrame.LookVector * ( math.abs(math.sin(Sin)) + 1)
 				Root.CFrame = CFrame.new(VPos, VRoot.Position)
+				end
 				
 			end)
 
@@ -215,6 +237,8 @@ local Commands = {
 		Args = {},
 		Func = function(Victim)
 
+			game.Workspace.Gravity = 196.2
+			
 			if Banging then
 				
 				Banging:Disconnect()
@@ -244,10 +268,11 @@ local Commands = {
 			Salute.Equipped:Connect(function()
 
 				local Anim = Instance.new("Animation")
-				Anim.Parent = game.Workspace
+				Anim.Name = "Salute"
 				Anim.AnimationId = Plr.Character:FindFirstChildOfClass("Humanoid").RigType ~= "R15" and "rbxassetid://72042024" or "rbxassetid://698251653"
 				Track = Plr.Character:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
 				Track.Looped = true
+				Track.Name = "SaluteAnim"
 				Track:Play()
 				Track.TimePosition = 0.05
 				Track:AdjustSpeed(0)
@@ -285,7 +310,6 @@ local Commands = {
 			Jerk.Equipped:Connect(function()
 				
 				local Anim = Instance.new("Animation")
-				Anim.Parent = game.Workspace
 				Anim.AnimationId = Plr.Character:FindFirstChildOfClass("Humanoid").RigType ~= "R15" and "rbxassetid://72042024" or "rbxassetid://698251653"
 				Track = Plr.Character:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
 				Track.Looped = true
@@ -363,6 +387,12 @@ local Commands = {
 
 					wait(math.random(1,6))
 
+					if not Lagging then
+
+						break
+
+					end
+					
 					local Glitch = math.random(1,5)
 
 					if Glitch == 1 then
@@ -493,6 +523,14 @@ local Commands = {
 
 			Plr.Character.Humanoid.JumpPower = 50
 			Plr.Character.Humanoid.WalkSpeed = 16
+			Plr.Character.Humanoid.PlatformStand = false
+			
+			repeat
+				
+				Plr.Character.Humanoid.RootPart.Anchored = false
+				wait(0.1)
+				
+			until Plr.Character.Humanoid.RootPart.Anchored == false
 
 		end,
 
@@ -588,7 +626,7 @@ local Commands = {
 	{
 
 		Name = {"safefly","sfly"},
-		Desc = "More careful version of ;fly.",
+		Desc = "More careful and less detectable version of ;fly, Use if ;fly is detected.",
 		Args = {},
 		Func = function()
 
@@ -615,8 +653,6 @@ local Commands = {
 			
 			SafeFlying = Run.RenderStepped:Connect(function()
 				
-				Plr.Character:FindFirstChildOfClass("Humanoid").Sit = true
-
 				for _, Animation in Plr.Character:FindFirstChildOfClass("Humanoid"):GetPlayingAnimationTracks() do
 
 					Animation:Stop()
@@ -651,7 +687,6 @@ local Commands = {
 				UpSpeed *= 0.8
 				
 			end)
-
 
 		end,
 
@@ -801,7 +836,7 @@ local Commands = {
 
 -- Setup
 
-game.TweenService:Create(Background,TweenInfo.new(0.5),{Position = UDim2.new(0.00999999978, 0, 0.649999976, 0)}):Play()
+game.TweenService:Create(Bar,TweenInfo.new(0.5),{Position = UDim2.new(0.01, 0,0.937, 0)}):Play()
 
 for _, Cmd in Commands do
 	
@@ -818,7 +853,7 @@ for _, Cmd in Commands do
 	
 	Clone.MouseButton1Down:Connect(function()
 		
-		CommandBox.Text = Cmd.Name[1]
+		Input.Text = Cmd.Name[1]
 		
 	end)
 	
@@ -844,29 +879,39 @@ end
 
 -- Execute
 
-UserInputService.InputBegan:Connect(function(Input, Chat)
+UserInputService.InputBegan:Connect(function(InputO, Chat)
 	
-	if not Chat and Input.KeyCode == Enum.KeyCode.Semicolon then
+	if not Chat and InputO.KeyCode == Enum.KeyCode.Semicolon then
 		
 		wait()
 		
-		CommandBox:CaptureFocus()
+		Input:CaptureFocus()
 		
 	end
 	
 end)
 
-CommandBox.FocusLost:Connect(function(Enter)
+Input.Focused:Connect(function()
+	
+	game.TweenService:Create(Bar,TweenInfo.new(0.2),{Position = UDim2.new(0.00999999978, 0, 0.751999974, 0)}):Play()
+	game.TweenService:Create(Scroll,TweenInfo.new(0.2),{Position = UDim2.new(0.0103884125, 0, 0.808333337, 0)}):Play()
+	
+end)
+
+Input.FocusLost:Connect(function(Enter)
+
+	game.TweenService:Create(Bar,TweenInfo.new(0.2),{Position = UDim2.new(0.01, 0,0.937, 0)}):Play()
+	game.TweenService:Create(Scroll,TweenInfo.new(0.2),{Position = UDim2.new(0.01, 0,1, 3)}):Play()
 
 	if Enter then
 		
-		local Split = string.split(CommandBox.Text, " ")
+		local Split = string.split(Input.Text, " ")
 		local Picked = Split[1]
 
 		for _, Cmd in ipairs(Commands) do
 			for _, Alias in ipairs(Cmd.Name) do
 				if string.lower(Alias) == string.lower(Picked) then
-					local parsed = ParseArgs(Cmd.Args, CommandBox.Text)
+					local parsed = ParseArgs(Cmd.Args, Input.Text)
 					spawn(function()
 
 						Cmd.Func(unpack(parsed))
@@ -876,7 +921,7 @@ CommandBox.FocusLost:Connect(function(Enter)
 			end
 		end
 		
-		CommandBox.Text = ""
+		Input.Text = ""
 		
 	end
 
