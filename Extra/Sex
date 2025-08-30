@@ -148,7 +148,7 @@ Check.MouseButton1Down:Connect(function()
 					Plr.Character:FindFirstChildOfClass("Humanoid").PlatformStand = true
 					Root.Velocity = Vector3.new(0,0,0)
 					Root.Rotation = Vector3.new(0,0,0)
-					Root.CFrame = CFrame.new(420,420,420)
+					Root.CFrame = CFrame.new(420,420,420) * AcceptPos.Rotation
 
 				until Found.Character and Found.Character.Humanoid.RootPart.Position.Y > 3000
 				
@@ -249,7 +249,7 @@ Request.MouseButton1Down:Connect(function()
 				Plr.Character:FindFirstChildOfClass("Humanoid").PlatformStand = true
 				Root.Velocity = Vector3.new(0,0,0)
 				Root.Rotation = Vector3.new(0,0,0)
-				Root.CFrame = CFrame.new(69,69,69)
+				Root.CFrame = CFrame.new(69,69,69) * OldPos.Rotation
 				
 			end
 			
