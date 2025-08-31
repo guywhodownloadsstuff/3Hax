@@ -19,19 +19,23 @@ end
 
 function OptionNotification(Title,Text,Duration,Button1,Button2,Action1,Action2)
 
+	local CB = Instance.new("BindableFunction")
+	
+	function CB.OnInvoke(Choice)
+		if Choice == Button1 then
+			Action1()
+		elseif Choice == Button2 then
+			Action2()
+		end
+	end
+
 	StarterGui:SetCore("SendNotification", {
 		Title = Title,
 		Text = Text,
 		Duration = Duration,
 		Button1 = Button1,
 		Button2 = Button2,
-		Callback = function(Choice)
-			if Choice == Button1 then
-				Action1()
-			elseif Choice == Button2 then
-				Action2()
-			end
-		end
+		Callback = CB,
 	})
 
 end
@@ -113,7 +117,7 @@ end)
 local TextChatService = game:GetService("TextChatService")
 
 TextChatService.MessageReceived:Connect(function(Msg)
-	print(Msg.Text)
+	
 	if Msg.Text == '<font color="#f74b52">You are not able to chat with this person.</font>' then
 
 		Notification("Error","This person does not have private messaging allowed, tell them to allow it.",10,"Oh")
