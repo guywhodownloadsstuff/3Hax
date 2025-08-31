@@ -38,7 +38,7 @@ end
 
 -- Setup
 
-Notification("Breed Script v0.2 (By 3Hax)","Get your friend to run this script then click him. (They will be highlighted.)",math.huge,"Understood")
+Notification("Breed Script (By 3Hax)","Get your friend to run this script then click him. (They will be highlighted.)",math.huge,"Understood")
 
 local Invitable = Instance.new("Animation")
 Invitable.AnimationId = "rbxassetid://69"
@@ -113,7 +113,7 @@ end)
 local TextChatService = game:GetService("TextChatService")
 
 TextChatService.MessageReceived:Connect(function(Msg)
-
+	print(Msg.Text)
 	if Msg.Text == '<font color="#f74b52">You are not able to chat with this person.</font>' then
 
 		Notification("Error","This person does not have private messaging allowed, tell them to allow it.",10,"Oh")
@@ -122,15 +122,18 @@ TextChatService.MessageReceived:Connect(function(Msg)
 
 	if Msg.Text == "request " .. string.sub(Plr.DisplayName,1,2) then
 
-		OptionNotification("Request",Msg.TextSource.DisplayName .. " wants to SEX. Do you accept?",math.huge,"Consent","NO",function()
+		local Requestor = game.Players:GetPlayerFromCharacter(game)
+		Requestor = game.Players:FindFirstChild(Msg.TextSource.Name)
+		
+		OptionNotification("Request",Requestor.DisplayName .. " wants to SEX. Do you accept?",math.huge,"Consent","NO",function()
 
 			if PMMode then
 
-				game.TextChatService.TextChannels.RBXGeneral:SendAsync("/w " .. Msg.TextSource.DisplayName .. " accept " .. string.sub(Msg.TextSource.DisplayName,1,2))
+				game.TextChatService.TextChannels.RBXGeneral:SendAsync("/w " .. Requestor.DisplayName .. " accept " .. string.sub(Requestor.DisplayName,1,2))
 
 			else
 
-				game.TextChatService.TextChannels.RBXGeneral:SendAsync("accept " .. string.sub(Msg.TextSource.DisplayName,1,2))
+				game.TextChatService.TextChannels.RBXGeneral:SendAsync("accept " .. string.sub(Requestor.DisplayName,1,2))
 
 			end
 
