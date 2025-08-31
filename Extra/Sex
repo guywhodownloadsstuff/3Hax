@@ -38,7 +38,7 @@ end
 
 -- Setup
 
-Notification("Breed Script (By 3Hax)","Get your friend to run this script then click him. (They will be highlighted.)",math.huge,"Understood")
+Notification("Breed Script v0.2 (By 3Hax)","Get your friend to run this script then click him. (They will be highlighted.)",math.huge,"Understood")
 
 local Invitable = Instance.new("Animation")
 Invitable.AnimationId = "rbxassetid://69"
