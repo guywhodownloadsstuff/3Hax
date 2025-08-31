@@ -46,80 +46,84 @@ local Animation = Plr.Character:FindFirstChildOfClass("Humanoid"):LoadAnimation(
 Animation.Looped = true
 Animation:Play()
 
-while true do
+spawn(function()
 	
-	wait(1)
-	
-	for _, Player in game.Players:GetPlayers() do
-		
-		if Player ~= Plr and Player.Character and Player.Character:FindFirstChildOfClass("Humanoid") then
-			
-			for _, Anim in Player.Character:FindFirstChildOfClass("Humanoid"):GetPlayingAnimationTracks() do
-				
-				if Anim.Animation.AnimationId == "rbxassetid://69" and not Player.Character:FindFirstChild("BreedInv") then
-					
-					local Click = Instance.new("ClickDetector",Player.Character)
-					Click.Name = "BreedInv"
-					Click.CursorIcon = "rbxasset://textures/Cursors/KeyboardMouse/ArrowCursor.png"
-					
-					local Highlight = Instance.new("Highlight",Player.Character)
-					Highlight.Name = "BreedHighlight"
-					
-					Highlight.FillTransparency = 1
-					Highlight.FillColor = Color3.new(1,1,1)
-					
-					Click.MouseHoverEnter:Connect(function()
-						
-						game.TweenService:Create(Highlight,TweenInfo.new(0.3),{FillTransparency = 0.7}):Play()
-						
-					end)
-					
-					Click.MouseHoverLeave:Connect(function()
+	while true do
 
-						game.TweenService:Create(Highlight,TweenInfo.new(0.3),{FillTransparency = 1}):Play()
+		wait(1)
 
-					end)
+		for _, Player in game.Players:GetPlayers() do
 
-					Click.MouseClick:Connect(function()
-						
-						if PMMode then
-							
-							game.TextChatService.TextChannels.RBXGeneral:SendAsync("/w " .. Player.DisplayName .. " request " .. string.sub(Player.DisplayName,1,2))
-							
-						else
-							
-							game.TextChatService.TextChannels.RBXGeneral:SendAsync("request " .. string.sub(Player.DisplayName,1,2))
-							
-						end
-						
-						Notification("Invite Sent!","",5,"Ok")
-						
-					end)
-					
+			if Player ~= Plr and Player.Character and Player.Character:FindFirstChildOfClass("Humanoid") then
+
+				for _, Anim in Player.Character:FindFirstChildOfClass("Humanoid"):GetPlayingAnimationTracks() do
+
+					if Anim.Animation.AnimationId == "rbxassetid://69" and not Player.Character:FindFirstChild("BreedInv") then
+
+						local Click = Instance.new("ClickDetector",Player.Character)
+						Click.Name = "BreedInv"
+						Click.CursorIcon = "rbxasset://textures/Cursors/KeyboardMouse/ArrowCursor.png"
+
+						local Highlight = Instance.new("Highlight",Player.Character)
+						Highlight.Name = "BreedHighlight"
+
+						Highlight.FillTransparency = 1
+						Highlight.FillColor = Color3.new(1,1,1)
+
+						Click.MouseHoverEnter:Connect(function()
+
+							game.TweenService:Create(Highlight,TweenInfo.new(0.3),{FillTransparency = 0.7}):Play()
+
+						end)
+
+						Click.MouseHoverLeave:Connect(function()
+
+							game.TweenService:Create(Highlight,TweenInfo.new(0.3),{FillTransparency = 1}):Play()
+
+						end)
+
+						Click.MouseClick:Connect(function()
+
+							if PMMode then
+
+								game.TextChatService.TextChannels.RBXGeneral:SendAsync("/w " .. Player.DisplayName .. " request " .. string.sub(Player.DisplayName,1,2))
+
+							else
+
+								game.TextChatService.TextChannels.RBXGeneral:SendAsync("request " .. string.sub(Player.DisplayName,1,2))
+
+							end
+
+							Notification("Invite Sent!","",5,"Ok")
+
+						end)
+
+					end
+
 				end
-				
+
 			end
-			
+
 		end
-		
+
 	end
 	
-end
+end)
 
 local TextChatService = game:GetService("TextChatService")
 
 TextChatService.MessageReceived:Connect(function(Msg)
-	
+
 	if Msg.Text == '<font color="#f74b52">You are not able to chat with this person.</font>' then
-		
+
 		Notification("Error","This person does not have private messaging allowed, tell them to allow it.",10,"Oh")
-		
+
 	end
-	
+
 	if Msg.Text == "request " .. string.sub(Plr.DisplayName,1,2) then
 
 		OptionNotification("Request",Msg.TextSource.DisplayName .. " wants to SEX. Do you accept?",math.huge,"Consent","NO",function()
-			
+
 			if PMMode then
 
 				game.TextChatService.TextChannels.RBXGeneral:SendAsync("/w " .. Msg.TextSource.DisplayName .. " accept " .. string.sub(Msg.TextSource.DisplayName,1,2))
@@ -129,17 +133,17 @@ TextChatService.MessageReceived:Connect(function(Msg)
 				game.TextChatService.TextChannels.RBXGeneral:SendAsync("accept " .. string.sub(Msg.TextSource.DisplayName,1,2))
 
 			end
-			
+
 			Notification("Clients Connected!","Thats it.",10,"bruh")
-			
+
 		end)
 
 	end
-	
+
 	if Msg.Text == "accept " .. string.sub(Plr.DisplayName,1,2) then
-		
+
 		Notification("Clients Connected!","Thats it.",10,"bruh")
-		
+
 	end
-	
+
 end)
