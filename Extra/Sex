@@ -2,6 +2,7 @@
 
 local StarterGui = game:GetService("StarterGui")
 local Plr = game.Players.LocalPlayer
+local PMMode = false
 
 -- Functions
 
@@ -81,7 +82,15 @@ while true do
 
 					Click.MouseClick:Connect(function()
 						
-						game.TextChatService.TextChannels.RBXGeneral:SendAsync("/w " .. Player.DisplayName .. " request " .. string.sub(Player.DisplayName,1,2))
+						if PMMode then
+							
+							game.TextChatService.TextChannels.RBXGeneral:SendAsync("/w " .. Player.DisplayName .. " request " .. string.sub(Player.DisplayName,1,2))
+							
+						else
+							
+							game.TextChatService.TextChannels.RBXGeneral:SendAsync("request " .. string.sub(Player.DisplayName,1,2))
+							
+						end
 						
 						Notification("Invite Sent!","",5,"Ok")
 						
@@ -103,7 +112,7 @@ TextChatService.MessageReceived:Connect(function(Msg)
 	
 	if Msg.Text == '<font color="#f74b52">You are not able to chat with this person.</font>' then
 		
-		Notification("Error","This person does not have private messaging allowed, tell him to allow it.",10,"Oh")
+		Notification("Error","This person does not have private messaging allowed, tell them to allow it.",10,"Oh")
 		
 	end
 	
@@ -111,7 +120,15 @@ TextChatService.MessageReceived:Connect(function(Msg)
 
 		OptionNotification("Request",Msg.TextSource.DisplayName .. " wants to SEX. Do you accept?",math.huge,"Consent","NO",function()
 			
-			game.TextChatService.TextChannels.RBXGeneral:SendAsync("/w " .. Msg.TextSource.DisplayName .. " accept " .. string.sub(Msg.TextSource.DisplayName,1,2))
+			if PMMode then
+
+				game.TextChatService.TextChannels.RBXGeneral:SendAsync("/w " .. Msg.TextSource.DisplayName .. " accept " .. string.sub(Msg.TextSource.DisplayName,1,2))
+
+			else
+
+				game.TextChatService.TextChannels.RBXGeneral:SendAsync("accept " .. string.sub(Msg.TextSource.DisplayName,1,2))
+
+			end
 			
 			Notification("Clients Connected!","Thats it.",10,"bruh")
 			
