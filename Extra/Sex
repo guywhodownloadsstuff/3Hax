@@ -81,7 +81,9 @@ while true do
 
 					Click.MouseClick:Connect(function()
 						
-						game.TextChatService.TextChannels.RBXGeneral:SendAsync("/w " .. Player.DisplayName .. " request")
+						game.TextChatService.TextChannels.RBXGeneral:SendAsync("/w " .. Player.DisplayName .. " request " .. string.sub(Player.DisplayName,1,2))
+						
+						Notification("Invite Sent!","",5,"Ok")
 						
 					end)
 					
@@ -102,6 +104,24 @@ TextChatService.MessageReceived:Connect(function(Msg)
 	if Msg.Text == '<font color="#f74b52">You are not able to chat with this person.</font>' then
 		
 		Notification("Error","This person does not have private messaging allowed, tell him to allow it.",10,"Oh")
+		
+	end
+	
+	if Msg.Text == "request " .. string.sub(Plr.DisplayName,1,2) then
+
+		OptionNotification("Request",Msg.TextSource.DisplayName .. " wants to SEX. Do you accept?",math.huge,"Consent","NO",function()
+			
+			game.TextChatService.TextChannels.RBXGeneral:SendAsync("/w " .. Msg.TextSource.DisplayName .. " accept " .. string.sub(Msg.TextSource.DisplayName,1,2))
+			
+			Notification("Clients Connected!","Thats it.",10,"bruh")
+			
+		end)
+
+	end
+	
+	if Msg.Text == "accept " .. string.sub(Plr.DisplayName,1,2) then
+		
+		Notification("Clients Connected!","Thats it.",10,"bruh")
 		
 	end
 	
